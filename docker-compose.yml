@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  rasa-server:
+    container_name: "polimataBot"
+    build:
+      context: ./rasa_server
+      dockerfile: Dockerfile
+    ports:
+     - 5005:5005
+    volumes:
+     - ./rasa_server:/app
+    command:
+      - run
+      - --enable-api
+      - --cors
+      - "*"
+    env_file: ./rasa_server/env/.dev.env
+  action-server:
+    container_name: "polimataAction"
+    build:
+      context: ./actions_server
+      dockerfile: Dockerfile
+    volumes:
+      - ./actions_server:/app/actions
+    ports:
+      - 5055:5055

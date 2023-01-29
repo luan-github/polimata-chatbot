@@ -1,0 +1,7 @@
+tests/*
+models/*
+actions/*
+env/*
+.bash_history
+**/*.md
+venv
