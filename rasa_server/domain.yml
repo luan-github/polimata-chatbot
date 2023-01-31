@@ -1,34 +1,22 @@
 version: '3.1'
 intents:
 - affirm
-- bot_challenge
 - centro_academico
 - deny
 - goodbye
 - greet
-- mood_great
-- mood_unhappy
 - start
 - test
 responses:
   utter_centro_academico:
   - text: Centro Acadêmico é a entidade que reúne os alunos de um determinado curso ou departamento da universidade para representar seus interesses, ideias, solucionar problemas e reivindicar seus direitos.
   utter_greet:
-  - text: Hey! How are you?
-  utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_happy:
-  - text: Great, carry on!
+  - text: Oi, como eu posso ajudar?
   utter_goodbye:
-  - text: Bye
-  utter_iamabot:
-  - text: I am a bot, powered by Rasa.
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  - text: Tchau
 actions:
 - utter_centro_academico
 - action_hello_world
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
