@@ -1,21 +1,98 @@
 version: '3.1'
 intents:
 - affirm
+- ask_como_participar
+- ask_contato
+- atletica
+- caccal:
+    used_entities:
+    - curso
+    - entidade
+    is_retrieval_intent: true
+- caotica:
+    used_entities:
+    - curso
+    - entidade
+    is_retrieval_intent: true
 - centro_academico
 - deny
 - goodbye
 - greet
 - start
 - test
+- thanks
+entities:
+- entidade
+- curso
+slots:
+  entidade:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: entidade
+  curso:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: curso
 responses:
-  utter_centro_academico:
-  - text: Centro Acadêmico é a entidade que reúne os alunos de um determinado curso ou departamento da universidade para representar seus interesses, ideias, solucionar problemas e reivindicar seus direitos.
   utter_greet:
   - text: Oi, como eu posso ajudar?
   utter_goodbye:
   - text: Tchau
+  utter_thanks:
+  - text: De nada
+  - text: Disponha
+  - text: Por nada
+  - text: Não há de quê
+  utter_centro_academico:
+  - text: Centro Acadêmico é a entidade que reúne os alunos de um determinado curso ou departamento da universidade para representar seus interesses, ideias, solucionar problemas e reivindicar seus direitos.
+  utter_caccal/ask_o_que_e_caccal:
+  - text: CACCAL é o Centro Acadêmico de Ciência da Computação.
+  utter_caccal/ask_local:
+  - text: O Centro Acadêmico de Ciência da Computação (CACCAL) fica localizado no bloco de Ciência da Computação e Engenharia Elétrica na UNIFAP.
+  utter_caccal_ask_como_participar:
+  - text: Para participar ativamente basta se fazer presente nas reuniões, assembleias gerais, acompanhar o CA nas redes sociais e, caso sentir a necessidade, entrar em contato com a diretoria do CACCAL.
+  utter_caccal_ask_contato:
+  - custom:
+      text: Você pode entrar em contato com o Centro Acadêmico de Computação no [Instagram, neste link](https://instagram.com/caccal_unifap?igshid=NDc0ODY0MjQ=)
+      parse_mode: MarkdownV2
+    channel: telegram
+  - text: |-
+      Você pode entrar em contato com o Centro Acadêmico de Computação no Instagram, neste link:
+      https://instagram.com/caccal_unifap?igshid=NDc0ODY0MjQ=
+  utter_atletica:
+  - text: A atlética universitária é uma organização composta e administrada por estudantes de um ou mais cursos de uma determinada universidade. Tem como responsabildade desenvolver atividades esportivas, recreativas e culturais. Vale ressaltar que essa não é uma estrutura da faculdade. E que não se trata de um setor oficial ou de algo comandado por profissionais da instituição.
+  - text: Atléticas universitárias são entidades responsáveis por desenvolverem atividades esportivas, recreativas e culturais.
+  utter_caotica/ask_o_que_e_caotica:
+  - text: ASSOCIAÇÃO ATLÉTICA ACADÊMICA DE CIÊNCIA DA COMPUTAÇÃO (AAACC) ou Atlética Caótica é a associação atlética universitária do curso de computação.
+  utter_caotica_ask_como_participar:
+  - text: A participação se dá por meio de associações semestrais, mediante pagamento de taxa, para  graduandos regularmente vinculados no curso de Ciência da Computação da Universidade Federal do Amapá ou ainda pós graduandos, graduados em Ciência da Computação e técnicos do colegiado.
+  utter_caotica/ask_valor_da_taxa:
+  - text: |-
+      As taxas são aplicadas de acordo com as seguintes categorias:
+        – Sócio Ouro, R$ 50,00 (cinquenta reais) semestrais.
+        – Sócio Sênior, R$ 90,00 (noventa reais) semestrais.
+        – Sócio Fundador, R$ 50,00 (cinquenta reais) semestrais.
+        – Sócio Diretor, R$ 50,00 (cinquenta reais) semestrais.
+        – Sócio Benemérito, não paga taxa, mas trata-se de título concedido pela diretoria da Atlética de Computação a todo associado, pessoa física não associada ou instituição que, de alguma forma, contribuir, significativamente, para o engrandecimento desta Atlética.
+  utter_caotica/ask_finalidade:
+  - text: |-
+      A Atlética tem como propósito:
+      Fomentar e difundir a prática do desporto e prática musical entre os alunos do curso de Ciência da Computação da Universidade Federal do Amapá proporcionando os meios necessários;
+      Promover e dirigir competições esportivas entre seus filiados e intercâmbio com entidades congêneres do estado, país e exterior;
+      Representar a Ciência da Computação da Universidade Federal do Amapá no desporto universitário e comunitário;
+      Colaborar e estimular o desenvolvimento do esporte universitário, buscando o espírito de companheirismo, solidariedade e colaboração entre seus associados.
+  - text: Tem como responsabildade desenvolver atividades esportivas, recreativas e culturais, visando à complementação e o aprimoramento da formação universitária.
+  utter_caotica_ask_contato:
+  - custom:
+      text: Você pode entrar em contato com a Atlética do curso de computação no [Instagram, neste link](https://instagram.com/atleticacaotica?igshid=NDc0ODY0MjQ=)
+      parse_mode: MarkdownV2
+    channel: telegram
+  - text: |-
+      Você pode entrar em contato com a Atlética do curso de computação no Instagram, neste link:
+      https://instagram.com/atleticacaotica?igshid=NDc0ODY0MjQ=
 actions:
-- utter_centro_academico
 - action_hello_world
 session_config:
   session_expiration_time: 60

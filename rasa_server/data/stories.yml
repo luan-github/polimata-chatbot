@@ -2,12 +2,212 @@ version: "3.1"
 
 stories:
 
-- story: interactive_story_1
-  steps:
-  - intent: centro_academico
-  - action: utter_centro_academico
-
 - story: interactive_story_teste
   steps:
   - intent: test
   - action: action_hello_world
+
+- story: valide_interactive_story_1
+  steps:
+  - intent: centro_academico
+    entities:
+    - entidade: centro acadêmico
+  - slot_was_set:
+    - entidade: centro acadêmico
+  - action: utter_centro_academico
+  - intent: caccal
+    entities:
+    - entidade: centro academico
+    - curso: computação
+  - slot_was_set:
+    - entidade: centro academico
+  - slot_was_set:
+    - curso: computação
+  - action: utter_caccal
+  - intent: ask_como_participar
+  - action: utter_caccal_ask_como_participar
+
+- story: como participar do centro acadêmico
+  steps:
+  - intent: centro_academico
+    entities:
+    - entidade: centro academico
+  - slot_was_set:
+    - entidade: centro academico
+  - action: utter_centro_academico
+  - intent: caccal
+    entities:
+    - entidade: centro academico
+    - curso: computação
+  - slot_was_set:
+    - entidade: centro academico
+  - slot_was_set:
+    - curso: computação
+  - action: utter_caccal
+  - intent: ask_como_participar
+  - action: utter_caccal_ask_como_participar
+
+- story: como participar da caotica
+  steps:
+  - intent: atletica
+    entities:
+    - entidade: atletica
+  - slot_was_set:
+    - entidade: atletica
+  - action: utter_atletica
+  - intent: caotica
+    entities:
+    - entidade: atletica
+    - curso: computação
+  - slot_was_set:
+    - entidade: atletica
+  - slot_was_set:
+    - curso: computação
+  - action: utter_caotica
+  - intent: ask_como_participar
+  - action: utter_caotica_ask_como_participar
+
+- story: pedindo contato do centro acadêmico
+  steps:
+  - intent: ask_contato
+    entities:
+    - entidade: centro acadêmico
+    - curso: computação
+  - slot_was_set:
+    - entidade: centro acadêmico
+  - slot_was_set:
+    - curso: computação
+  - action: utter_caccal_ask_contato
+
+- story: pedindo contato da atletica de computação 1
+  steps:
+  - intent: ask_contato
+    entities:
+    - entidade: atletica
+    - curso: computação
+  - slot_was_set:
+    - entidade: atletica
+  - slot_was_set:
+    - curso: computação
+  - action: utter_caotica_ask_contato
+
+- story: solicitando contato atlética 2
+  steps:
+  - intent: ask_contato
+    entities:
+    - entidade: atletica
+  - slot_was_set:
+    - entidade: atletica
+  - action: utter_caotica_ask_contato
+
+- story: solicitando contato caotica
+  steps:
+  - intent: ask_contato
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_caotica_ask_contato
+
+- story: solicitando contato caccal
+  steps:
+  - intent: ask_contato
+    entities:
+    - entidade: CACCAL
+  - slot_was_set:
+    - entidade: CACCAL
+  - action: utter_caccal_ask_contato
+
+- story: solicitando contato da atlética e centro acadêmico 1
+  steps:
+  - intent: ask_contato
+    entities:
+    - entidade: atletica
+    - entidade: centro acadêmico
+  - slot_was_set:
+    - entidade: centro acadêmico
+  - action: utter_caccal_ask_contato
+  - action: utter_caotica_ask_contato
+
+- story: solicitando contato da atlética e centro acadêmico 2
+  steps:
+  - intent: ask_contato
+    entities:
+    - entidade: caotica
+    - entidade: caccal
+  - slot_was_set:
+    - entidade: caccal
+  - action: utter_caccal_ask_contato
+  - action: utter_caotica_ask_contato
+
+- story: solicitando contato atlética e centro acadêmico 3
+  steps:
+  - intent: ask_contato
+    entities:
+    - entidade: centro acadêmico
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_caccal_ask_contato
+  - action: utter_caotica_ask_contato
+
+- story: solicitando contato atlética e centro academico 3
+  steps:
+  - intent: ask_contato
+    entities:
+    - entidade: atletica
+    - entidade: centro acadêmico
+    - curso: computação
+  - slot_was_set:
+    - entidade: centro acadêmico
+  - slot_was_set:
+    - curso: computação
+  - action: utter_caccal_ask_contato
+  - action: utter_caotica_ask_contato
+
+- story: solicitando como participar do caccal
+  steps:
+  - intent: ask_como_participar
+    entities:
+    - entidade: CACCAL
+  - slot_was_set:
+    - entidade: CACCAL
+  - action: utter_caccal_ask_como_participar
+
+- story: solicitando como participar da caotica
+  steps:
+  - intent: ask_como_participar
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_caotica_ask_como_participar
+
+- story: como participar da atlética de computação
+  steps:
+  - intent: ask_como_participar
+    entities:
+    - entidade: atletica
+    - curso: computação
+  - slot_was_set:
+    - entidade: atletica
+  - slot_was_set:
+    - curso: computação
+  - action: utter_caotica_ask_como_participar
+
+- story: informações basicas da caótica
+  steps:
+  - intent: caotica
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_caotica
+  - intent: caotica
+  - action: utter_caotica
+  - intent: ask_como_participar
+  - action: utter_caotica_ask_como_participar
+  - intent: caotica
+  - action: utter_caotica
+  - intent: ask_contato
+  - action: utter_caotica_ask_contato

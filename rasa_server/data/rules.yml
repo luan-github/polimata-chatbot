@@ -2,17 +2,42 @@ version: "3.1"
 
 rules:
 
-- rule: Despedir-se a qualquer momento
+- rule: Cumprimentar a qualquer momento
   steps:
   - intent: greet
   - action: utter_greet
 
-- rule: Cumprimentar a qualquer momento
+- rule:  Despedir-se a qualquer momento
   steps:
   - intent: goodbye
   - action: utter_goodbye
+
+- rule: Responder ao agradecimento
+  steps:
+  - intent: thanks
+  - action: utter_thanks
 
 - rule: Cumprimentar usuário no Telegram
   steps:
   - intent: start
   - action: utter_greet
+
+- rule: respond to centro_academico
+  steps:
+  - intent: centro_academico
+  - action: utter_centro_academico
+
+- rule: respond to atletica
+  steps:
+  - intent: atletica
+  - action: utter_atletica
+
+- rule: respond to caccal
+  steps:
+  - intent: caccal
+  - action: utter_caccal
+
+- rule: respond to caotica
+  steps:
+  - intent: caotica
+  - action: utter_caotica
