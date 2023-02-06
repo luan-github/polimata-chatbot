@@ -2,7 +2,7 @@ version: "3.1"
 
 stories:
 
-- story: interactive_story_teste
+- story: action-server
   steps:
   - intent: test
   - action: action_hello_world
@@ -211,3 +211,90 @@ stories:
   - action: utter_caotica
   - intent: ask_contato
   - action: utter_caotica_ask_contato
+
+- story: ask-polimata-name
+  steps:
+  - intent: ask_polimata_name
+  - action: utter_ask_polimata_name
+
+- story: ask-polimata-meaning
+  steps:
+  - intent: ask_polimata_meaning
+  - action: utter_ask_polimata_meaning
+
+- story: ask-polimata-project
+  steps:
+  - intent: ask_polimata_project
+  - action: utter_ask_polimata_project
+
+- story: ask-polimata-technology
+  steps:
+  - intent: ask_polimata_technology
+  - action: utter_ask_polimata_technology
+
+- story: ask-polimata-address
+  steps:
+  - intent: ask_polimata_address
+  - action: utter_ask_polimata_address
+
+- story: ask-polimata-functions
+  steps:
+  - intent: ask_polimata_functions
+  - action: utter_ask_polimata_functions
+
+- story: ask-polimata-give-suggestion
+  steps:
+  - intent: ask_polimata_give_suggestion
+  - action: utter_ask_polimata_give_suggestion
+
+- story: ask-polimata-installation
+  steps:
+  - intent: ask_polimata_installation
+  - action: utter_ask_polimata_installation
+
+- story: ask-polimata-learning-aid
+  steps:
+  - intent: ask_polimata_learning_aid
+  - action: utter_ask_polimata_learning_aid
+
+- story: ask-polimata-como-participar
+  steps:
+  - intent: ask_como_participar
+  - action: utter_ask_polimata_como_participar
+
+- story: short-presentation
+  steps:
+  - intent: ask_polimata_name
+  - action: utter_ask_polimata_name
+  - intent: ask_polimata_meaning
+  - action: utter_ask_polimata_meaning
+  - intent: neutral_intention
+
+- story: neutra-intention
+  steps:
+  - intent: neutral_intention
+
+- story: test-presentation-1
+  steps:
+  - intent: ask_polimata_project
+  - action: utter_ask_polimata_project
+  - intent: ask_como_participar
+  - action: utter_ask_polimata_como_participar
+  - intent: atletica
+    entities:
+    - entidade: atletica
+  - slot_was_set:
+    - entidade: atletica
+  - action: utter_atletica
+  - intent: ask_como_participar
+    entities:
+    - entidade: atletica
+  - slot_was_set:
+    - entidade: atletica
+  - action: utter_caotica_ask_como_participar
+  - intent: ask_polimata_functions
+  - action: utter_ask_polimata_functions
+  - intent: ask_polimata_technology
+  - action: utter_ask_polimata_technology
+  - intent: ask_polimata_learning_aid
+  - action: utter_ask_polimata_learning_aid

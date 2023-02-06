@@ -15,7 +15,6 @@ services:
       - --enable-api
       - --cors
       - "*"
-    env_file: ./rasa_server/env/.dev.env
   action-server:
     container_name: "polimataAction"
     build:

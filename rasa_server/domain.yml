@@ -3,27 +3,46 @@ intents:
 - affirm
 - ask_como_participar
 - ask_contato
+- ask_polimata_address
+- ask_polimata_functions
+- ask_polimata_give_suggestion
+- ask_polimata_installation
+- ask_polimata_learning_aid
+- ask_polimata_meaning
+- ask_polimata_name
+- ask_polimata_project
+- ask_polimata_technology
 - atletica
 - caccal:
     used_entities:
     - curso
+    - disciplina
     - entidade
+    - lugar
     is_retrieval_intent: true
 - caotica:
     used_entities:
     - curso
+    - disciplina
     - entidade
+    - lugar
     is_retrieval_intent: true
 - centro_academico
 - deny
 - goodbye
 - greet
+- neutral_intention
+- out_of_scope
+- polimata_compliment
+- polimata_out_of_scope_for_now
 - start
 - test
 - thanks
 entities:
 - entidade
 - curso
+- disciplina
+- lugar
 slots:
   entidade:
     type: text
@@ -35,11 +54,22 @@ slots:
     mappings:
     - type: from_entity
       entity: curso
+  disciplina:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: disciplina
+  lugar:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: lugar
 responses:
   utter_greet:
-  - text: Oi, como eu posso ajudar?
+  - text: oi
   utter_goodbye:
   - text: Tchau
+  - text: Até mais
   utter_thanks:
   - text: De nada
   - text: Disponha
@@ -58,9 +88,7 @@ responses:
       text: Você pode entrar em contato com o Centro Acadêmico de Computação no [Instagram, neste link](https://instagram.com/caccal_unifap?igshid=NDc0ODY0MjQ=)
       parse_mode: MarkdownV2
     channel: telegram
-  - text: |-
-      Você pode entrar em contato com o Centro Acadêmico de Computação no Instagram, neste link:
-      https://instagram.com/caccal_unifap?igshid=NDc0ODY0MjQ=
+  - text: 'Você pode entrar em contato com o Centro Acadêmico de Computação no Instagram, neste link: https://instagram.com/caccal_unifap?igshid=NDc0ODY0MjQ='
   utter_atletica:
   - text: A atlética universitária é uma organização composta e administrada por estudantes de um ou mais cursos de uma determinada universidade. Tem como responsabildade desenvolver atividades esportivas, recreativas e culturais. Vale ressaltar que essa não é uma estrutura da faculdade. E que não se trata de um setor oficial ou de algo comandado por profissionais da instituição.
   - text: Atléticas universitárias são entidades responsáveis por desenvolverem atividades esportivas, recreativas e culturais.
@@ -92,6 +120,80 @@ responses:
   - text: |-
       Você pode entrar em contato com a Atlética do curso de computação no Instagram, neste link:
       https://instagram.com/atleticacaotica?igshid=NDc0ODY0MjQ=
+  utter_ask_polimata_name:
+  - text: Eu me chamo Polímata
+  - text: Meu nome é Polímata
+  utter_ask_polimata_meaning:
+  - text: |
+      Atualmente a palavra Polímata é usada para se referir a alguém que possui conhecimento profundo em muitas áreas. Alguns exemplos famosos de polímatas são Leonardo da Vinci e Nikola Tesla.
+
+      E esse nome me foi dado porque eu deveria auxiliar estudantes a revisarem assuntos em várias disciplinas, como se eu fosse um verdadeiro polímata.
+  utter_ask_polimata_project:
+  - custom:
+      text: Eu tento responder algumas dúvidas comuns sobre serviços e recursos da instituição e pretendo dar assistência em atividades acadêmicas\. Espero que com o uso seja possível identificar as principais demandas e melhorar minhas respostas\. Você pode conhecer mais e participar desse projeto no link abaixo\.
+      parse_mode: MarkdownV2
+      reply_markup:
+        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+    channel: telegram
+  - text: Eu tento responder algumas dúvidas comuns sobre serviços e recursos da instituição e pretendo dar assistência em atividades acadêmicas. Espero que com o uso seja possível identificar as principais demandas e melhorar minhas respostas. Você pode conhecer mais e participar desse projeto em https://github.com/luan-github/polimata-chatbot
+  utter_ask_polimata_functions:
+  - custom:
+      text: Como eu sou um projeto de código aberto recente, meus diálogos ainda estão sendo implementados ou configurados\. Então eu ainda não tenho uma automação para listar minhas funções ou cada uma de minhas áreas de conhecimento\. Talvez você encontre algo mais atualizado para essa pergunta na página do meu projeto\.
+      parse_mode: MarkdownV2
+      reply_markup:
+        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+    channel: telegram
+  - text: Como eu sou um projeto de código aberto recente, meus diálogos ainda estão sendo implementados ou configurados. Então eu ainda não tenho uma automação para listar minhas funções ou cada uma de minhas áreas de conhecimento. Talvez você encontre algo mais atualizado para essa pergunta em https://github.com/luan-github/polimata-chatbot).
+  utter_ask_polimata_address:
+  - custom:
+      text: Meu projeto está disponível no Github
+      parse_mode: MarkdownV2
+      reply_markup:
+        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+    channel: telegram
+  - text: Meu projeto está disponível no Github em https://github.com/luan-github/polimata-chatbot
+  utter_ask_polimata_technology:
+  - custom:
+      text: Até o momento as principais tecnologias utilizadas no meu desenvolvimento foram a linguagem python, o sistema de containers Docker e a aplicação Telegram\. Novas tecnologias devem estar listadas na página do projeto\.
+      parse_mode: MarkdownV2
+      reply_markup:
+        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+    channel: telegram
+  - text: Até o momento as principais tecnologias utilizadas no meu desenvolvimento foram a linguagem python, o sistema de containers Docker e aplicação Telegram. Novas tecnologias devem estar listadas em https://github.com/luan-github/polimata-chatbot
+  utter_ask_polimata_installation:
+  - custom:
+      text: Orientações de instalação estão mehor detalhadas na página inicial do projeto\. Clique no link abaixo para acessar\.
+      parse_mode: MarkdownV2
+      reply_markup:
+        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+    channel: telegram
+  - text: Orientações de instalação estão mehor detalhadas na página inicial do projeto em https://github.com/luan-github/polimata-chatbot
+  utter_ask_polimata_como_participar:
+  - custom:
+      text: Você terá uma explicação mais adequada para a sua pergunta na página inicial do projeto, na seção \'Como Contribuir ou obter ajuda\'\.
+      parse_mode: MarkdownV2
+      reply_markup:
+        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+    channel: telegram
+  - text: Você terá uma explicação mais adequada para a sua pergunta na página inicial do projeto, na seção 'Como Contribuir ou obter ajuda' em https://github.com/luan-github/polimata-chatbot
+  utter_ask_polimata_give_suggestion:
+  - custom:
+      text: No momento, sugestões e dúvidas só podem ser recebidas pela página do projeto na plataforma Github.
+      parse_mode: MarkdownV2
+      reply_markup:
+        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+    channel: telegram
+  - text: No momento, sugestões e dúvidas só podem ser recebidas pela página do projeto na plataforma Github em https://github.com/luan-github/polimata-chatbot
+  utter_ask_polimata_learning_aid:
+  - text: Futuramente eu espero dar assistência em dúvidas ou dificuldades de estudo, nem que seja apenas sobre a formatação de trabalhos. Mas até o momento essas funcionalidades não foram implementadas.
+  utter_polimata_out_of_scope_for_now:
+  - text: Eu ainda não sou capaz de atender sua solicitação.
+  - text: Desculpe, eu ainda não sou capaz de atender sua solicitação.
+  utter_polimata_compliment:
+  - text: Obrigado
+  - text: Muito Obrigado
+  utter_out_of_scope:
+  - text: Eu não tenho certeza se entendi. Talvez você precise escrever sua solicitação com outras palavras, ou eu não posso atendê-la pois ela está fora do propósito do meu projeto.
 actions:
 - action_hello_world
 session_config:

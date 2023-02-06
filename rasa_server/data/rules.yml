@@ -41,3 +41,23 @@ rules:
   steps:
   - intent: caotica
   - action: utter_caotica
+
+- rule: polimata-compliment
+  steps:
+  - intent: polimata_compliment
+  - action: utter_polimata_compliment
+
+- rule: out-of-scope-for-now
+  steps:
+  - intent: polimata_out_of_scope_for_now
+  - action: utter_polimata_out_of_scope_for_now
+
+- rule: out-of-scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- rule: nlu-fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_out_of_scope

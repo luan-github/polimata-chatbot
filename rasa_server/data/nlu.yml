@@ -20,13 +20,13 @@ nlu:
     - boatarde
     - olá
     - oi, tudo bem?
+    - tem alguém ai?
 - intent: goodbye
   examples: |
     - tchau
     - vejo você depois
     - até mais
     - goodbye
-    - obrigado e até mais
     - bye bye
 - intent: affirm
   examples: |
@@ -57,6 +57,7 @@ nlu:
     - muito obrigado
     - obrigada
     - muito obrigada
+    - obrigado e até mais
     - thanks
     - thank you
     - agradecido
@@ -88,10 +89,12 @@ nlu:
   examples: |
     - e qual é o de [computação](curso)?
     - O que é o [CACCAL](entidade)?
+    - Qual o [CA]{"entity": "entidade", "value": "centro acad\u00eamico"} de [ciência da computação](curso)?
     - Qual o [centro acadêmico](entidade) de [ciência da computação](curso)?
     - O que significa [CACCAL](entidade)?
     - Qual a sigla do [centro acadêmico](entidade) de [computação](curso)?
     - e qual [centro academico](entidade) de [ciências da computação](curso)?
+    - e qual [C.A.]{"entity": "entidade", "value": "centro acad\u00eamico"} de [ciências da computação](curso)?
     - e qual o [centro acadêmico](entidade) do curso de [computação](curso)?
     - o [CACCAL](entidade) é do curso de [computação](curso)
 - intent: caccal/ask_local
@@ -109,6 +112,7 @@ nlu:
     - O que são as [Atléticas](entidade) universitárias?
     - o que vc sabe sobre a [atletica](entidade)?
     - o que é a [atlética]{"entity": "entidade", "value": "atletica"}?
+    - e o que vc sabe sobre a [atletica](entidade)?
 - intent: caotica/ask_o_que_e_caotica
   examples: |
     - O que é a [caótica](entidade)?
@@ -166,6 +170,11 @@ nlu:
     - como eu posso participar da [caótica]{"entity": "entidade", "value": "caotica"}?
     - como eu posso participar da [atlética]{"entity": "entidade", "value": "atletica"} de [computação](curso)?
     - e como eu posso participar?
+    - Como eu posso participar do seu projeto?
+    - Gostaria de participar do projeto?
+    - O que eu preciso saber para participar do projeto?
+    - e eu posso participar?
+    - e como eu participo da [atlética]{"entity": "entidade", "value": "atletica"}?
 - intent: ask_contato
   examples: |
     - Qual a rede social?
@@ -207,16 +216,193 @@ nlu:
     - qual o contato da [atlética]{"entity": "entidade", "value": "atletica"}?
     - qual o contato doo [centro acadêmico](entidade) e da [caótica]{"entity": "entidade", "value": "caotica"}?
     - quais os contatos da [atlética]{"entity": "entidade", "value": "atletica"} e [centro acadêmico](entidade) de [computação](curso)?
+- intent: ask_polimata_name
+  examples: |
+    - Qual seu nome?
+    - Como você se chama?
+    - olá qual seu nome?
+    - oi, qual o seu nome?
+    - oi, qual seu nome?
+- intent: ask_polimata_meaning
+  examples: |
+    - O que significa polimata?
+    - porque polimata?
+    - O que quer dizer polímata?
+    - Seu nome é estranho
+    - De onde veio a ideia do seu nome?
+    - Por que vc se chama polimata?
+    - por que você se chama assim?
+    - e o que isso quer dizer
+    - e o que significa isso?
+    - e o que isso quer dizer?
+    - polimata é alguem que fala vários idiomas?
+- intent: ask_polimata_project
+  examples: |
+    - O que é esse projeto polímata?
+    - Fale mais sobre você
+    - Me explique o seu escopo
+    - Qual a sua finalidade?
+    - Qual o seu propósito?
+    - Qual é a sua?
+    - O que é você?
+    - o que é esse seu projeto?
+    - me fale mais sobre o seu projeto
+    - ei, me explica esse seu projeto
+- intent: ask_polimata_functions
+  examples: |
+    - Pra pra que você serve
+    - Quais funções você possui?
+    - Quais suas funcionalidades?
+    - Quais seus requisitos funcionais?
+    - O que você sabe fazer?
+    - O que vc sabe fazer?
+    - e oq vc faz?
+    - e o que você faz?
+    - me explica suas funções
+    - que assuntos vc conhece?
+    - sobre o que você sabe falar
+- intent: ask_polimata_address
+  examples: |
+    - Qual o link para esse projeto?
+    - Qual o endereço desse projeto?
+    - Onde seu projeto está hospedado?
+    - Onde eu faço seu download?
+    - Onde eu baixo você?
+    - Onde eu baixo seu código fonte?
+    - Como posso baixar seu código fonte?
+- intent: ask_polimata_technology
+  examples: |
+    - Quais tecnologias foram usadas nesse projeto?
+    - você foi feito em qual linguagem?
+    - em que framework você é baseado?
+    - Como você foi criado?
+    - Qual licença você usa?
+    - Em qual tecnologia você é baseado?
+    - Como você foi construído?
+    - e como vc foi desenvolvido?
+- intent: ask_polimata_installation
+  examples: |
+    - Como eu instalo você?
+    - Como você é instalado?
+    - como eu rodo você localmente
+    - dá para instalar você
+- intent: ask_polimata_give_suggestion
+  examples: |
+    - Posso sugerir algo?
+    - Posso fazer uma sugestão?
+    - Tenho uma dúvida
+    - Posso te dar uma ideia?
+- intent: ask_polimata_learning_aid
+  examples: |
+    - Você sabe dar cola?
+    - Você dá cola
+    - Você sabe (calculo)[disciplina]?
+    - Você sabe (programação)[disciplina]?
+    - Você ensina alguma coisa?
+    - Você sabe programar?
+    - vc ajuda nas disciplinas?
+    - preciso de ajuda em uma disciplina
+    - você pode me ajudar em (cálculo)[disciplina]?
+    - você pode me ensinar (cálculo)[disciplina]?
+    - o que você pode me ensinar?
+    - você pode me ajudar em banco de dados?
+    - e você ajuda os estudantes nas disciplinas?
+    - em quais disciplinas você ajuda os esudantes?
+    - vc ensina alguma disciplina?
+- intent: polimata_compliment
+  examples: |
+    - Você é muito legal
+    - Parabéns
+    - Gostei de você
+    - gostei do projeto
+    - top
+    - Você é top
+    - Projeto legal
+    - projeto interessante
+    - gj
+    - good job
+    - bom trabalho
+    - nice work
+    - muito bem
+    - você é um bot inteligente
+    - bom garoto
+    - obrigado, você é muito educado
+    - você é muito gentil
+    - você foi de grande ajuda
+    - você é fantástico
+    - você é sensacional
+    - você é o melhor
+- intent: polimata_out_of_scope_for_now
+  examples: |
+    - O que vc sabe sobre a [atlética](entidade) de [biologia](curso)
+    - Quem compõe a diretoria atual do [centro acadêmico](entidade)
+    - Qual o [centro acadêmico](entidade) de [historia](curso)
+    - qual o cardápio do [RU](lugar)?
+    - o que tem no [restarante universitário](lugar) hoje?
+    - qual o valor da refeição no [restaurante](lugar)?
+    - A [biblioteca](lugar) tem site?
+    - como eu tiro a carteirinha da [biblioteca](lugar)?
+    - Qual o número de contato da [biblioteca]((lugar)?
+    - tem o livro de (calculo)[disciplina] 1 na [biblioteca]((lugar)?
+    - qual o status do livro de (calculo)[disciplina] na [biblioteca]((lugar)?
+    - Como eu faço a referência de um site?
+    - Como eu faço referência de artigo com mais de três autores?
+    - Como eu faço a referência de uma monografia?
+    - Qual deve ser a margem do [TCC](disciplina)?
+    - Qual deve ser o tamanho da fonte no [tcc](disciplina)?
+    - qual a diferença entre quadro e tabela?
+    - como eu faço se o quadro é maior que a página?
+    - como faço a referência de outra monografia?
+- intent: out_of_scope
+  examples: |
+    - vc sabe contar piadas?
+    - me conta uma história interessante
+    - Qual sua data de nascimento?
+    - quando você nasceu?
+    - Qual seu time?
+    - Você veio em paz?
+    - Os robôs vão dominar a humanidade?
+    - os bots vão dominar a humanidade?
+    - você tem sentimetos?
+    - você tem emoções?
+    - qual seu sonho?
+    - O universo tem fim?
+    - Quem é o presidente do Brasil?
+    - você fala inglês?
+    - você fala outro idioma?
 - intent: test
   examples: |
     - Action server está funcionando?
     - Action
-- intent: caotica
+- intent: neutral_intention
   examples: |
-    - oi, oque é a [caótica]{"entity": "entidade", "value": "caotica"}?
-    - e o que ela faz?
-    - e qual é a taxa?
-    - o que é a [caótica]{"entity": "entidade", "value": "caotica"}?
+    - humm, interessante
+    - ta ok então
+    - blz
+    - ta certo então
+    - ta ok
+    - bom saber
+    - beleza
+    - só filé
+    - então tá
+    - kkkkkk
+    - kk
+    - hsuahsash
+    - rsrs
+    - rs
+    - rsrsrs
+    - hihi
+    - hihihihi
+    - hahaha
+    - haha
+    - hahahaha
+    - então é né
+    - se é assim sim
+    - kkk
+- synonym: centro acadêmico
+  examples: |
+    - CA
+    - C.A.
 - synonym: atletica
   examples: |
     - atlética
@@ -230,3 +416,8 @@ nlu:
   examples: |
     - ciência da computação
     - ciências da computação
+- synonym: RU
+  examples: |
+    - restaurante universitário
+    - restaurante
+    - R.U.
