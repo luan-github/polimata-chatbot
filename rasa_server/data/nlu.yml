@@ -72,38 +72,38 @@ nlu:
     - vlw
 - intent: centro_academico
   examples: |
-    - O que é o [centro acadêmico](entidade)?
-    - O que é um [centro acadêmico](entidade)?
-    - O que faz o [centro acadêmico](entidade) de [computação](curso)?
-    - O que faz um [centro acadêmico](entidade)?
+    - O que é o [centro academico](entidade)?
+    - O que é um [centro academico](entidade)?
+    - O que faz o [centro academico](entidade) de [computação](curso)?
+    - O que faz um [centro academico](entidade)?
     - O que faz o [CACCAL](entidade)?
-    - Para que serve o [centro acadêmico](entidade)?
-    - Qual a finalidade do [centro acadêmico](entidade)?
-    - Qual o propósito do [centro acadêmico](entidade)?
-    - Qual a atribuição do [centro acadêmico](entidade)?
-    - Quais são as atividades do [centro acadêmico](entidade)?
+    - Para que serve o [centro academico](entidade)?
+    - Qual a finalidade do [centro academico](entidade)?
+    - Qual o propósito do [centro academico](entidade)?
+    - Qual a atribuição do [centro academico](entidade)?
+    - Quais são as atividades do [centro academico](entidade)?
     - o que vc sabe sobre o [centro academico](entidade)?
-    - o que é o [centro acadêmico](entidade)?
+    - o que é o [centro academico](entidade)?
     - o que é o [centro academico](entidade)?
 - intent: caccal/ask_o_que_e_caccal
   examples: |
     - e qual é o de [computação](curso)?
     - O que é o [CACCAL](entidade)?
-    - Qual o [CA]{"entity": "entidade", "value": "centro acad\u00eamico"} de [ciência da computação](curso)?
-    - Qual o [centro acadêmico](entidade) de [ciência da computação](curso)?
+    - Qual o [CA]{"entity": "entidade", "value": "centro academico"} de [ciência da computação](curso)?
+    - Qual o [centro academico](entidade) de [ciência da computação](curso)?
     - O que significa [CACCAL](entidade)?
-    - Qual a sigla do [centro acadêmico](entidade) de [computação](curso)?
+    - Qual a sigla do [centro academico](entidade) de [computação](curso)?
     - e qual [centro academico](entidade) de [ciências da computação](curso)?
-    - e qual [C.A.]{"entity": "entidade", "value": "centro acad\u00eamico"} de [ciências da computação](curso)?
-    - e qual o [centro acadêmico](entidade) do curso de [computação](curso)?
+    - e qual [C.A]{"entity": "entidade", "value": "centro academico"} de [ciências da computação](curso)?
+    - e qual o [centro academico](entidade) do curso de [computação](curso)?
     - o [CACCAL](entidade) é do curso de [computação](curso)
 - intent: caccal/ask_local
   examples: |
     - onde fica o de [computação](curso)?
-    - Onde fica o [centro acadêmico](entidade) de [computação](curso)?
+    - Onde fica o [centro academico](entidade) de [computação](curso)?
     - Onde fica o [CACCAL](entidade)?
-    - Onde encontro membros do [centro acadêmico](entidade)?
-    - Onde fica o pessoal do [centro acadêmico](entidade)?
+    - Onde encontro membros do [centro academico](entidade)?
+    - Onde fica o pessoal do [centro academico](entidade)?
 - intent: atletica
   examples: |
     - O que é a [Atlética](entidade)?
@@ -159,10 +159,10 @@ nlu:
     - Quero fazer parte da [atlética](entidade)
     - Como posso participar da [atletica](entidade)?
     - Como posso fazer parte da [atlética](entidade)?
-    - Como eu posso participar do [centro acadêmico](entidade) de [computação](curso)?
+    - Como eu posso participar do [centro academico](entidade) de [computação](curso)?
     - Como eu participo do [CACCAL](entidade)?
-    - Eu quero fazer parte do [centro acadêmico](entidade)
-    - Como posso fazer parte do [centro acadêmico](entidade) de [computação](curso)?
+    - Eu quero fazer parte do [centro academico](entidade)
+    - Como posso fazer parte do [centro academico](entidade) de [computação](curso)?
     - como eu posso participar?
     - e como eu posso participar dele?
     - e como eu posso participar dela?
@@ -196,26 +196,26 @@ nlu:
     - Qual a rede social da [atlética](entidade)?
     - e qual o contato da [atlética](entidade)?
     - e como posso entrar em contato com alguem da [caótica](entidade)?
-    - Como eu entro em contato com [centro acadêmico](entidade)?
-    - Como eu posso entrar em contato com [centro acadêmico](entidade)?
-    - Qual o contato do [centro acadêmico](entidade)?
-    - Preciso falar com alguém do [centro acadêmico](entidade)
-    - Como entro em contato com o pessoal do [centro acadêmico](entidade)?
-    - Tem algum canal de contato com o [centro acadêmico](entidade)?
-    - Qual o canal de contato do [centro acadêmico](entidade)?
-    - Qual a rede social do [centro acadêmico](entidade)?
-    - Como posso entrar em contato com membros do [centro acadêmico](entidade)?
-    - qual o contato do [centro acadêmico](entidade) de [computação](curso)?
+    - Como eu entro em contato com [centro academico](entidade)?
+    - Como eu posso entrar em contato com [centro academico](entidade)?
+    - Qual o contato do [centro academico](entidade)?
+    - Preciso falar com alguém do [centro academico](entidade)
+    - Como entro em contato com o pessoal do [centro academico](entidade)?
+    - Tem algum canal de contato com o [centro academico](entidade)?
+    - Qual o canal de contato do [centro academico](entidade)?
+    - Qual a rede social do [centro academico](entidade)?
+    - Como posso entrar em contato com membros do [centro academico](entidade)?
+    - qual o contato do [centro academico](entidade) de [computação](curso)?
     - e qual a rede social do [caccal](entidade)?
     - qual o contato da [atletica](entidade) de [computação](curso)?
     - qual o contato da [caótica]{"entity": "entidade", "value": "caotica"}?
     - qual o contato do [CACCAL](entidade)?
-    - quais as redes sociais da [atlética]{"entity": "entidade", "value": "atletica"} e do [centro acadêmico](entidade)?
+    - quais as redes sociais da [atlética]{"entity": "entidade", "value": "atletica"} e do [centro academico](entidade)?
     - qual o contato da [caótica]{"entity": "entidade", "value": "caotica"} e do [caccal](entidade)?
     - tem algum telefone para contato ou email?
     - qual o contato da [atlética]{"entity": "entidade", "value": "atletica"}?
-    - qual o contato doo [centro acadêmico](entidade) e da [caótica]{"entity": "entidade", "value": "caotica"}?
-    - quais os contatos da [atlética]{"entity": "entidade", "value": "atletica"} e [centro acadêmico](entidade) de [computação](curso)?
+    - qual o contato doo [centro academico](entidade) e da [caótica]{"entity": "entidade", "value": "caotica"}?
+    - quais os contatos da [atlética]{"entity": "entidade", "value": "atletica"} e [centro academico](entidade) de [computação](curso)?
 - intent: ask_polimata_name
   examples: |
     - Qual seu nome?
@@ -335,8 +335,8 @@ nlu:
 - intent: polimata_out_of_scope_for_now
   examples: |
     - O que vc sabe sobre a [atlética](entidade) de [biologia](curso)
-    - Quem compõe a diretoria atual do [centro acadêmico](entidade)
-    - Qual o [centro acadêmico](entidade) de [historia](curso)
+    - Quem compõe a diretoria atual do [centro academico](entidade)
+    - Qual o [centro academico](entidade) de [historia](curso)
     - qual o cardápio do [RU](lugar)?
     - o que tem no [restarante universitário](lugar) hoje?
     - qual o valor da refeição no [restaurante](lugar)?
@@ -353,6 +353,284 @@ nlu:
     - qual a diferença entre quadro e tabela?
     - como eu faço se o quadro é maior que a página?
     - como faço a referência de outra monografia?
+- intent: ask_tcc
+  examples: |
+    - o que vc tem sobre [tcc](disciplina)?
+    - O que você sabe sobre [Trabalho de Conclusão de curso]{"entity": "disciplina", "value": "tcc"}?
+    - O que é o [Trabalho de Conclusão]{"entity": "disciplina", "value": "tcc"}?
+    - O que é um [tcc](disciplina)?
+    - o que é basicamente um [tcc](disciplina)?
+    - como é o [tcc](disciplina) de [computação](curso)?
+    - então, o que é [trabalho de conclusão de curso]{"entity": "disciplina", "value": "tcc"}?
+    - então, o que é um [trabalho de conclsão de curso](disciplina)?
+    - o que é um [tcc](disciplina)?
+    - o que vc pode me falar sobre o [tcc](disciplina)?
+    - precisamos falar sobre o [tcc](disciplina)
+- intent: ask_tcc_usual_path
+  examples: |
+    - Eu queria saber como eu começo a fazer meu [tcc](disciplina)
+    - Eu queria saber como eu começo a fazer
+    - como é feito o [tcc](disciplina)?
+    - Como a gente começa a fazer o [tcc](disciplina)?
+    - Como se dá início ao [tcc](disciplina)?
+    - Como é o processo de fazer um [tcc](disciplina)?
+    - quais as etapas de um [tcc](disciplina)?
+    - quais as fases de um [tcc](disciplina)?
+    - Como é a burocracia do [tcc](disciplina)?
+    - Como que desenrola um [tcc](disciplina)?
+    - Como eu desenrolo meu [tcc](disciplina)?
+    - por onde eu começo meu [tcc](disciplina)?
+    - como eu dou inicio ao meu [tcc](disciplina)?
+    - qual o protocolo de um [tcc](disciplina)?
+    - mostre-me o caminho do [tcc](disciplina)?
+    - me explica como eu faço meu [tcc](disciplina)
+    - me explica como eu faço o meu
+    - O que é preciso para fazer o [tcc](disciplina)?
+    - O que eu preciso saber sobre [tcc](disciplina)?
+    - o que eu devo saber sobre [tcc](disciplina)
+    - como eu começo meu [tcc](disciplina)?
+    - como eu começo?
+    - eu queria saber sobre o [tcc](disciplina)
+    - tenho que me inscrever para creditar o [tcc](disciplina)?
+    - eu não preciso me inscrever no [tcc](disciplina)?
+    - eu não tenho que me matricular no [tcc](disciplina)?
+    - eu tenho que me matricular no [tcc](disciplina)?
+    - primeiro eu tenho que fazer meu pré-projeto?
+    - primeiro eu faço o pré-projeto?
+- intent: ask_tcc_docs
+  examples: |
+    - Vc tem a documentação de [tcc](disciplina)?
+    - Vc tem a documentação?
+    - Me envia o regulamento de [tcc](disciplina)
+    - Me envia o regulamento
+    - que regulamento é esse?
+    - Me envia os documentos necessários para dar entrada no [tcc](disciplina)
+    - Me envia os documentos necessários
+    - Me envia a carta de aceite
+    - Me envia o formulário de inscrição de [tcc](disciplina)
+    - Me envia o formulário de inscrição
+    - Me envia o formulário de [tcc](disciplina)
+    - Me envia o formulário
+    - manda os documentos do [tcc](disciplina)
+    - mande-me os documentos
+    - preciso destes documentos
+    - preciso destes docs
+    - os docs do [tcc](disciplina)?
+    - quais os docs do [tcc](disciplina)?
+    - me envia os pdfs de [tcc](disciplina)
+    - me envia o pdf do regulamento de [tcc](disciplina)
+    - me envia o pdf do regulamento
+    - Me envia o modelo de pré projeto
+    - Me envia o modelo de projeto do [Trabalho de Conclusão de curso]{"entity": "disciplina", "value": "tcc"}
+    - preciso dos links para os documentos do [Trabalho de Conclusão]{"entity": "disciplina", "value": "tcc"}
+    - preciso do link para a carta de aceite
+    - Quais documentos eu preciso para dar entrada no [tcc](disciplina)?
+    - Quais documentos eu preciso para dar entrada?
+    - Que documentos são necessários para dar entrada no [tcc](disciplina)?
+    - Que documentos são necessários para dar entrada?
+    - Quais documentos eu vou precisar?
+    - Quais documentos eu preciso para iniciar o [tcc](disciplina)?
+    - Onde encontro a documentação de [tcc](disciplina)?
+    - que documentos eu preciso para protocolar o [tcc](disciplina) na coordenação?
+    - e quais documentos eu preciso para me increver no [tcc](disciplina)?
+    - e quais documentos eu preciso para me increver?
+    - o que eu preciso ler sobre [tcc](disciplina)?
+    - o que é necessário ler sobre [tcc](disciplina)?
+    - quais sãos os docs do [tcc](disciplina)?
+    - quais sãos os docs que precisa levar na coordenação?
+    - quais sãos os documentos do [tcc](disciplina)?
+    - quais sãos os documentos do [tcc](disciplina) que precisa levar na coordenação?
+    - quais sãos os documentos que precisa levar na coordenação?
+    - quais sãos os pdfs do [tcc](disciplina)?
+
+- intent: ask_tcc_goal
+  examples: |
+    - Qual a finalidade do [tcc](disciplina)?
+    - Para que serve o [tcc](disciplina)?
+    - Qual o propósito do [tcc](disciplina)?
+    - De que serve o [tcc](disciplina)?
+    - pra que serve o [tcc](disciplina)?
+- intent: ask_tcc_like_group_work
+  examples: |
+    - O [tcc](disciplina) é individual?
+    - O [Trabalho de Conclusão]{"entity": "disciplina", "value": "tcc"} pode ser em grupo?
+    - Pode fazer o [tcc](disciplina) em dupla?
+    - Pode fazer em dupla?
+    - Pode fazer o [Trabalho de Conclusão de curso]{"entity": "disciplina", "value": "tcc"} em dupla?
+    - tem que fazer sozinho?
+    - é obrigatório fazer só?
+    - é obrigado fazer sozinho?
+    - Pode fazer o [tcc](disciplina) em trio?
+    - pode fazer o [tcc](disciplina) em grupo de três?
+- intent: ask_tcc_score_or_require
+  examples: |
+    - O [tcc](disciplina) é obrigatório?
+    - Ele é obrigatório?
+    - Esse trabalho é obrigatório
+    - O [tcc](disciplina) reprova?
+    - O [Trabalho de Conclusão]{"entity": "disciplina", "value": "tcc"} reprova?
+    - O que acontece se eu não fizer o [tcc](disciplina)?
+    - O que acontece se eu não fizer?
+    - Tem que fazer o [tcc](disciplina)?
+    - Tem mesmo que fazer esse trabalho?
+    - Qual a nota mínima em um [Trabalho de Conclusão de curso]{"entity": "disciplina", "value": "tcc"}?
+    - Qual a nota mínima?
+    - qual a nota minima no [tcc](disciplina)?
+    - Qual a pontuação mínima em um [tcc](disciplina)?
+    - Qual a pontuação mínima?
+    - Vale quantos pontos?
+    - Qual a pontuação máxima?
+    - Qual a pontuação máxima de um [tcc](disciplina)?
+    - e qual a nota minima?
+- intent: ask_tcc_type
+  examples: |
+    - Que tipo de pesquisa eu posso fazer?
+    - o [tcc](disciplina) tem que ser uma monografia?
+    - o projeto tem que ser uma monografia?
+    - o projeto pode ser um artigo científico?
+    - O [tcc](disciplina) pode ser um artigo?
+    - O [tcc](disciplina) tem que ser um artigo publicado?
+    - Posso apresentar um artigo como [tcc](disciplina)?
+    - Artigo ciêntifico vale como [tcc](disciplina)?
+    - Quais os tipos de [tcc](disciplina)?
+    - Sobre o que eu posso fazer meu [tcc](disciplina)?
+    - Sobre o que eu posso fazer minha pesquisa?
+    - Sobre o que eu posso fazer meu pré-projeto?
+    - Sobre o que eu posso fazer meu artigo?
+    - Sobre o que eu posso fazer minha monografia?
+    - Que tema eu posso escolher para o meu [tcc](disciplina)?
+    - Que tema eu posso escolher para pesquisar?
+    - qual pode ser o tema da pesquisa?
+    - Que tema eu posso escolher para o meu pré-projeto?
+    - O que eu posso pesquisar no meu [tcc](disciplina)?
+- intent: ask_tcc_when_to_start
+  examples: |
+    - Quando a gente pode fazer o [tcc](disciplina)?
+    - quando eu vou poder fazer o [tcc](disciplina)?
+    - Quando pode apresentar o [tcc](disciplina)?
+    - e quando pode apresentar?
+    - A partir de quando pode apresentar o [tcc](disciplina)?
+    - A partir de quando pode apresentar?
+    - Quem pode apresentar o [tcc](disciplina)?
+    - Quem pode apresentar?
+    - Quando eu devo começar meu [tcc](disciplina)?
+    - E quando eu devo começar?
+    - Quando posso iniciar meu [tcc](disciplina)?
+    - Quando posso iniciar?
+    - Quando posso começar meu [tcc](disciplina)?
+    - e quando posso eu começar?
+    - quando se deve iniciar o [tcc](disciplina)?
+    - quando se deve iniciar?
+    - A partir de que semestre pode fazer o [tcc](disciplina)?
+    - A partir de que semestre pode dar entrada no [tcc](disciplina)?
+    - mas quando eu posso começar?
+- intent: ask_tcc_professor
+  examples: |
+    - E como eu escolho meu orientador?
+    - Quem pode ser meu orientador?
+    - Quem pode ser meu supervisor?
+    - Quem pode ser meu supervisor de [tcc](disciplina)?
+    - E quem pode me orintar?
+    - Como eu defino meu orientador?
+    - Não sei quem escolher para me supervisionar
+    - Não sei quem escolher para me supervisonar no [tcc](disciplina)
+    - Não sei quem escolher para me orientar
+    - Não sei quem escolher para me orientar no meu [tcc](disciplina)
+    - Preciso de um orientador
+    - Preciso de um orientador de [tcc](disciplina)
+    - Quem pode ser orientador de [tcc](disciplina)?
+    - Quem pode ser orientador?
+    - Quem pode ser o supervisor do [tcc](disciplina)?
+    - Quem pode ser o supervisor?
+    - Quem pode orientar [tcc](disciplina)?
+    - E quem deve ser esse orientador?
+    - E quem deve ser esse professor supervisor?
+    - E quem deve ser esse professor?
+    - Onde encontro um supervisor?
+    - Onde encontro um supervisor de [tcc](disciplina)?
+    - Onde encontro um orientador?
+    - Onde encontro um orientador de [tcc](disciplina)?
+    - O orientador tem que ser colegiado?
+    - O orientador tem que ser do nosso curso?
+    - O orientador tem ser do curso de [computação](curso)?
+    - O professor que vai me orientar tem ser do curso?
+    - O professor que vai me supervisionar tem ser do curso?
+    - O professor orientador tem que ser do curso?
+    - O professor supervisor tem que ser do curso?
+    - Esse professor que orienta a gente tem que ser do nosso curso?
+    - Esse professor que orienta a gente tem que ser do colegiado?
+    - Que professor eu escolho para orientar meu [tcc](disciplina)?
+    - Que professor eu escolho para supervisionar meu [tcc](disciplina)?
+    - Que professor eu posso escolher para orientar meu [tcc](disciplina)?
+    - Que professor eu posso escolher para supervisionar meu [tcc](disciplina)?
+    - Que professor eu posso escolher para me orientar?
+    - Que professor eu posso escolher para me orientar no [tcc](disciplina)?
+
+- intent: ask_tcc_professor_change
+  examples: |
+    - Posso trocar de orientador?
+    - É possível trocar de orientador?
+    - Dá para trocar de orientador?
+    - Pode mudar o orientador?
+    - Como muda o orientador de [tcc](disciplina)?
+    - Pode substituir o orientador?
+- intent: ask_tcc_assessment
+  examples: |
+    - Como é feita a avaliação do [tcc](disciplina)
+    - E como é feita a avaliação
+    - como são calculados os pontos?
+    - como é feito o cálculo da pontuação?
+    - como é feito o cálculo da nota?
+    - como a banca decide a nota?
+    - como a banca gera a nota?
+    - qual a formula usada?
+    - qual a fórmula usada para atribuir a nota do [tcc](disciplina)?
+    - qual a fórmula usada para atribuir a nota?
+    - Quem compõe a banca de [tcc](disciplina)?
+    - Quem compõe a banca?
+    - o que faz a banca avaliadora?
+    - qual o papel da banca avaliadora?
+    - como atua a banca avaliadora?
+    - e como é calculada a nota?
+    - Quem avalia o [tcc](disciplina)?
+    - Quem avalia?
+    - Como é avaliado o [tcc](disciplina)?
+    - Como é calculada a nota do [tcc](disciplina)?
+    - Qual a fórmula para a nota do [tcc](disciplina)?
+    - Qual a fórmula para a nota?
+    - Como se calcula a nota do [tcc](disciplina)?
+    - Como se calcula a nota?
+    - Qual a conta que faz para gerar a nota de [tcc](disciplina)?
+- intent: ask_tcc_co_advisor
+  examples: |
+    - Quem pode ser coorientador de [tcc](disciplina)?
+    - Quem pode ser coorientador?
+    - É preciso de coorientador no [tcc](disciplina)?
+    - É preciso ter coorientador?
+    - O coorientador tem que ser do nosso curso?
+    - O coorientador tem que do colegiado?
+- intent: ask_tcc_examples
+  examples: |
+    - Onde eu encontro modelos de [tcc](disciplina)?
+    - Você tem [tccs](disciplina) pra mim dar uma olhada?
+    - onde encontro trabalhos de conclusão do curso?
+    - queria ver um [tcc](disciplina) pronto?
+    - Você tem exemplos de [tcc](disciplina)?
+    - quais trabalhos já foram apresentados?
+    - tem como ter acesso a trabalhos de quem já se formou?
+    - tem trabalhos de quem já se formou?
+    - tem exemplos de monografias para estudar?
+    - queria ver as monografias de quem já se formou
+    - Quais [tccs]{"entity": "disciplina", "value": "tcc"} já foram apresentados?
+- intent: ask_tcc_time_span
+  examples: |
+    - Quanto dura uma apresentação de [tcc](disciplina)?
+    - Quanto dura uma apresentação?
+    - quanto tempo leva uma apresentação de [tcc](disciplina)?
+    - Qual a duração de uma apresentação de [tcc](disciplina)?
+    - Quanto tempo um aluno tem para apresentar o [tcc](disciplina)?
+    - quanto tempo dura uma apresentação de [tcc](disciplina)?
+    - quanto tempo dura uma apresentação?
 - intent: out_of_scope
   examples: |
     - vc sabe contar piadas?
@@ -399,10 +677,10 @@ nlu:
     - então é né
     - se é assim sim
     - kkk
-- synonym: centro acadêmico
+- synonym: centro academico
   examples: |
     - CA
-    - C.A.
+    - C.A
 - synonym: atletica
   examples: |
     - atlética
@@ -412,6 +690,13 @@ nlu:
     - AAACC
     - A.A.A.C.C
     - caótica
+- synonym: tcc
+  examples: |
+    - Trabalho de Conclusão de curso
+    - Trabalho de Conclusão
+    - trabalho de conclusão de curso
+    - tccs
+    - trabalho de conclusão
 - synonym: computação
   examples: |
     - ciência da computação
@@ -420,4 +705,4 @@ nlu:
   examples: |
     - restaurante universitário
     - restaurante
-    - R.U.
+    - R.U

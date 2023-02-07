@@ -12,6 +12,20 @@ intents:
 - ask_polimata_name
 - ask_polimata_project
 - ask_polimata_technology
+- ask_tcc
+- ask_tcc_assessment
+- ask_tcc_co_advisor
+- ask_tcc_docs
+- ask_tcc_examples
+- ask_tcc_goal
+- ask_tcc_like_group_work
+- ask_tcc_professor
+- ask_tcc_professor_change
+- ask_tcc_score_or_require
+- ask_tcc_time_span
+- ask_tcc_type
+- ask_tcc_usual_path
+- ask_tcc_when_to_start
 - atletica
 - caccal:
     used_entities:
@@ -39,9 +53,9 @@ intents:
 - test
 - thanks
 entities:
+- disciplina
 - entidade
 - curso
-- disciplina
 - lugar
 slots:
   entidade:
@@ -66,7 +80,8 @@ slots:
       entity: lugar
 responses:
   utter_greet:
-  - text: oi
+  - text: Oi, como eu posso ajudar?
+  - text: Olá, como eu posso ajudar?
   utter_goodbye:
   - text: Tchau
   - text: Até mais
@@ -133,7 +148,9 @@ responses:
       text: Eu tento responder algumas dúvidas comuns sobre serviços e recursos da instituição e pretendo dar assistência em atividades acadêmicas\. Espero que com o uso seja possível identificar as principais demandas e melhorar minhas respostas\. Você pode conhecer mais e participar desse projeto no link abaixo\.
       parse_mode: MarkdownV2
       reply_markup:
-        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+        inline_keyboard:
+        - - text: Projeto Polímata
+            url: https://github.com/luan-github/polimata-chatbot
     channel: telegram
   - text: Eu tento responder algumas dúvidas comuns sobre serviços e recursos da instituição e pretendo dar assistência em atividades acadêmicas. Espero que com o uso seja possível identificar as principais demandas e melhorar minhas respostas. Você pode conhecer mais e participar desse projeto em https://github.com/luan-github/polimata-chatbot
   utter_ask_polimata_functions:
@@ -141,7 +158,9 @@ responses:
       text: Como eu sou um projeto de código aberto recente, meus diálogos ainda estão sendo implementados ou configurados\. Então eu ainda não tenho uma automação para listar minhas funções ou cada uma de minhas áreas de conhecimento\. Talvez você encontre algo mais atualizado para essa pergunta na página do meu projeto\.
       parse_mode: MarkdownV2
       reply_markup:
-        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+        inline_keyboard:
+        - - text: Projeto Polímata
+            url: https://github.com/luan-github/polimata-chatbot
     channel: telegram
   - text: Como eu sou um projeto de código aberto recente, meus diálogos ainda estão sendo implementados ou configurados. Então eu ainda não tenho uma automação para listar minhas funções ou cada uma de minhas áreas de conhecimento. Talvez você encontre algo mais atualizado para essa pergunta em https://github.com/luan-github/polimata-chatbot).
   utter_ask_polimata_address:
@@ -149,7 +168,9 @@ responses:
       text: Meu projeto está disponível no Github
       parse_mode: MarkdownV2
       reply_markup:
-        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+        inline_keyboard:
+        - - text: Projeto Polímata
+            url: https://github.com/luan-github/polimata-chatbot
     channel: telegram
   - text: Meu projeto está disponível no Github em https://github.com/luan-github/polimata-chatbot
   utter_ask_polimata_technology:
@@ -157,23 +178,29 @@ responses:
       text: Até o momento as principais tecnologias utilizadas no meu desenvolvimento foram a linguagem python, o sistema de containers Docker e a aplicação Telegram\. Novas tecnologias devem estar listadas na página do projeto\.
       parse_mode: MarkdownV2
       reply_markup:
-        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+        inline_keyboard:
+        - - text: Projeto Polímata
+            url: https://github.com/luan-github/polimata-chatbot
     channel: telegram
   - text: Até o momento as principais tecnologias utilizadas no meu desenvolvimento foram a linguagem python, o sistema de containers Docker e aplicação Telegram. Novas tecnologias devem estar listadas em https://github.com/luan-github/polimata-chatbot
   utter_ask_polimata_installation:
   - custom:
-      text: Orientações de instalação estão mehor detalhadas na página inicial do projeto\. Clique no link abaixo para acessar\.
+      text: Orientações de instalação estão melhor detalhadas na página inicial do projeto\. Clique no link abaixo para acessar\.
       parse_mode: MarkdownV2
       reply_markup:
-        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+        inline_keyboard:
+        - - text: Projeto Polímata
+            url: https://github.com/luan-github/polimata-chatbot
     channel: telegram
-  - text: Orientações de instalação estão mehor detalhadas na página inicial do projeto em https://github.com/luan-github/polimata-chatbot
+  - text: Orientações de instalação estão melhor detalhadas na página inicial do projeto em https://github.com/luan-github/polimata-chatbot
   utter_ask_polimata_como_participar:
   - custom:
       text: Você terá uma explicação mais adequada para a sua pergunta na página inicial do projeto, na seção \'Como Contribuir ou obter ajuda\'\.
       parse_mode: MarkdownV2
       reply_markup:
-        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+        inline_keyboard:
+        - - text: Projeto Polímata
+            url: https://github.com/luan-github/polimata-chatbot
     channel: telegram
   - text: Você terá uma explicação mais adequada para a sua pergunta na página inicial do projeto, na seção 'Como Contribuir ou obter ajuda' em https://github.com/luan-github/polimata-chatbot
   utter_ask_polimata_give_suggestion:
@@ -181,7 +208,9 @@ responses:
       text: No momento, sugestões e dúvidas só podem ser recebidas pela página do projeto na plataforma Github.
       parse_mode: MarkdownV2
       reply_markup:
-        inline_keyboard: [[{text: 'Projeto Polímata', url: 'https://github.com/luan-github/polimata-chatbot'}]]
+        inline_keyboard:
+        - - text: Projeto Polímata
+            url: https://github.com/luan-github/polimata-chatbot
     channel: telegram
   - text: No momento, sugestões e dúvidas só podem ser recebidas pela página do projeto na plataforma Github em https://github.com/luan-github/polimata-chatbot
   utter_ask_polimata_learning_aid:
@@ -192,6 +221,84 @@ responses:
   utter_polimata_compliment:
   - text: Obrigado
   - text: Muito Obrigado
+  utter_ask_tcc:
+  - text: |-
+      TCC é um trabalho acadêmico obrigatório para alunos que vão se graduar.
+      No Curso de Computação ele pode ser uma monografia ou um artigo científico completo publicado em periódico indexado ou conferência com Qualis CAPES.
+  utter_ask_tcc_usual_path:
+  - text: |-
+      Em geral o TCC ocorre da seguinte forma:
+      Primeiro o aluno constrói um Pré-Projeto sob a supervisão de um professor do curso.
+      Em seguida o estudante pode dar entrada na coordenação com a documentação necessária ao agendamento da apresentação deste Pré-Projeto a uma Banca Examinadora, que fará orientações de natureza teórico-metodológicas, de caráter exclusivamente qualitativo.
+      Então o aluno deverá cumprir as atividades previstas no Pré-Projeto para que seja agendada uma nova apresentação, desta vez a uma Banca Avaliadora.
+
+      Obs.: Você não precisa se matricular no requisito TCC para dar início ao seu Pré-Projeto. Mas precisa ter alcançado 50% dos créditos do curso para poder inscrever-se nesse componente curricular e obter o agendamento da primeira banca.
+  utter_ask_tcc_docs:
+  - custom:
+      text: |
+        Os principais documentos e links relacionados ao TCC são:
+        Carta de Aceitação de Orientação
+
+        Formulário de Inscrição de TCC
+
+        [Template de Pré\-Projeto](https://www.overleaf.com/latex/templates/template-projeto-tcc-bcc-unifap/qwgjsnnwwxrz.pdf)
+
+        [Regulamento de TCC](https://www2.unifap.br/ccomputacao/files/2013/11/Resolu%c3%a7%c3%a3oDeTCC.pdf)
+
+        [Trabalhos já apresentados](https://www2.unifap.br/ccomputacao/pesquisa-e-desenvolvimento/trabalhos-de-conclusao-de-curso/)
+
+        A Carta de Aceitação de Orientação e Formulário de Inscrição de TCC são encontrados no mesmo PDF do Regulamento de TCC
+
+        Caso estes links estejam desatualizados você também deverá encontrar estes documentos no [blog do Curso](https://www2.unifap.br/ccomputacao/)
+      parse_mode: MarkdownV2
+  utter_ask_tcc_goal:
+  - text: |-
+      De acordo com o Artigo 3º do Regulamento:
+      O TCC tem como objetivo prover meios para o discente:
+      I. Exercitar a capacidade criativa, a originalidade e a implementação de ideias empreendedoras e/ou científicas;
+      II. Aprimorar habilidades de análise e síntese através da realização de trabalhos individuais;
+      III. Consolidar e colocar em prática os conhecimentos adquiridos durante o curso;
+      IV. Desenvolver a habilidade de escrita de um texto técnico-científico, com clareza e precisão.
+  utter_ask_tcc_like_group_work:
+  - text: |-
+      Segundo o artigo 4º do Regulamento, o TCC deve consistir em um trabalho individual em uma das linhas de pesquisa do Curso de Ciência da Computação.
+      Obs.: O colegiado tem poder para alterar o regulamento e pode permitir projetos de TCC não individuais, dependendo das circunstâncias. É interessante consultar a coordenação para confirmar qual a regra será aplicada.
+  utter_ask_tcc_score_or_require:
+  - text: Segundo o regulamento somente será integralizado o currículo do discente que for aprovado no TCC. Sendo aprovado o discente que obtiver a nota mínima de 7,0 (sete).
+  utter_ask_tcc_type:
+  - text: |-
+      O TCC deve ser um trabalho em uma das linhas de pesquisa do Curso de Ciência da Computação. Apresentado na forma de uma monografia, ou de artigo científico completo publicado em periódico indexado ou conferência com Qualis CAPES.
+      Deve seguir as orientações presentes no GUIA DE TRABALHOS TÉCNICOS-CIENTÍFICOS da Associação Brasileira de Normas Técnicas.
+
+      E em caso de artigo deve ter o aluno como autor e o orientador como coautor.
+  utter_ask_tcc_when_to_start:
+  - text: |
+      Segundo o regulamento, o aluno deverá se inscrever no componente curricular TCC nas datas previstas no calendário acadêmico, a partir de 50% dos créditos concluídos.
+
+      Obs.: Você não precisa se matricular no requisito TCC para dar início ao seu Pré-Projeto. Mas precisa ter alcançado 50% dos créditos do curso para poder inscrever-se nesse componente curricular e obter o agendamento da primeira banca.
+  utter_ask_tcc_professor:
+  - text: |-
+      O TCC deve ter como orientador um professor do colegiado. E, naturalmente, é recomendado que você busque como orientador um professor cuja linha de pesquisa ou formação tenha mais relação com o tema ou pesquisa do seu Pré-Projeto.
+      Caso considere necessário o seu orientador poderá indicar um coorientador.
+  utter_ask_tcc_professor_change:
+  - text: É de responsabilidade do colegiado do curso autorizar a substituição de orientador, a partir de manifestação por escrito do orientador atual do TCC e do orientando.
+  utter_ask_tcc_assessment:
+  - text: |-
+      A avaliação do TCC é realizada por uma banca avaliadora a qual apresentará por escrito, apreciação sobre a realização, importância e valor do trabalho, emitindo a devida nota. A banca avaliadora é composta por dois professores do colegiado e do orientador. Um professor avaliador poderá ser um membro externo, desde que aprovado pelo Colegiado. A nota será obtida pela média aritmética dos dois professores. O orientador somente presidirá a banca avaliadora.
+
+      A nota final de cada examinador será a soma do trabalho escrito (com valor de 0 a 5,0 - zero a cinco) e da apresentação oral (com valor de 0 a 5,0 - zero a cinco), totalizando, assim, nota 10,0 (dez). A Nota final será calculada pela soma das duas notas finais. É considerado aprovado no Trabalho de Conclusão do Curso o aluno com média final igual ou superior a 7,0 (sete).
+  utter_ask_tcc_co_advisor:
+  - text: É de responsabilidade do orientador indicar, caso considere necessário, um coorientador para o TCC de um orientando seu. Coorientadores de TCC podem ser professores pertencentes a outras unidades da UNIFAP, ou membros de instituição externa, desde que sejam autorizados pelo Colegiado do Curso.
+  utter_ask_tcc_examples:
+  - custom:
+      text: Você pode ter acesso a trabalhos já apresentados no blog do curso, [nesta página](https://www2.unifap.br/ccomputacao/pesquisa-e-desenvolvimento/trabalhos-de-conclusao-de-curso/)
+      parse_mode: MarkdownV2
+  utter_ask_tcc_time_span:
+  - text: |-
+      Existe apenas uma recomendação de que a defesa do TCC siga a seguinte distribuição de tempo:
+      Mínimo de 30 (trinta) e máximo de 40 (quarenta) minutos para a apresentação oral pelo candidato;
+      30 (trinta) minutos de arguição pelos três membros da banca examinadora;
+      10 (dez) minutos para avaliação e deliberação da banca sobre o trabalho, divulgação do conceito (aprovado ou reprovado) e encerramento.
   utter_out_of_scope:
   - text: Eu não tenho certeza se entendi. Talvez você precise escrever sua solicitação com outras palavras, ou eu não posso atendê-la pois ela está fora do propósito do meu projeto.
 actions:
