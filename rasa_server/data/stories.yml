@@ -303,9 +303,9 @@ stories:
   steps:
   - intent: ask_tcc
     entities:
-    - disciplina: trabalho de conclsão de curso
+    - disciplina: tcc
   - slot_was_set:
-    - disciplina: trabalho de conclsão de curso
+    - disciplina: tcc
   - action: utter_ask_tcc
 
 - story: ask-tcc-2
@@ -346,7 +346,7 @@ stories:
 
 - story: ask-tcc-docs
   steps:
-  - intent: ask_tcc_docs
+  - intent: ask_docs
     entities:
     - disciplina: tcc
   - slot_was_set:
@@ -400,12 +400,12 @@ stories:
 
 - story: ask-tcc-score-or-require
   steps:
-  - intent: ask_tcc_score_or_require
+  - intent: ask_tcc_score
     entities:
     - disciplina: tcc
   - slot_was_set:
     - disciplina: tcc
-  - action: utter_ask_tcc_score_or_require
+  - action: utter_ask_tcc_score
 
 - story: ask-tcc-time-span
   steps:
@@ -427,7 +427,7 @@ stories:
 
 - story: ask-tcc-when-to-start
   steps:
-  - intent: ask_tcc_when_to_start
+  - intent: ask_when_to_start
     entities:
     - disciplina: tcc
   - slot_was_set:
@@ -442,9 +442,9 @@ stories:
   - slot_was_set:
     - disciplina: tcc
   - action: utter_ask_tcc_usual_path
-  - intent: ask_tcc_when_to_start
+  - intent: ask_when_to_start
   - action: utter_ask_tcc_when_to_start
-  - intent: ask_tcc_docs
+  - intent: ask_docs
     entities:
     - disciplina: tcc
   - slot_was_set:
@@ -459,9 +459,9 @@ stories:
   - slot_was_set:
     - disciplina: tcc
   - action: utter_ask_tcc
-  - intent: ask_tcc_when_to_start
+  - intent: ask_when_to_start
   - action: utter_ask_tcc_when_to_start
-  - intent: ask_tcc_docs
+  - intent: ask_docs
     entities:
     - disciplina: tcc
   - slot_was_set:
@@ -478,7 +478,7 @@ stories:
   - action: utter_ask_tcc_usual_path
   - intent: ask_tcc_professor
   - action: utter_ask_tcc_professor
-  - intent: ask_tcc_docs
+  - intent: ask_docs
     entities:
     - disciplina: tcc
   - slot_was_set:
@@ -495,7 +495,7 @@ stories:
   - action: utter_ask_tcc_usual_path
   - intent: ask_tcc_professor
   - action: utter_ask_tcc_professor
-  - intent: ask_tcc_docs
+  - intent: ask_docs
   - action: utter_ask_tcc_docs
 
 - story: tcc-happy-path-2.3
@@ -506,14 +506,14 @@ stories:
   - slot_was_set:
     - disciplina: tcc
   - action: utter_ask_tcc_usual_path
-  - intent: ask_tcc_docs
+  - intent: ask_docs
   - action: utter_ask_tcc_docs
   - intent: ask_tcc_professor
   - action: utter_ask_tcc_professor
   - intent: ask_tcc_professor_change
   - action: utter_ask_tcc_professor_change
-  - intent: ask_tcc_score_or_require
-  - action: utter_ask_tcc_score_or_require
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
 
 - story: tcc-happy-path-2.5
   steps:
@@ -556,17 +556,17 @@ stories:
   - slot_was_set:
     - disciplina: tcc
   - action: utter_ask_tcc_time_span
-  - intent: ask_tcc_score_or_require
-  - action: utter_ask_tcc_score_or_require
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
 
 - story: happy-path-4
   steps:
-  - intent: ask_tcc_score_or_require
+  - intent: ask_tcc_score
     entities:
     - disciplina: tcc
   - slot_was_set:
     - disciplina: tcc
-  - action: utter_ask_tcc_score_or_require
+  - action: utter_ask_tcc_score
   - intent: ask_tcc_assessment
   - action: utter_ask_tcc_assessment
 
@@ -589,27 +589,27 @@ stories:
   - slot_was_set:
     - disciplina: tcc
   - action: utter_ask_tcc
-  - intent: ask_tcc_when_to_start
+  - intent: ask_when_to_start
   - action: utter_ask_tcc_when_to_start
-  - intent: ask_tcc_docs
+  - intent: ask_docs
   - action: utter_ask_tcc_docs
   - intent: ask_tcc_like_group_work
   - action: utter_ask_tcc_like_group_work
 
 - story: tcc-happy-path-7
   steps:
-  - intent: ask_tcc_docs
+  - intent: ask_docs
     entities:
     - disciplina: tcc
   - slot_was_set:
     - disciplina: tcc
   - action: utter_ask_tcc_docs
-  - intent: ask_tcc_when_to_start
+  - intent: ask_when_to_start
   - action: utter_ask_tcc_when_to_start
   - intent: ask_tcc_usual_path
   - action: utter_ask_tcc_usual_path
-  - intent: ask_tcc_score_or_require
-  - action: utter_ask_tcc_score_or_require
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
 
 - story: tcc-happy-path-8
   steps:
@@ -619,10 +619,10 @@ stories:
   - slot_was_set:
     - disciplina: tcc
   - action: utter_ask_tcc_type
-  - intent: ask_tcc_when_to_start
+  - intent: ask_when_to_start
   - action: utter_ask_tcc_when_to_start
-  - intent: ask_tcc_score_or_require
-  - action: utter_ask_tcc_score_or_require
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
   - intent: ask_tcc_assessment
   - action: utter_ask_tcc_assessment
 
@@ -636,8 +636,8 @@ stories:
   - action: utter_ask_tcc_co_advisor
   - intent: ask_tcc_professor_change
   - action: utter_ask_tcc_professor_change
-  - intent: ask_tcc_score_or_require
-  - action: utter_ask_tcc_score_or_require
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
   - intent: ask_tcc_assessment
   - action: utter_ask_tcc_assessment
 
@@ -648,11 +648,11 @@ stories:
     - disciplina: tcc
   - slot_was_set:
     - disciplina: tcc
-  - action: utter_ask_tcc_co_advisor
+  - action: utter_ask_tcc_professor_change
   - intent: ask_tcc_co_advisor
   - action: utter_ask_tcc_co_advisor
-  - intent: ask_tcc_score_or_require
-  - action: utter_ask_tcc_score_or_require
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
   - intent: ask_tcc_assessment
   - action: utter_ask_tcc_assessment
   - intent: ask_tcc_time_span
@@ -668,11 +668,11 @@ stories:
   - action: utter_ask_tcc_time_span
   - intent: ask_tcc_co_advisor
   - action: utter_ask_tcc_co_advisor
-  - intent: ask_tcc_score_or_require
-  - action: utter_ask_tcc_score_or_require
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
   - intent: ask_tcc_assessment
   - action: utter_ask_tcc_assessment
-  - intent: ask_tcc_when_to_start
+  - intent: ask_when_to_start
   - action: utter_ask_tcc_when_to_start
 
 - story: ask-tcc-assessment-2
@@ -683,7 +683,231 @@ stories:
   - slot_was_set:
     - disciplina: tcc
   - action: utter_ask_tcc_assessment
-  - intent: ask_tcc_when_to_start
+  - intent: ask_when_to_start
   - action: utter_ask_tcc_when_to_start
   - intent: ask_tcc_examples
   - action: utter_ask_tcc_examples
+
+- story: ask-training
+  steps:
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+
+- story: ask-traning-require
+  steps:
+    - intent: ask_require
+      entities:
+      - disciplina:
+    - slot_was_set:
+      - disciplina: estagio
+    - action: utter_ask_training_require
+
+- story: ask-tcc-require
+  steps:
+    - intent: ask_require
+      entities:
+      - disciplina:
+    - slot_was_set:
+      - disciplina: tcc
+    - action: utter_ask_tcc_require
+
+- story: ask-training-require
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+  - intent: ask_require
+  - action: utter_ask_training_require
+
+- story: ask-tcc-require
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_tcc
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc
+  - intent: ask_require
+  - action: utter_ask_tcc_require
+
+- story: ask-require-whithout-slot
+  steps:
+    - intent: ask_require
+    - action: utter_ask_curriculum_require
+
+- story: ask-tcc-require-whithout-slot
+  steps:
+    - intent: ask_require
+    - action: utter_ask_curriculum_require
+    - intent: inform
+      entities:
+      - disciplina: tcc
+    - slot_was_set:
+      - disciplina: tcc
+    - action: utter_ask_tcc_require
+
+- story: ask-training-require-whithout-slot
+  steps:
+    - intent: ask_require
+    - action: utter_ask_curriculum_require
+    - intent: inform
+      entities:
+      - disciplina: estagio
+    - slot_was_set:
+      - disciplina: estagio
+    - action: utter_ask_training_require
+
+- story: ask-when-whithout-slot
+  steps:
+    - intent: ask_when_to_start
+    - action: utter_ask_when_to_start
+
+- story: ask-tcc-when-whithout-slot
+  steps:
+    - intent: ask_when_to_start
+    - action: utter_ask_when_to_start
+    - intent: inform
+      entities:
+      - disciplina: tcc
+    - slot_was_set:
+      - disciplina: tcc
+    - action: utter_ask_tcc_when_to_start
+
+- story: ask-training-when-whithout-slot
+  steps:
+    - intent: ask_when_to_start
+    - action: utter_ask_when_to_start
+    - intent: inform
+      entities:
+      - disciplina: estagio
+    - slot_was_set:
+      - disciplina: estagio
+    - action: utter_ask_training_when_to_start
+
+- story: ask-docs-whithout-slot
+  steps:
+    - intent: ask_docs
+    - action: utter_ask_docs
+
+- story: ask-tcc-docs-whithout-slot
+  steps:
+    - intent: ask_docs
+    - action: utter_ask_docs
+    - intent: inform
+      entities:
+      - disciplina: tcc
+    - slot_was_set:
+      - disciplina: tcc
+    - action: utter_ask_tcc_docs
+
+- story: ask-training-docs-whithout-slot
+  steps:
+    - intent: ask_docs
+    - action: utter_ask_docs
+    - intent: inform
+      entities:
+      - disciplina: estagio
+    - slot_was_set:
+      - disciplina: estagio
+    - action: utter_ask_training_docs
+
+- story: ask-training-program-1
+  steps:
+    - intent: ask_training_program
+      entities:
+      - disciplina: estagio
+    - slot_was_set:
+      - disciplina: estagio
+    - action: utter_ask_training_program
+
+- story: ask-training-program-2
+  steps:
+    - intent: ask_training_program
+      entities:
+      - disciplina: estagio
+    - slot_was_set:
+      - disciplina: estagio
+    - action: utter_ask_training_program
+    - intent: ask_docs
+    - action: utter_ask_training_docs
+    - intent: ask_when_to_start
+    - action: utter_ask_training_when_to_start
+
+- story: ask-training-program
+  steps:
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+  - intent: ask_training_program
+  - action: utter_ask_training_program
+
+- story: ask-training-happy-path-1
+  steps:
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+  - intent: ask_when_to_start
+  - action: utter_ask_training_when_to_start
+  - intent: ask_require
+  - action: utter_ask_training_require
+  - intent: ask_docs
+  - action: utter_ask_training_docs
+
+- story: ask-training-happy-path-2
+  steps:
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+  - intent: ask_require
+  - action: utter_ask_training_require
+  - intent: ask_docs
+  - action: utter_ask_training_docs
+
+- story: ask-training-happy-path-3
+  steps:
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+  - intent: ask_docs
+  - action: utter_ask_training_docs
+  - intent: ask_require
+  - action: utter_ask_training_require
+
+
+- story: ask-training-happy-path-4
+  steps:
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+  - intent: ask_docs
+  - action: utter_ask_training_docs
+  - intent: ask_require
+  - action: utter_ask_training_require
+  - intent: ask_training_program
+  - action: utter_ask_training_program

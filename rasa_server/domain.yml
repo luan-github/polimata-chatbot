@@ -3,6 +3,7 @@ intents:
 - affirm
 - ask_como_participar
 - ask_contato
+- ask_docs
 - ask_polimata_address
 - ask_polimata_functions
 - ask_polimata_give_suggestion
@@ -12,20 +13,22 @@ intents:
 - ask_polimata_name
 - ask_polimata_project
 - ask_polimata_technology
+- ask_require
 - ask_tcc
 - ask_tcc_assessment
 - ask_tcc_co_advisor
-- ask_tcc_docs
 - ask_tcc_examples
 - ask_tcc_goal
 - ask_tcc_like_group_work
 - ask_tcc_professor
 - ask_tcc_professor_change
-- ask_tcc_score_or_require
+- ask_tcc_score
 - ask_tcc_time_span
 - ask_tcc_type
 - ask_tcc_usual_path
-- ask_tcc_when_to_start
+- ask_training_activity
+- ask_training_program
+- ask_when_to_start
 - atletica
 - caccal:
     used_entities:
@@ -45,6 +48,7 @@ intents:
 - deny
 - goodbye
 - greet
+- inform
 - neutral_intention
 - out_of_scope
 - polimata_compliment
@@ -69,7 +73,10 @@ slots:
     - type: from_entity
       entity: curso
   disciplina:
-    type: text
+    type: categorical
+    values:
+    - estagio
+    - tcc
     mappings:
     - type: from_entity
       entity: disciplina
@@ -235,21 +242,7 @@ responses:
       Obs.: Você não precisa se matricular no requisito TCC para dar início ao seu Pré-Projeto. Mas precisa ter alcançado 50% dos créditos do curso para poder inscrever-se nesse componente curricular e obter o agendamento da primeira banca.
   utter_ask_tcc_docs:
   - custom:
-      text: |
-        Os principais documentos e links relacionados ao TCC são:
-        Carta de Aceitação de Orientação
-
-        Formulário de Inscrição de TCC
-
-        [Template de Pré\-Projeto](https://www.overleaf.com/latex/templates/template-projeto-tcc-bcc-unifap/qwgjsnnwwxrz.pdf)
-
-        [Regulamento de TCC](https://www2.unifap.br/ccomputacao/files/2013/11/Resolu%c3%a7%c3%a3oDeTCC.pdf)
-
-        [Trabalhos já apresentados](https://www2.unifap.br/ccomputacao/pesquisa-e-desenvolvimento/trabalhos-de-conclusao-de-curso/)
-
-        A Carta de Aceitação de Orientação e Formulário de Inscrição de TCC são encontrados no mesmo PDF do Regulamento de TCC
-
-        Caso estes links estejam desatualizados você também deverá encontrar estes documentos no [blog do Curso](https://www2.unifap.br/ccomputacao/)
+      text: "Os principais documentos e links relacionados ao TCC são:\nCarta de Aceitação de Orientação\n\nFormulário de Inscrição de TCC\n\n[Template de Pré\\-Projeto](https://www.overleaf.com/latex/templates/template-projeto-tcc-bcc-unifap/qwgjsnnwwxrz.pdf)\n\n[Regulamento de TCC](https://www2.unifap.br/ccomputacao/files/2013/11/Resolu%c3%a7%c3%a3oDeTCC.pdf)\n\n[Trabalhos já apresentados](https://www2.unifap.br/ccomputacao/pesquisa-e-desenvolvimento/trabalhos-de-conclusao-de-curso/)\n\nA Carta de Aceitação de Orientação e Formulário de Inscrição de TCC são encontrados no mesmo PDF do Regulamento de TCC\n\nCaso estes links estejam desatualizados você também deverá encontrar estes documentos no [blog do Curso](https://www2.unifap.br/ccomputacao/)\n"
       parse_mode: MarkdownV2
   utter_ask_tcc_goal:
   - text: |-
@@ -263,8 +256,10 @@ responses:
   - text: |-
       Segundo o artigo 4º do Regulamento, o TCC deve consistir em um trabalho individual em uma das linhas de pesquisa do Curso de Ciência da Computação.
       Obs.: O colegiado tem poder para alterar o regulamento e pode permitir projetos de TCC não individuais, dependendo das circunstâncias. É interessante consultar a coordenação para confirmar qual a regra será aplicada.
-  utter_ask_tcc_score_or_require:
-  - text: Segundo o regulamento somente será integralizado o currículo do discente que for aprovado no TCC. Sendo aprovado o discente que obtiver a nota mínima de 7,0 (sete).
+  utter_ask_tcc_score:
+  - text: Segundo o regulamento será aprovado o discente que obtiver a nota mínima de 7,0 (sete).
+  utter_ask_tcc_require:
+  - text: Segundo o regulamento somente será integralizado o currículo do discente que for aprovado no TCC.
   utter_ask_tcc_type:
   - text: |-
       O TCC deve ser um trabalho em uma das linhas de pesquisa do Curso de Ciência da Computação. Apresentado na forma de uma monografia, ou de artigo científico completo publicado em periódico indexado ou conferência com Qualis CAPES.
@@ -299,6 +294,38 @@ responses:
       Mínimo de 30 (trinta) e máximo de 40 (quarenta) minutos para a apresentação oral pelo candidato;
       30 (trinta) minutos de arguição pelos três membros da banca examinadora;
       10 (dez) minutos para avaliação e deliberação da banca sobre o trabalho, divulgação do conceito (aprovado ou reprovado) e encerramento.
+  utter_ask_training_activity:
+  - custom:
+      text: "Segundo regulamentação da universidade, o estágio constitui “um modo especial de capacitação em serviço”, sendo neste caso, as atividades desenvolvidas no campo da Ciência da Computação\\.\n\nSão reconhecidas duas modalidades de estágio:\nI \\- O Estágio Supervisionado Obrigatório: que só pode ser realizado a partir do cumprimento de 50\\% dos créditos do curso\\.\nII \\- O Estágio Supervisionado Não Obrigatório: que pode ser creditado como Atividade Complementar \\(AC\\)\\.\n\nFonte: [Blog do Curso](https://www2.unifap.br/ccomputacao/pesquisa-e-desenvolvimento/estagio-obrigatorio/)\n"
+      parse_mode: MarkdownV2
+  utter_ask_training_program:
+  - text: |
+      Atualmente atividades como: projeto de extensão, projeto de pesquisa, monitoria, escritório modelo do Curso de Ciência da Computação, podem ser consideradas como atividades de estágio, uma vez que essas atendem regulamentação da universidade.
+
+      Mas alguns exemplos de instituições ou empresas onde estudantes do curso já conseguiram estágios são: Tribunal Regional do Trabalho, Ministério Público do Estado do Amapá, Tribunal de Justiça do Estado do Amapá, POP-AP RNP, Sesc Amapá, Banm Criação de Softwares, A3Data, MSB Tecnologia, Linformatica e CRM TI LTDA
+  utter_ask_training_require:
+  - custom:
+      text: "Estudantes que puderem comprovar atividade profissional na área de seu curso como empregados, autônomos ou empresários, há pelo menos um ano, podem creditar o Estágio Supervisionado Obrigatório, formalizando o APROVEITAMENTO DE ESTÁGIO\\.\n\nO processo de formalização é descrito nesta [página do blog do curso](https://www2.unifap.br/ccomputacao/pesquisa-e-desenvolvimento/estagio-obrigatorio/)\n"
+      parse_mode: MarkdownV2
+  utter_ask_training_when_to_start:
+  - custom:
+      text: "O estágio supervisionado obrigatório no Curso de Ciência da Computação, só poderá ser realizado a partir do cumprimento de 50\\% dos créditos do curso\\.\n\nFonte: [Blog do Curso](https://www2.unifap.br/ccomputacao/pesquisa-e-desenvolvimento/estagio-obrigatorio/)\n"
+      parse_mode: MarkdownV2
+  utter_ask_training_docs:
+  - custom:
+      text: "A Resolução de Estágio Supervisionado está passando por atualizações, por isso é recomendado verificar a documentação de estágio diretamente no [blog do curso](https://www2.unifap.br/ccomputacao/pesquisa-e-desenvolvimento/estagio-obrigatorio/)\n"
+      parse_mode: MarkdownV2
+      reply_markup:
+        inline_keyboard:
+        - - text: Blog do Curso
+            url: https://www2.unifap.br/ccomputacao/pesquisa-e-desenvolvimento/estagio-obrigatorio/
+    channel: telegram
+  utter_ask_curriculum_require:
+  - text: Desculpe, mas qual componente curricular você deseja saber se é obrigatório?
+  utter_ask_when_to_start:
+  - text: Desculpe, mas qual  disciplina ou componente curricular você deseja saber quando pode começar?
+  utter_ask_docs:
+  - text: Desculpe, mas de qual disciplina ou componente curricular você deseja a documentação?
   utter_out_of_scope:
   - text: Eu não tenho certeza se entendi. Talvez você precise escrever sua solicitação com outras palavras, ou eu não posso atendê-la pois ela está fora do propósito do meu projeto.
 actions:

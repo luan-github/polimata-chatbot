@@ -20,6 +20,7 @@ nlu:
     - boatarde
     - olá
     - oi, tudo bem?
+    - oi de novo
     - tem alguém ai?
 - intent: goodbye
   examples: |
@@ -70,6 +71,14 @@ nlu:
     - obg
     - tks
     - vlw
+- intent: inform
+  examples: |
+    - [estágio](disciplina)
+    - [tcc]disciplina
+    - O [tcc](disciplina)
+    - O [estágio](disciplina)
+    - A disciplina de [estagio](disciplina), por favor
+    - [calculo](disciplina)
 - intent: centro_academico
   examples: |
     - O que é o [centro academico](entidade)?
@@ -83,7 +92,6 @@ nlu:
     - Qual a atribuição do [centro academico](entidade)?
     - Quais são as atividades do [centro academico](entidade)?
     - o que vc sabe sobre o [centro academico](entidade)?
-    - o que é o [centro academico](entidade)?
     - o que é o [centro academico](entidade)?
 - intent: caccal/ask_o_que_e_caccal
   examples: |
@@ -356,12 +364,12 @@ nlu:
 - intent: ask_tcc
   examples: |
     - o que vc tem sobre [tcc](disciplina)?
-    - O que você sabe sobre [Trabalho de Conclusão de curso]{"entity": "disciplina", "value": "tcc"}?
-    - O que é o [Trabalho de Conclusão]{"entity": "disciplina", "value": "tcc"}?
+    - O que você sabe sobre [Trabalho de Conclusão de curso](disciplina)?
+    - O que é o [Trabalho de Conclusão](disciplina)?
     - O que é um [tcc](disciplina)?
     - o que é basicamente um [tcc](disciplina)?
     - como é o [tcc](disciplina) de [computação](curso)?
-    - então, o que é [trabalho de conclusão de curso]{"entity": "disciplina", "value": "tcc"}?
+    - então, o que é [trabalho de conclusão de curso](disciplina)?
     - então, o que é um [trabalho de conclsão de curso](disciplina)?
     - o que é um [tcc](disciplina)?
     - o que vc pode me falar sobre o [tcc](disciplina)?
@@ -397,52 +405,6 @@ nlu:
     - eu tenho que me matricular no [tcc](disciplina)?
     - primeiro eu tenho que fazer meu pré-projeto?
     - primeiro eu faço o pré-projeto?
-- intent: ask_tcc_docs
-  examples: |
-    - Vc tem a documentação de [tcc](disciplina)?
-    - Vc tem a documentação?
-    - Me envia o regulamento de [tcc](disciplina)
-    - Me envia o regulamento
-    - que regulamento é esse?
-    - Me envia os documentos necessários para dar entrada no [tcc](disciplina)
-    - Me envia os documentos necessários
-    - Me envia a carta de aceite
-    - Me envia o formulário de inscrição de [tcc](disciplina)
-    - Me envia o formulário de inscrição
-    - Me envia o formulário de [tcc](disciplina)
-    - Me envia o formulário
-    - manda os documentos do [tcc](disciplina)
-    - mande-me os documentos
-    - preciso destes documentos
-    - preciso destes docs
-    - os docs do [tcc](disciplina)?
-    - quais os docs do [tcc](disciplina)?
-    - me envia os pdfs de [tcc](disciplina)
-    - me envia o pdf do regulamento de [tcc](disciplina)
-    - me envia o pdf do regulamento
-    - Me envia o modelo de pré projeto
-    - Me envia o modelo de projeto do [Trabalho de Conclusão de curso]{"entity": "disciplina", "value": "tcc"}
-    - preciso dos links para os documentos do [Trabalho de Conclusão]{"entity": "disciplina", "value": "tcc"}
-    - preciso do link para a carta de aceite
-    - Quais documentos eu preciso para dar entrada no [tcc](disciplina)?
-    - Quais documentos eu preciso para dar entrada?
-    - Que documentos são necessários para dar entrada no [tcc](disciplina)?
-    - Que documentos são necessários para dar entrada?
-    - Quais documentos eu vou precisar?
-    - Quais documentos eu preciso para iniciar o [tcc](disciplina)?
-    - Onde encontro a documentação de [tcc](disciplina)?
-    - que documentos eu preciso para protocolar o [tcc](disciplina) na coordenação?
-    - e quais documentos eu preciso para me increver no [tcc](disciplina)?
-    - e quais documentos eu preciso para me increver?
-    - o que eu preciso ler sobre [tcc](disciplina)?
-    - o que é necessário ler sobre [tcc](disciplina)?
-    - quais sãos os docs do [tcc](disciplina)?
-    - quais sãos os docs que precisa levar na coordenação?
-    - quais sãos os documentos do [tcc](disciplina)?
-    - quais sãos os documentos do [tcc](disciplina) que precisa levar na coordenação?
-    - quais sãos os documentos que precisa levar na coordenação?
-    - quais sãos os pdfs do [tcc](disciplina)?
-
 - intent: ask_tcc_goal
   examples: |
     - Qual a finalidade do [tcc](disciplina)?
@@ -453,27 +415,18 @@ nlu:
 - intent: ask_tcc_like_group_work
   examples: |
     - O [tcc](disciplina) é individual?
-    - O [Trabalho de Conclusão]{"entity": "disciplina", "value": "tcc"} pode ser em grupo?
+    - O [Trabalho de Conclusão](disciplina) pode ser em grupo?
     - Pode fazer o [tcc](disciplina) em dupla?
     - Pode fazer em dupla?
-    - Pode fazer o [Trabalho de Conclusão de curso]{"entity": "disciplina", "value": "tcc"} em dupla?
+    - Pode fazer o [Trabalho de Conclusão de curso](disciplina) em dupla?
     - tem que fazer sozinho?
     - é obrigatório fazer só?
     - é obrigado fazer sozinho?
     - Pode fazer o [tcc](disciplina) em trio?
     - pode fazer o [tcc](disciplina) em grupo de três?
-- intent: ask_tcc_score_or_require
+- intent: ask_tcc_score
   examples: |
-    - O [tcc](disciplina) é obrigatório?
-    - Ele é obrigatório?
-    - Esse trabalho é obrigatório
-    - O [tcc](disciplina) reprova?
-    - O [Trabalho de Conclusão]{"entity": "disciplina", "value": "tcc"} reprova?
-    - O que acontece se eu não fizer o [tcc](disciplina)?
-    - O que acontece se eu não fizer?
-    - Tem que fazer o [tcc](disciplina)?
-    - Tem mesmo que fazer esse trabalho?
-    - Qual a nota mínima em um [Trabalho de Conclusão de curso]{"entity": "disciplina", "value": "tcc"}?
+    - Qual a nota mínima em um [Trabalho de Conclusão de curso](disciplina)?
     - Qual a nota mínima?
     - qual a nota minima no [tcc](disciplina)?
     - Qual a pontuação mínima em um [tcc](disciplina)?
@@ -503,27 +456,6 @@ nlu:
     - qual pode ser o tema da pesquisa?
     - Que tema eu posso escolher para o meu pré-projeto?
     - O que eu posso pesquisar no meu [tcc](disciplina)?
-- intent: ask_tcc_when_to_start
-  examples: |
-    - Quando a gente pode fazer o [tcc](disciplina)?
-    - quando eu vou poder fazer o [tcc](disciplina)?
-    - Quando pode apresentar o [tcc](disciplina)?
-    - e quando pode apresentar?
-    - A partir de quando pode apresentar o [tcc](disciplina)?
-    - A partir de quando pode apresentar?
-    - Quem pode apresentar o [tcc](disciplina)?
-    - Quem pode apresentar?
-    - Quando eu devo começar meu [tcc](disciplina)?
-    - E quando eu devo começar?
-    - Quando posso iniciar meu [tcc](disciplina)?
-    - Quando posso iniciar?
-    - Quando posso começar meu [tcc](disciplina)?
-    - e quando posso eu começar?
-    - quando se deve iniciar o [tcc](disciplina)?
-    - quando se deve iniciar?
-    - A partir de que semestre pode fazer o [tcc](disciplina)?
-    - A partir de que semestre pode dar entrada no [tcc](disciplina)?
-    - mas quando eu posso começar?
 - intent: ask_tcc_professor
   examples: |
     - E como eu escolho meu orientador?
@@ -565,7 +497,6 @@ nlu:
     - Que professor eu posso escolher para supervisionar meu [tcc](disciplina)?
     - Que professor eu posso escolher para me orientar?
     - Que professor eu posso escolher para me orientar no [tcc](disciplina)?
-
 - intent: ask_tcc_professor_change
   examples: |
     - Posso trocar de orientador?
@@ -621,7 +552,7 @@ nlu:
     - tem trabalhos de quem já se formou?
     - tem exemplos de monografias para estudar?
     - queria ver as monografias de quem já se formou
-    - Quais [tccs]{"entity": "disciplina", "value": "tcc"} já foram apresentados?
+    - Quais [tccs](disciplina) já foram apresentados?
 - intent: ask_tcc_time_span
   examples: |
     - Quanto dura uma apresentação de [tcc](disciplina)?
@@ -631,6 +562,147 @@ nlu:
     - Quanto tempo um aluno tem para apresentar o [tcc](disciplina)?
     - quanto tempo dura uma apresentação de [tcc](disciplina)?
     - quanto tempo dura uma apresentação?
+- intent: ask_training_activity
+  examples: |
+    - O que é o [estagio](disciplina)?
+    - O que voce tem sobre [estagio](disciplina)?
+    - precisamos falar sobre [estágio](disciplina)
+    - O que você pode explicar sobre [estagio](disciplina)?
+    - O que vc sabe sobre [estágio](disciplina)?
+    - o que é [estágio](disciplina)?
+    - o que é a disciplina de [estágio](disciplina)?
+    - como é a disciplina de [estágio](disciplina)?
+    - me explica como funciona o [estágio](disciplina)
+    - o que é importante saber sobre o [estagio](disciplina)?
+    - o q vc sabe sobre [estágio]{"entity": "disciplina", "value": "estagio"}?
+- intent: ask_training_program
+  examples: |
+    - onde encontro vagas?
+    - onde posso cumprir essa disciplina?
+    - onde posso cumprir esse requisito?
+    - onde posso cumprir essa matéria?
+    - Onde eu posso  [estagiar](disciplina)?
+    - Em que lugares eu posso  [estagiar](disciplina)?
+    - Você pode indicar lugares para [estágio](disciplina)?
+    - Alguma sugestão de lugares para  [estagiar](disciplina)?
+    - Onde os acadêmicos costumam  [estagiar](disciplina)?
+    - Onde dá para  [estagiar](disciplina)?
+    - Onde encontro um [estágio](disciplina)?
+    - onde encontro um lugar para  [estagiar](disciplina)?
+    - que lugares você indica para cumprir os [estágios](disciplina)?
+    - onde dá para  [estagiar](disciplina) nessa cidade?
+    - Preciso de indicações de [estágio](disciplina)
+    - Não tenho idéia de onde  [estagiar](disciplina)
+    - Não sei onde  [estagiar](disciplina)
+    - Como eu faço para arranjar um [estágio](disciplina)
+    - Não encontro vagas para [estagio](disciplina)
+    - onde encontro vagas para [estagio](disciplina)?
+- intent: ask_require
+  examples: |
+    - O [tcc](disciplina) é obrigatório?
+    - Ele é obrigatório?
+    - quem é obrigado a fazer?
+    - mas eu sou obridago a fazer?
+    - Esse trabalho é obrigatório
+    - O [tcc](disciplina) reprova?
+    - O [Trabalho de Conclusão](disciplina) reprova?
+    - O que acontece se eu não fizer o [tcc](disciplina)?
+    - O que acontece se eu não fizer?
+    - Tem que fazer o [tcc](disciplina)?
+    - Tem mesmo que fazer esse trabalho?
+    - é obrigatório?
+    - o [estagio](disciplina) é obrigatório?
+    - Eu já trabalho na área de ti, preciso [estagiar]?
+    - Quem já trabalha precisa [estagiar](disciplina)?
+    - Quem já tem empresa precisar [estagiar](disciplina)?
+    - Eu tenho uma empresa, preciso [estagiar](disciplina)?
+    - O [estágio](disciplina) é obrigatório para quem já trabalha?
+    - Quem é isento do [estágio](disciplina)?
+    - Quem não precisa [estagiar](disciplina)?
+    - Todos precisam [estagiar](disciplina)?
+    - Todo mundo precisa [estagiar](disciplina)?
+    - eu já trabalho na área
+    - o [estágio](disciplina) é obrigatório?
+- intent: ask_when_to_start
+  examples: |
+    - Quando a gente pode fazer o [tcc](disciplina)?
+    - quando eu vou poder fazer o [tcc](disciplina)?
+    - Quando pode apresentar o [tcc](disciplina)?
+    - e quando pode apresentar?
+    - A partir de quando pode apresentar o [tcc](disciplina)?
+    - A partir de quando pode apresentar?
+    - Quem pode apresentar o [tcc](disciplina)?
+    - Quem pode apresentar?
+    - Quando eu devo começar meu [tcc](disciplina)?
+    - E quando eu devo começar?
+    - Quando posso iniciar meu [tcc](disciplina)?
+    - Quando posso iniciar?
+    - Quando posso começar meu [tcc](disciplina)?
+    - quando se deve iniciar o [tcc](disciplina)?
+    - quando se deve iniciar?
+    - A partir de que semestre pode fazer o [tcc](disciplina)?
+    - A partir de que semestre pode dar entrada no [tcc](disciplina)?
+    - mas quando eu posso começar?
+    - Quando eu posso começar a [estagiar](disciplina)?
+    - Quando eu tenho que começar a fazer [estágio](disciplina)?
+    - Quando eu devo iniciar o [estágio](disciplina)?
+    - Quando eu posso começar
+    - quando eu posso começar?
+- intent: ask_docs
+  examples: |
+    - Vc tem a documentação de [tcc](disciplina)?
+    - Vc tem a documentação?
+    - Me envia o regulamento de [tcc](disciplina)
+    - Me envia o regulamento
+    - que regulamento é esse?
+    - Me envia os documentos necessários para dar entrada no [tcc](disciplina)
+    - Me envia os documentos necessários
+    - Me envia a carta de aceite
+    - Me envia o formulário de inscrição de [tcc](disciplina)
+    - Me envia o formulário de inscrição
+    - Me envia o formulário de [tcc](disciplina)
+    - Me envia o formulário
+    - manda os documentos do [tcc](disciplina)
+    - mande-me os documentos
+    - preciso destes documentos
+    - preciso destes docs
+    - os docs do [tcc](disciplina)?
+    - quais os docs do [tcc](disciplina)?
+    - me envia os pdfs de [tcc](disciplina)
+    - me envia o pdf do regulamento de [tcc](disciplina)
+    - me envia o pdf do regulamento
+    - Me envia o modelo de pré projeto
+    - Me envia o modelo de projeto do [Trabalho de Conclusão de curso](disciplina)
+    - preciso dos links para os documentos do [Trabalho de Conclusão](disciplina)
+    - preciso do link para a carta de aceite
+    - Quais documentos eu preciso para dar entrada no [tcc](disciplina)?
+    - Quais documentos eu preciso para dar entrada?
+    - Que documentos são necessários para dar entrada no [tcc](disciplina)?
+    - Que documentos são necessários para dar entrada?
+    - Quais documentos eu vou precisar?
+    - Quais documentos eu preciso para iniciar o [tcc](disciplina)?
+    - Onde encontro a documentação de [tcc](disciplina)?
+    - que documentos eu preciso para protocolar o [tcc](disciplina) na coordenação?
+    - e quais documentos eu preciso para me increver no [tcc](disciplina)?
+    - e quais documentos eu preciso para me increver?
+    - o que eu preciso ler sobre [tcc](disciplina)?
+    - o que é necessário ler sobre [tcc](disciplina)?
+    - quais sãos os docs do [tcc](disciplina)?
+    - quais sãos os docs que precisa levar na coordenação?
+    - quais sãos os documentos do [tcc](disciplina)?
+    - quais sãos os documentos do [tcc](disciplina) que precisa levar na coordenação?
+    - quais sãos os documentos que precisa levar na coordenação?
+    - quais sãos os pdfs do [tcc](disciplina)?
+    - Qual a documentação de [estágio](disciplina)?
+    - Quais os documentos de [estágio](disciplina)?
+    - Me envia os pdfs de [estágio](disciplina)?
+    - vc tem o link para o termo de compromisso?
+    - vc tem o modelo do plano de [estágio](disciplina)?
+    - que documentos eu preciso
+    - me manda a documentação
+    - quais os documentos
+    - quais os documentos de [estagio](disciplina)
+    - qual é a documentação?
 - intent: out_of_scope
   examples: |
     - vc sabe contar piadas?
@@ -690,13 +762,31 @@ nlu:
     - AAACC
     - A.A.A.C.C
     - caótica
+- synonym: estagio
+  examples: |
+    - estágio
+    - estágios
+    - estagios
+    - estagiar
+    - stagio
+    - stágio
+    - estgio
+    - estago
 - synonym: tcc
   examples: |
-    - Trabalho de Conclusão de curso
-    - Trabalho de Conclusão
     - trabalho de conclusão de curso
-    - tccs
+    - trabalho de conclusao de curso
     - trabalho de conclusão
+    - trabalho de conclusao
+    - tccs
+    - trbalho de conclusão
+    - trbalho de conclusao
+    - trabaho de conclusão
+    - trabaho de conclusao
+    - trabaho de conclsão
+    - trabaho de conclsao
+    - trabalo de conclusão
+    - trabalo de conclusao
 - synonym: computação
   examples: |
     - ciência da computação
