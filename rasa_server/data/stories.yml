@@ -1,4 +1,4 @@
-version: "3.1"
+neutralversion: "3.1"
 
 stories:
 
@@ -7,210 +7,207 @@ stories:
   - intent: test
   - action: action_hello_world
 
-- story: valide_interactive_story_1
+- story: ask-caccal-1
   steps:
-  - intent: centro_academico
-    entities:
-    - entidade: centro acadêmico
-  - slot_was_set:
-    - entidade: centro acadêmico
-  - action: utter_centro_academico
-  - intent: caccal
-    entities:
-    - entidade: centro academico
-    - curso: computação
-  - slot_was_set:
-    - entidade: centro academico
-  - slot_was_set:
-    - curso: computação
-  - action: utter_caccal
-  - intent: ask_como_participar
-  - action: utter_caccal_ask_como_participar
+  - intent: ask_entity
+  - or:
+    - slot_was_set:
+      - entidade: caccal
+    - slot_was_set:
+      - entidade: centro academico
+  - action: utter_ask_caccal
 
-- story: como participar do centro acadêmico
+- story: ask-caccal-and-get-in-1
   steps:
-  - intent: centro_academico
-    entities:
-    - entidade: centro academico
-  - slot_was_set:
-    - entidade: centro academico
-  - action: utter_centro_academico
-  - intent: caccal
-    entities:
-    - entidade: centro academico
-    - curso: computação
-  - slot_was_set:
-    - entidade: centro academico
-  - slot_was_set:
-    - curso: computação
-  - action: utter_caccal
-  - intent: ask_como_participar
-  - action: utter_caccal_ask_como_participar
+  - intent: ask_entity
+  - or:
+    - slot_was_set:
+      - entidade: caccal
+    - slot_was_set:
+      - entidade: centro academico
+  - action: utter_ask_caccal
+  - intent: ask_how_get_in
+  - action: utter_ask_caccal_how_get_in
 
-- story: como participar da caotica
+- story: ask-contact-caccal-1
   steps:
-  - intent: atletica
-    entities:
-    - entidade: atletica
-  - slot_was_set:
-    - entidade: atletica
-  - action: utter_atletica
-  - intent: caotica
-    entities:
-    - entidade: atletica
-    - curso: computação
-  - slot_was_set:
-    - entidade: atletica
-  - slot_was_set:
-    - curso: computação
-  - action: utter_caotica
-  - intent: ask_como_participar
-  - action: utter_caotica_ask_como_participar
+  - intent: ask_contact
+  - action: utter_ask_contact
+  - intent: inform
+  - or:
+    - slot_was_set:
+      - entidade: caccal
+    - slot_was_set:
+      - entidade: centro academico
+  - action: utter_ask_caccal_contact
 
-- story: pedindo contato do centro acadêmico
+- story: ask-contact-caccal-2
   steps:
-  - intent: ask_contato
-    entities:
-    - entidade: centro acadêmico
-    - curso: computação
-  - slot_was_set:
-    - entidade: centro acadêmico
-  - slot_was_set:
-    - curso: computação
-  - action: utter_caccal_ask_contato
+  - intent: ask_contact
+  - or:
+    - slot_was_set:
+      - entidade: caccal
+    - slot_was_set:
+      - entidade: centro academico
+  - action: utter_ask_caccal_contact
 
-- story: pedindo contato da atletica de computação 1
+- story: how-get-in-caccal-1
   steps:
-  - intent: ask_contato
-    entities:
-    - entidade: atletica
-    - curso: computação
-  - slot_was_set:
-    - entidade: atletica
-  - slot_was_set:
-    - curso: computação
-  - action: utter_caotica_ask_contato
+  - intent: ask_how_get_in
+  - or:
+    - slot_was_set:
+      - entidade: caccal
+    - slot_was_set:
+      - entidade: centro academico
+  - action: utter_ask_caccal_how_get_in
 
-- story: solicitando contato atlética 2
+- story: how-get-in-caccal-2
   steps:
-  - intent: ask_contato
-    entities:
-    - entidade: atletica
-  - slot_was_set:
-    - entidade: atletica
-  - action: utter_caotica_ask_contato
+  - intent: ask_how_get_in
+  - action: utter_ask_how_get_in
+  - intent: inform
+  - or:
+    - slot_was_set:
+      - entidade: caccal
+    - slot_was_set:
+      - entidade: centro academico
+  - action: utter_ask_caccal_how_get_in
 
-- story: solicitando contato caotica
+- story: ask-caotica-1
   steps:
-  - intent: ask_contato
-    entities:
-    - entidade: caotica
-  - slot_was_set:
-    - entidade: caotica
-  - action: utter_caotica_ask_contato
+  - intent: ask_entity
+  - or:
+    - slot_was_set:
+      - entidade: atletica
+    - slot_was_set:
+      - entidade: caotica
+  - action: utter_ask_caotica
 
-- story: solicitando contato caccal
+- story: ask-caotica-tax-1
   steps:
-  - intent: ask_contato
-    entities:
-    - entidade: CACCAL
-  - slot_was_set:
-    - entidade: CACCAL
-  - action: utter_caccal_ask_contato
+  - intent: ask_caotica_tax
+  - action: utter_ask_caotica_tax
 
-- story: solicitando contato da atlética e centro acadêmico 1
+- story: ask-caotica-tax-2
   steps:
-  - intent: ask_contato
-    entities:
-    - entidade: atletica
-    - entidade: centro acadêmico
-  - slot_was_set:
-    - entidade: centro acadêmico
-  - action: utter_caccal_ask_contato
-  - action: utter_caotica_ask_contato
+  - intent: ask_caotica_tax
+  - or:
+    - slot_was_set:
+        - entidade: atletica
+    - slot_was_set:
+        - entidade: caotica
+  - action: utter_ask_caotica_tax
 
-- story: solicitando contato da atlética e centro acadêmico 2
+- story: ask-caotica-contact
   steps:
-  - intent: ask_contato
-    entities:
-    - entidade: caotica
-    - entidade: caccal
-  - slot_was_set:
-    - entidade: caccal
-  - action: utter_caccal_ask_contato
-  - action: utter_caotica_ask_contato
+  - intent: ask_contact
+  - or:
+    - slot_was_set:
+      - entidade: atletica
+    - slot_was_set:
+      - entidade: caotica
+  - action: utter_ask_caotica_contact
 
-- story: solicitando contato atlética e centro acadêmico 3
+- story: how-get-in-caotica-1
   steps:
-  - intent: ask_contato
-    entities:
-    - entidade: centro acadêmico
-    - entidade: caotica
-  - slot_was_set:
-    - entidade: caotica
-  - action: utter_caccal_ask_contato
-  - action: utter_caotica_ask_contato
+  - intent: ask_how_get_in
+  - action: utter_ask_how_get_in
+  - intent: inform
+  - or:
+    - slot_was_set:
+      - entidade: atletica
+    - slot_was_set:
+      - entidade: caotica
+  - action: utter_ask_caotica_how_get_in
 
-- story: solicitando contato atlética e centro academico 3
+- story: how-get-in-caotica-2
   steps:
-  - intent: ask_contato
-    entities:
-    - entidade: atletica
-    - entidade: centro acadêmico
-    - curso: computação
-  - slot_was_set:
-    - entidade: centro acadêmico
-  - slot_was_set:
-    - curso: computação
-  - action: utter_caccal_ask_contato
-  - action: utter_caotica_ask_contato
+  - intent: ask_how_get_in
+  - or:
+    - slot_was_set:
+      - entidade: atletica
+    - slot_was_set:
+      - entidade: caotica
+  - action: utter_ask_caotica_how_get_in
 
-- story: solicitando como participar do caccal
+- story: caotica-get-in-happy-path
   steps:
-  - intent: ask_como_participar
-    entities:
-    - entidade: CACCAL
-  - slot_was_set:
-    - entidade: CACCAL
-  - action: utter_caccal_ask_como_participar
+  - intent: ask_how_get_in
+  - or:
+    - slot_was_set:
+      - entidade: atletica
+    - slot_was_set:
+      - entidade: caotica
+  - action: utter_ask_caotica_how_get_in
+  - intent: ask_caotica_tax
+  - action: utter_ask_caotica_tax
+  - intent: ask_contact
+  - action: utter_ask_caotica_contact
 
-- story: solicitando como participar da caotica
+- story: caotica-happy-path-2
   steps:
-  - intent: ask_como_participar
-    entities:
-    - entidade: caotica
-  - slot_was_set:
-    - entidade: caotica
-  - action: utter_caotica_ask_como_participar
+  - intent: ask_entity
+  - or:
+    - slot_was_set:
+      - entidade: atletica
+    - slot_was_set:
+      - entidade: caotica
+  - action: utter_ask_caotica
+  - intent: ask_how_get_in
+  - action: utter_ask_caotica_how_get_in
+  - intent: ask_contact
+  - action: utter_ask_caccal_contact
 
-- story: como participar da atlética de computação
+- story: ask-caotica-get-in-and-tax
   steps:
-  - intent: ask_como_participar
-    entities:
-    - entidade: atletica
-    - curso: computação
-  - slot_was_set:
-    - entidade: atletica
-  - slot_was_set:
-    - curso: computação
-  - action: utter_caotica_ask_como_participar
+  - intent: ask_entity
+  - or:
+    - slot_was_set:
+      - entidade: atletica
+    - slot_was_set:
+      - entidade: caotica
+  - action: utter_ask_caotica
+  - intent: ask_contact
+  - action: utter_ask_caotica_contact
+  - intent: ask_how_get_in
+  - action: utter_ask_caotica_how_get_in
+  - intent: ask_caotica_tax
+  - action: utter_ask_caotica_tax
 
-- story: informações basicas da caótica
+- story: ask-caotica-get-in-tax-contact
   steps:
-  - intent: caotica
-    entities:
-    - entidade: caotica
+  - intent: ask_entity
+  - or:
+    - slot_was_set:
+      - entidade: atletica
+    - slot_was_set:
+      - entidade: caotica
+  - action: utter_ask_caotica
+  - intent: ask_how_get_in
+  - action: utter_ask_caotica_how_get_in
+  - intent: ask_caotica_tax
+  - action: utter_ask_caotica_tax
+  - intent: ask_contact
+  - action: utter_ask_caotica_contact
+
+- story: ask-how-get-in-without-slot
+  steps:
+  - intent: ask_how_get_in
+  - action: utter_ask_how_get_in
+
+- story: ask-contact-without-slot
+  steps:
+  - intent: ask_contact
+  - action: utter_ask_contact
+
+- story: ask-how-get-in-polimata-project
+  steps:
+  - intent: ask_how_get_in
+  - action: utter_ask_how_get_in
+  - intent: inform
   - slot_was_set:
-    - entidade: caotica
-  - action: utter_caotica
-  - intent: caotica
-  - action: utter_caotica
-  - intent: ask_como_participar
-  - action: utter_caotica_ask_como_participar
-  - intent: caotica
-  - action: utter_caotica
-  - intent: ask_contato
-  - action: utter_caotica_ask_contato
+    - entidade: null
+  - action: utter_ask_polimata_how_get_in
 
 - story: ask-polimata-name
   steps:
@@ -242,6 +239,284 @@ stories:
   - intent: ask_polimata_functions
   - action: utter_ask_polimata_functions
 
+- story: ask-polimata-what-more-caccal-1
+  steps:
+  - intent: ask_polimata_functions
+  - or:
+    - slot_was_set:
+      - entidade: caccal
+    - slot_was_set:
+      - entidade: centro academico
+  - action: utter_ask_what_more_caccal
+  - intent: ask_entity
+  - action: utter_ask_caccal
+
+- story: ask-polimata-what-more-caccal-2
+  steps:
+  - intent: ask_polimata_functions
+  - or:
+    - slot_was_set:
+      - entidade: caccal
+    - slot_was_set:
+      - entidade: centro academico
+  - action: utter_ask_what_more_caccal
+  - intent: ask_how_get_in
+  - action: utter_ask_caccal_how_get_in
+
+- story: ask-polimata-what-more-caccal-3
+  steps:
+  - intent: ask_polimata_functions
+  - or:
+    - slot_was_set:
+      - entidade: caccal
+    - slot_was_set:
+      - entidade: centro academico
+  - action: utter_ask_what_more_caccal
+  - intent: ask_contact
+  - action: utter_ask_caccal_contact
+
+- story: ask-polimata-what-more-caotica-1
+  steps:
+  - intent: ask_polimata_functions
+  - or:
+    - slot_was_set:
+      - entidade: atletica
+    - slot_was_set:
+      - entidade: caotica
+  - action: utter_ask_what_more_caotica
+  - intent: ask_entity
+  - action: utter_ask_caotica
+
+- story: ask-polimata-what-more-caotica-2
+  steps:
+  - intent: ask_polimata_functions
+  - or:
+    - slot_was_set:
+      - entidade: atletica
+    - slot_was_set:
+      - entidade: caotica
+  - action: utter_ask_what_more_caotica
+  - intent: ask_how_get_in
+  - action: utter_ask_caotica_how_get_in
+
+- story: ask-polimata-what-more-caotica-3
+  steps:
+  - intent: ask_polimata_functions
+  - or:
+    - slot_was_set:
+      - entidade: atletica
+    - slot_was_set:
+      - entidade: caotica
+  - action: utter_ask_what_more_caotica
+  - intent: ask_caotica_tax
+  - action: utter_ask_caotica_tax
+
+- story: ask-polimata-what-more-caotica-4
+  steps:
+  - intent: ask_polimata_functions
+  - or:
+    - slot_was_set:
+      - entidade: atletica
+    - slot_was_set:
+      - entidade: caotica
+  - action: utter_ask_what_more_caotica
+  - intent: ask_contact
+  - action: utter_ask_caotica_contact
+
+- story: ask-polimata-what-more-tcc-1
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+
+- story: ask-polimata-what-more-tcc-2
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_tcc
+  - action: utter_ask_tcc
+
+- story: ask-polimata-what-more-tcc-3
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_tcc_assessment
+  - action: utter_ask_tcc_assessment
+
+- story: ask-polimata-what-more-tcc-4
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_tcc_co_advisor
+  - action: utter_ask_tcc_co_advisor
+
+- story: ask-polimata-what-more-tcc-5
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_tcc_examples
+  - action: utter_ask_tcc_examples
+
+- story: ask-polimata-what-more-tcc-6
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_tcc_goal
+  - action: utter_ask_tcc_goal
+
+- story: ask-polimata-what-more-tcc-7
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_tcc_like_group_work
+  - action: utter_ask_tcc_like_group_work
+
+- story: ask-polimata-what-more-tcc-8
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_tcc_professor
+  - action: utter_ask_tcc_professor
+
+- story: ask-polimata-what-more-tcc-9
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_tcc_professor_change
+  - action: utter_ask_tcc_professor_change
+
+- story: ask-polimata-what-more-tcc-10
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
+
+- story: ask-polimata-what-more-tcc-11
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_tcc_time_span
+  - action: utter_ask_tcc_time_span
+
+- story: ask-polimata-what-more-tcc-12
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_tcc_type
+  - action: utter_ask_tcc_type
+
+- story: ask-polimata-what-more-tcc-13
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_tcc_usual_path
+  - action: utter_ask_tcc_usual_path
+
+- story: ask-polimata-what-more-tcc-14
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_when_to_start
+  - action: utter_ask_tcc_when_to_start
+
+- story: ask-polimata-what-more-tcc-15
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_require
+  - action: utter_ask_tcc_require
+
+- story: ask-polimata-what-more-tcc-16
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+  - intent: ask_docs
+  - action: utter_ask_tcc_docs
+
+- story: ask-polimata-what-more-training-1
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_what_more_training
+
+- story: ask-polimata-what-more-training-2
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_what_more_training
+  - intent: ask_training_activity
+  - action: utter_ask_training_activity
+
+- story: ask-polimata-what-more-training-3
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_what_more_training
+  - intent: ask_training_program
+  - action: utter_ask_training_program
+
+- story: ask-polimata-what-more-training-4
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_what_more_training
+  - intent: ask_when_to_start
+  - action: utter_ask_training_when_to_start
+
+- story: ask-polimata-what-more-training-5
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_what_more_training
+  - intent: ask_docs
+  - action: utter_ask_training_docs
+
+- story: ask-polimata-what-more-training-6
+  steps:
+  - intent: ask_polimata_functions
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_what_more_training
+  - intent: ask_require
+  - action: utter_ask_training_require
+
 - story: ask-polimata-give-suggestion
   steps:
   - intent: ask_polimata_give_suggestion
@@ -257,58 +532,21 @@ stories:
   - intent: ask_polimata_learning_aid
   - action: utter_ask_polimata_learning_aid
 
-- story: ask-polimata-como-participar
-  steps:
-  - intent: ask_como_participar
-  - action: utter_ask_polimata_como_participar
-
 - story: short-presentation
   steps:
   - intent: ask_polimata_name
   - action: utter_ask_polimata_name
   - intent: ask_polimata_meaning
   - action: utter_ask_polimata_meaning
-  - intent: neutral_intention
+  - intent: neutral
+  - action: action_listen
 
-- story: neutra-intention
+- story: neutral-intention
   steps:
-  - intent: neutral_intention
-
-- story: test-presentation-1
-  steps:
-  - intent: ask_polimata_project
-  - action: utter_ask_polimata_project
-  - intent: ask_como_participar
-  - action: utter_ask_polimata_como_participar
-  - intent: atletica
-    entities:
-    - entidade: atletica
-  - slot_was_set:
-    - entidade: atletica
-  - action: utter_atletica
-  - intent: ask_como_participar
-    entities:
-    - entidade: atletica
-  - slot_was_set:
-    - entidade: atletica
-  - action: utter_caotica_ask_como_participar
-  - intent: ask_polimata_functions
-  - action: utter_ask_polimata_functions
-  - intent: ask_polimata_technology
-  - action: utter_ask_polimata_technology
-  - intent: ask_polimata_learning_aid
-  - action: utter_ask_polimata_learning_aid
+  - intent: neutral
+  - action: action_listen
 
 - story: ask-tcc-1
-  steps:
-  - intent: ask_tcc
-    entities:
-    - disciplina: tcc
-  - slot_was_set:
-    - disciplina: tcc
-  - action: utter_ask_tcc
-
-- story: ask-tcc-2
   steps:
   - intent: ask_tcc
     entities:
@@ -398,7 +636,7 @@ stories:
     - disciplina: tcc
   - action: utter_ask_tcc_professor_change
 
-- story: ask-tcc-score-or-require
+- story: ask-tcc-score
   steps:
   - intent: ask_tcc_score
     entities:
@@ -445,10 +683,6 @@ stories:
   - intent: ask_when_to_start
   - action: utter_ask_tcc_when_to_start
   - intent: ask_docs
-    entities:
-    - disciplina: tcc
-  - slot_was_set:
-    - disciplina: tcc
   - action: utter_ask_tcc_docs
 
 - story: tcc-happy-path-2
@@ -462,10 +696,6 @@ stories:
   - intent: ask_when_to_start
   - action: utter_ask_tcc_when_to_start
   - intent: ask_docs
-    entities:
-    - disciplina: tcc
-  - slot_was_set:
-    - disciplina: tcc
   - action: utter_ask_tcc_docs
 
 - story: tcc-happy-path-2.1
@@ -479,10 +709,6 @@ stories:
   - intent: ask_tcc_professor
   - action: utter_ask_tcc_professor
   - intent: ask_docs
-    entities:
-    - disciplina: tcc
-  - slot_was_set:
-    - disciplina: tcc
   - action: utter_ask_tcc_docs
 
 - story: tcc-happy-path-2.2
@@ -533,7 +759,6 @@ stories:
   - action: utter_ask_tcc_professor_change
   - intent: ask_tcc_co_advisor
   - action: utter_ask_tcc_co_advisor
-
 
 - story: tcc-happy-path-2.4
   steps:
@@ -895,7 +1120,6 @@ stories:
   - action: utter_ask_training_docs
   - intent: ask_require
   - action: utter_ask_training_require
-
 
 - story: ask-training-happy-path-4
   steps:

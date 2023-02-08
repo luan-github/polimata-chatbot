@@ -22,26 +22,6 @@ rules:
   - intent: start
   - action: utter_greet
 
-- rule: respond to centro_academico
-  steps:
-  - intent: centro_academico
-  - action: utter_centro_academico
-
-- rule: respond to atletica
-  steps:
-  - intent: atletica
-  - action: utter_atletica
-
-- rule: respond to caccal
-  steps:
-  - intent: caccal
-  - action: utter_caccal
-
-- rule: respond to caotica
-  steps:
-  - intent: caotica
-  - action: utter_caotica
-
 - rule: polimata-compliment
   steps:
   - intent: polimata_compliment

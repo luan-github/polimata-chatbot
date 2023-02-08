@@ -79,84 +79,79 @@ nlu:
     - O [estágio](disciplina)
     - A disciplina de [estagio](disciplina), por favor
     - [calculo](disciplina)
-- intent: centro_academico
+    - do seu projeto
+    - do seu desenvolvimento
+    - do [centro academico](entidade)
+    - do [caccal(entidade)
+    - do [CA](entidade)
+    - do [centro academico] de [computação](curso)
+    - da [atletica](entidade)
+    - da [caotica](entidade)
+- intent: ask_entity
   examples: |
     - O que é o [centro academico](entidade)?
     - O que é um [centro academico](entidade)?
-    - O que faz o [centro academico](entidade) de [computação](curso)?
     - O que faz um [centro academico](entidade)?
-    - O que faz o [CACCAL](entidade)?
     - Para que serve o [centro academico](entidade)?
     - Qual a finalidade do [centro academico](entidade)?
     - Qual o propósito do [centro academico](entidade)?
     - Qual a atribuição do [centro academico](entidade)?
     - Quais são as atividades do [centro academico](entidade)?
     - o que vc sabe sobre o [centro academico](entidade)?
-    - o que é o [centro academico](entidade)?
-- intent: caccal/ask_o_que_e_caccal
-  examples: |
+    - O curso de [computação](curso) tem [centro acadêmico](entidade)?
+    - O que faz o [CACCAL](entidade)?
+    - O que faz o [centro academico](entidade) de [computação](curso)?
     - e qual é o de [computação](curso)?
     - O que é o [CACCAL](entidade)?
-    - Qual o [CA]{"entity": "entidade", "value": "centro academico"} de [ciência da computação](curso)?
-    - Qual o [centro academico](entidade) de [ciência da computação](curso)?
+    - Qual o [CA](entidade) de ciência da [computação](curso)?
+    - Qual o [centro academico](entidade) de ciência da [computação](curso)?
     - O que significa [CACCAL](entidade)?
     - Qual a sigla do [centro academico](entidade) de [computação](curso)?
-    - e qual [centro academico](entidade) de [ciências da computação](curso)?
-    - e qual [C.A]{"entity": "entidade", "value": "centro academico"} de [ciências da computação](curso)?
+    - e qual [centro academico](entidade) de ciências da [computação](curso)?
+    - e qual [C.A](entidade) de ciências da [computação](curso)?
     - e qual o [centro academico](entidade) do curso de [computação](curso)?
     - o [CACCAL](entidade) é do curso de [computação](curso)
-- intent: caccal/ask_local
-  examples: |
-    - onde fica o de [computação](curso)?
-    - Onde fica o [centro academico](entidade) de [computação](curso)?
-    - Onde fica o [CACCAL](entidade)?
-    - Onde encontro membros do [centro academico](entidade)?
-    - Onde fica o pessoal do [centro academico](entidade)?
-- intent: atletica
-  examples: |
-    - O que é a [Atlética](entidade)?
-    - O que é a Atlética universitária?
+    - O que é a [atlética](entidade)?
+    - O que é a [Atlética](entidade) universitária?
     - O que é uma [Atlética](entidade)?
-    - O que são as [Atléticas](entidade) universitárias?
     - o que vc sabe sobre a [atletica](entidade)?
-    - o que é a [atlética]{"entity": "entidade", "value": "atletica"}?
+    - o que é a [atlética](entidade)?
     - e o que vc sabe sobre a [atletica](entidade)?
-- intent: caotica/ask_o_que_e_caotica
-  examples: |
-    - O que é a [caótica](entidade)?
-    - O que é a [Atlética](entidade) [Caótica](entidade)?
-    - O que é a [AAACC]{"entity": "entidade", "value": "caotica"}?
-    - O que é a [A.A.A.C.C]{"entity": "entidade", "value": "caotica"}?
-    - Qual a [atlética](entidade) do curso de [computação](curso)?
-    - A [CAÓTICA](entidade) é de qual curso?
-    - Qual a sigla da [atlética] de [computação](curso)}?
+    - o que é a [atletica](entidade)?
+    - O que é a [caotica](entidade)?
+    - O que é a [atletica](entidade) [caotica](entidade)?
+    - O que é a [AAACC](entidade)?
+    - O que é a [A.A.A.C.C](entidade)?
+    - Qual a [atletica](entidade) do curso de [computação](curso)?
+    - A [caotica](entidade) é de qual curso?
+    - Qual a sigla da [atlética](entidade) de [computação](curso)}?
     - O Curso de [computação](curso) tem uma [atletica](entidade)?
-    - A [computação](curso) tem uma [associação desportiva]{"entity": "entidade", "value": "atletica"}?
+    - A [computação](curso) tem uma [associação desportiva](entidade)?
     - e qual a [atletica](entidade) de [computação](curso)?
-- intent: caotica/ask_valor_da_taxa
+    - o que é a [caótica]{"entity": "entidade", "value": "caotica"}?
+    - o que é a [caotica](entidade)?
+    - O que faz a [atlética](entidade)?
+    - Qual a finalidade da [atlética](entidade)?
+    - Quais as atribuições da [atlética](entidade)?
+    - Para que serve a [atlética](entidade)?
+    - Qual o propósito da [atlética](entidade)?
+    - O que a [caotica](entidade) faz?
+    - Para que serve a [caótica](entidade)?
+    - Qual a finalidade da [caótica](entidade)?
+    - Qual a atribuição da [caótica](entidade)?
+    - Qual o propósito da [caótica](entidade)?
+- intent: ask_caotica_tax
   examples: |
     - Qual o valor da taxa?
     - Qual o valor da taxa da [atlética](entidade)?
     - Quanto é a taxa?
     - Quanto é a taxa da [atlética](entidade)?
     - E qual é o valor dessa taxa?
+    - qual a taxa de associação com a [caótica]entidade?
     - E qual é o valor dessa taxa da [atlética](entidade)?
-- intent: caotica/ask_finalidade
-  examples: |
-    - O que faz a [atlética](entidade)?
-    - e o que ela faz?
-    - Qual a finalidade da [atlética](entidade)?
-    - Quais as atribuições da [atlética](entidade)?
-    - Para que serve a [atlética](entidade)?
-    - E para que serve?
-    - pra que serve isso?
-    - Qual o propósito da [atlética](entidade)?
-    - O que a [CAÓTICA](entidade) faz?
-    - Para que serve a [caótica](entidade)?
-    - Qual a finalidade da [caótica](entidade)?
-    - Qual a atribuição da [caótica](entidade)?
-    - Qual o propósito da [caótica](entidade)?
-- intent: ask_como_participar
+    - quanto tem pagar para ser membro da [caotica](entidade)?
+    - qual o valor da taxa?
+- intent: ask_how_get_in
   examples: |
     - Como eu posso partipar?
     - Como eu faço para fazer parte?
@@ -175,15 +170,15 @@ nlu:
     - e como eu posso participar dele?
     - e como eu posso participar dela?
     - como eu posso participar do [CACCAL](entidade)?
-    - como eu posso participar da [caótica]{"entity": "entidade", "value": "caotica"}?
-    - como eu posso participar da [atlética]{"entity": "entidade", "value": "atletica"} de [computação](curso)?
+    - como eu posso participar da [caótica](entidade)?
+    - como eu posso participar da [atlética](entidade) de [computação](curso)?
     - e como eu posso participar?
     - Como eu posso participar do seu projeto?
     - Gostaria de participar do projeto?
     - O que eu preciso saber para participar do projeto?
     - e eu posso participar?
-    - e como eu participo da [atlética]{"entity": "entidade", "value": "atletica"}?
-- intent: ask_contato
+    - e como eu participo da [atlética](entidade)?
+- intent: ask_contact
   examples: |
     - Qual a rede social?
     - Tem rede social?
@@ -216,14 +211,17 @@ nlu:
     - qual o contato do [centro academico](entidade) de [computação](curso)?
     - e qual a rede social do [caccal](entidade)?
     - qual o contato da [atletica](entidade) de [computação](curso)?
-    - qual o contato da [caótica]{"entity": "entidade", "value": "caotica"}?
+    - qual o contato da [caótica](entidade)?
     - qual o contato do [CACCAL](entidade)?
-    - quais as redes sociais da [atlética]{"entity": "entidade", "value": "atletica"} e do [centro academico](entidade)?
-    - qual o contato da [caótica]{"entity": "entidade", "value": "caotica"} e do [caccal](entidade)?
+    - quais as redes sociais da [atlética](entidade) e do [centro academico](entidade)?
+    - qual o contato da [caótica](entidade) e do [caccal](entidade)?
     - tem algum telefone para contato ou email?
-    - qual o contato da [atlética]{"entity": "entidade", "value": "atletica"}?
-    - qual o contato doo [centro academico](entidade) e da [caótica]{"entity": "entidade", "value": "caotica"}?
-    - quais os contatos da [atlética]{"entity": "entidade", "value": "atletica"} e [centro academico](entidade) de [computação](curso)?
+    - qual o contato da [atlética](entidade)?
+    - qual o contato doo [centro academico](entidade) e da [caótica](entidade)?
+    - quais os contatos da [atlética](entidade) e [centro academico](entidade) de [computação](curso)?
+    - como eu entro em contato?
+    - como eu falo com o pessoal da [atletica](entidade)?
+    - qual o contato deles?
 - intent: ask_polimata_name
   examples: |
     - Qual seu nome?
@@ -258,7 +256,7 @@ nlu:
     - ei, me explica esse seu projeto
 - intent: ask_polimata_functions
   examples: |
-    - Pra pra que você serve
+    - Pra que você serve
     - Quais funções você possui?
     - Quais suas funcionalidades?
     - Quais seus requisitos funcionais?
@@ -268,7 +266,16 @@ nlu:
     - e o que você faz?
     - me explica suas funções
     - que assuntos vc conhece?
+    - que perguntas você sabe responder?
+    - o que você sabe responder?
     - sobre o que você sabe falar
+    - me conta mais
+    - o que mais?
+    - o que mais voce sabe?
+    - o que mais vc sabe sobre a [atletica](entidade)
+    - o que mais voce sabe sobre o [centro academico](entidade)
+    - o que mais voce sabe sobre o [estagio](disciplina)
+    - o que mais voce sabe sobre o [tcc](disciplina)
 - intent: ask_polimata_address
   examples: |
     - Qual o link para esse projeto?
@@ -334,6 +341,7 @@ nlu:
     - muito bem
     - você é um bot inteligente
     - bom garoto
+    - tu é o bichão né?
     - obrigado, você é muito educado
     - você é muito gentil
     - você foi de grande ajuda
@@ -346,7 +354,7 @@ nlu:
     - Quem compõe a diretoria atual do [centro academico](entidade)
     - Qual o [centro academico](entidade) de [historia](curso)
     - qual o cardápio do [RU](lugar)?
-    - o que tem no [restarante universitário](lugar) hoje?
+    - o que tem no [restarante](lugar) hoje?
     - qual o valor da refeição no [restaurante](lugar)?
     - A [biblioteca](lugar) tem site?
     - como eu tiro a carteirinha da [biblioteca](lugar)?
@@ -555,8 +563,8 @@ nlu:
     - Quais [tccs](disciplina) já foram apresentados?
 - intent: ask_tcc_time_span
   examples: |
-    - Quanto dura uma apresentação de [tcc](disciplina)?
-    - Quanto dura uma apresentação?
+    - Quanto tempo dura uma apresentação de [tcc](disciplina)?
+    - Quanto tempo dura uma apresentação?
     - quanto tempo leva uma apresentação de [tcc](disciplina)?
     - Qual a duração de uma apresentação de [tcc](disciplina)?
     - Quanto tempo um aluno tem para apresentar o [tcc](disciplina)?
@@ -574,7 +582,7 @@ nlu:
     - como é a disciplina de [estágio](disciplina)?
     - me explica como funciona o [estágio](disciplina)
     - o que é importante saber sobre o [estagio](disciplina)?
-    - o q vc sabe sobre [estágio]{"entity": "disciplina", "value": "estagio"}?
+    - o q vc sabe sobre [estágio](disciplina)?
 - intent: ask_training_program
   examples: |
     - onde encontro vagas?
@@ -724,7 +732,7 @@ nlu:
   examples: |
     - Action server está funcionando?
     - Action
-- intent: neutral_intention
+- intent: neutral
   examples: |
     - humm, interessante
     - ta ok então
@@ -749,19 +757,39 @@ nlu:
     - então é né
     - se é assim sim
     - kkk
+- synonym: caotica
+  examples: |
+    - caótica
+    - AAACC
+    - A.A.A.C.C
+    - caótca
+    - caotca
+    - caotia
+    - caótia
 - synonym: centro academico
   examples: |
     - CA
     - C.A
+    - centro acadêmico
+    - cetro acadêmico
+    - cetro academico
+    - centro acaêmico
+    - centro acaemico
+    - centro acamico
+    - centro acadmico
+    - cento acadêmico
+    - cento academico
 - synonym: atletica
   examples: |
     - atlética
+    - atética
+    - atleica
+    - atlétca
+    - atletca
     - associação desportiva
-- synonym: caotica
-  examples: |
-    - AAACC
-    - A.A.A.C.C
-    - caótica
+    - associaçao desportiva
+    - asociação desportiva
+    - asociaçao desportiva
 - synonym: estagio
   examples: |
     - estágio
@@ -789,10 +817,20 @@ nlu:
     - trabalo de conclusao
 - synonym: computação
   examples: |
-    - ciência da computação
-    - ciências da computação
+    - computaçao
+    - comptação
+    - comptaçao
+    - computacão
+    - compuacão
+    - compuação
+    - compuacao
 - synonym: RU
   examples: |
-    - restaurante universitário
     - restaurante
+    - restaurane
+    - restaurate
+    - restaurnte
+    - restarante
+    - resturante
+    - retaurante
     - R.U
