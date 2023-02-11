@@ -1,10 +1,12 @@
 version: '3.1'
 intents:
 - affirm
-- ask_entity
 - ask_caotica_tax
 - ask_contact
+- ask_docs
+- ask_entity
 - ask_how_get_in
+- ask_location
 - ask_polimata_address
 - ask_polimata_functions
 - ask_polimata_give_suggestion
@@ -30,7 +32,6 @@ intents:
 - ask_training_activity
 - ask_training_program
 - ask_when_to_start
-- ask_docs
 - deny
 - goodbye
 - greet
@@ -40,13 +41,13 @@ intents:
 - polimata_compliment
 - polimata_out_of_scope_for_now
 - start
-- test
 - thanks
 entities:
+- lugar
 - entidade
 - disciplina
 - curso
-- lugar
+- departamento
 slots:
   entidade:
     type: categorical
@@ -76,6 +77,14 @@ slots:
     mappings:
     - type: from_entity
       entity: lugar
+  departamento:
+    type: categorical
+    values:
+    - dcet
+    - derca
+    mappings:
+    - type: from_entity
+      entity: departamento
 responses:
   utter_greet:
   - text: Oi, como eu posso ajudar?
@@ -121,8 +130,7 @@ responses:
       text: Você pode entrar em contato com a Atlética do curso de computação no [Instagram, neste link](https://instagram.com/atleticacaotica?igshid=NDc0ODY0MjQ=)
       parse_mode: MarkdownV2
     channel: telegram
-  - text: |-
-      Você pode entrar em contato com a Atlética do curso de computação no Instagram, neste link: https://instagram.com/Daotica?igshid=NDc0ODY0MjQ=
+  - text: 'Você pode entrar em contato com a Atlética do curso de computação no Instagram, neste link: https://instagram.com/Daotica?igshid=NDc0ODY0MjQ='
   utter_ask_polimata_name:
   - text: Eu me chamo Polímata
   - text: Meu nome é Polímata
@@ -133,10 +141,7 @@ responses:
       E esse nome me foi dado porque eu deveria auxiliar estudantes a revisarem assuntos em várias disciplinas, como se eu fosse um verdadeiro polímata.
   utter_ask_polimata_project:
   - custom:
-      text: |
-        Eu sou um chatbot contextual de código aberto\. Isso significa que posso alternar entre os diálogos para os quais fui projetado, que considero informações anteriores para responder sua mensagem mais recente, e que posso evoluir para considerar o seu contexto um pouco além da conversa\.\.\. Por exemplo, se eu identificasse que você tem dúvidas em disciplinas avançadas, poderia calcular que você já creditou 50\% do curso e no dia seguinte lembrá-lo que você já poderia realizar a inscrição do seu Pré-Projeto de TCC\.
-
-        E sendo de código aberto você pode contribuir com o meu desenvolvimento, agregando mais ao seu portfólio, quem sabe até implementar essa última funcionalidade que eu citei\. Clique no link do projeto para saber mais.
+      text: "Eu sou um chatbot contextual de código aberto\\. Isso significa que posso alternar entre os diálogos para os quais fui projetado, que considero informações anteriores para responder sua mensagem mais recente, e que posso evoluir para considerar o seu contexto um pouco além da conversa\\.\\.\\. Por exemplo, se eu identificasse que você tem dúvidas em disciplinas avançadas, poderia calcular que você já creditou 50\\% do curso e no dia seguinte lembrá-lo que você já poderia realizar a inscrição do seu Pré-Projeto de TCC\\.\n\nE sendo de código aberto você pode contribuir com o meu desenvolvimento, agregando mais ao seu portfólio, quem sabe até implementar essa última funcionalidade que eu citei\\. Clique no link do projeto para saber mais.\n"
       parse_mode: MarkdownV2
       reply_markup:
         inline_keyboard:
@@ -149,8 +154,7 @@ responses:
       E sendo de código aberto você pode contribuir com o meu desenvolvimento, agregando mais ao seu portfólio, quem sabe até implementar essa última funcionalidade que eu citei. Clique no link do projeto para saber mais: https://github.com/luan-github/polimata-chatbot
   utter_ask_polimata_functions:
   - custom:
-      text: |
-        Por enquanto eu tenho respostas para dúvidas sobre o meu projeto, as regulamentações de TCC e Estágio e algumas informações básicas sobre o Centro Acadêmico e a Associação Atlética de Computação.
+      text: "Por enquanto eu tenho respostas para dúvidas sobre o meu projeto, as regulamentações de TCC e Estágio, algumas informações básicas sobre o Centro Acadêmico e a Associação Atlética de Computação. Além de ajudar a encontrar alguns locais dentro da universidade.\n"
       parse_mode: MarkdownV2
       reply_markup:
         inline_keyboard:
@@ -331,14 +335,8 @@ responses:
   utter_out_of_scope:
   - text: Eu não tenho certeza se entendi. Talvez você precise escrever sua solicitação com outras palavras, ou eu não posso atendê-la pois ela está fora do propósito do meu projeto.
 actions:
-- action_hello_world
-- utter_ask_caccal_contact
-- utter_ask_caccal_how_get_in
-- utter_ask_caotica
-- utter_ask_caotica_contact
-- utter_ask_caotica_how_get_in
-- utter_ask_caotica_tax
-- utter_ask_how_get_in
+- action_utter_location
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

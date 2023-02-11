@@ -1,11 +1,6 @@
-neutralversion: "3.1"
+version: "3.1"
 
 stories:
-
-- story: action-server
-  steps:
-  - intent: test
-  - action: action_hello_world
 
 - story: ask-caccal-1
   steps:

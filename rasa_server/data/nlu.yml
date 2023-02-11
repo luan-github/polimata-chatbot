@@ -317,13 +317,13 @@ nlu:
     - Você sabe programar?
     - vc ajuda nas disciplinas?
     - preciso de ajuda em uma disciplina
-    - você pode me ajudar em (cálculo)[disciplina]?
-    - você pode me ensinar (cálculo)[disciplina]?
+    - você pode me ajudar em [calculo](disciplina)?
+    - você pode me ensinar [calculo](disciplina)?
     - o que você pode me ensinar?
-    - você pode me ajudar em banco de dados?
+    - você pode me ajudar em [banco de dados](disciplina)?
     - e você ajuda os estudantes nas disciplinas?
-    - em quais disciplinas você ajuda os esudantes?
-    - vc ensina alguma disciplina?
+    - em quais matérias você ajuda os esudantes?
+    - vc ensina alguma matéria?
 - intent: polimata_compliment
   examples: |
     - Você é muito legal
@@ -711,6 +711,53 @@ nlu:
     - quais os documentos
     - quais os documentos de [estagio](disciplina)
     - qual é a documentação?
+- intent: ask_location
+  examples: |
+    - Onde fica a [unifap](lugar)?
+    - Onde é a [biblioteca](lugar)?
+    - Onde é a [biblioteca](lugar)?
+    - Onde é a [biblioteca da unifap](lugar)?
+    - Onde é a [biblioteca da universidade](lugar)?
+    - Como eu chego no [anfiteatro](lugar)?
+    - Onde é o bloco do curso de [computação](lugar)?
+    - Onde é o curso de [computação](lugar)?
+    - Onde fica o curso de [letras](lugar)?
+    - Onde fica o prédio de [computação](lugar)?
+    - onde fica o predio de [engenharia eletrica](lugar)?
+    - Como eu chego no prédio de [engenharia eletrica](lugar)?
+    - qual o caminho para o [restaurante](lugar) universitario?
+    - onde é o [restaurante](lugar)?
+    - onde é o [derca](lugar)?
+    - onde é o [derca da unifap](lugar)?
+    - pra onde é o [ginasio](lugar)?
+    - pra onde é o [ginasio da unifap](lugar)?
+    - pra onde é o [ginasio da universidade](lugar)?
+    - onde é o [dcet](lugar)?
+    - como eu chego no [decet](lugar)
+    - eu quero chegar no [ginasio](lugar)
+    - onde é a [quadra](lugar)?
+    - onde é a [quadra da unifap](lugar)?
+    - onde fica o [nai](lugar)?
+    - como que a gente chega no [nai](lugar)
+    - onde é o [nucleo de acessilidade](lugar) ?
+    - onde é o [departamento de exatas](lugar)?
+    - onde é o [departamento de ciencias exatas e tecnologicas](lugar)?
+    - onde fica o [posto de saude](lugar)?
+    - onde fica o [posto de saude da unifap](lugar)?
+    - tem [unidade básica de saúde](lugar) na unifap?
+    - onde é o [banheiro](lugar)?
+    - onde é a [unifap](lugar)?
+    - onde é a [universidade](lugar)?
+    - onde eu posso tirar [xerox](lugar)?
+    - onde tira [xerox](lugar) aqui?
+    - onde eu posso tirar [cópias](lugar)?
+    - onde fica a [xerox](lugar)?
+    - onde é a [reprografia](lugar)?
+    - onde posso [imprimir](lugar) um trabalho?
+    - vc sabe onde é a [xerox](lugar)?
+    - onde eu posso tirar [xerox](lugar)?
+    - a onde é o [nti](lugar)?
+    - onde fica o (núcleo de tecnologia e informática](lugar)?
 - intent: out_of_scope
   examples: |
     - vc sabe contar piadas?
@@ -728,10 +775,6 @@ nlu:
     - Quem é o presidente do Brasil?
     - você fala inglês?
     - você fala outro idioma?
-- intent: test
-  examples: |
-    - Action server está funcionando?
-    - Action
 - intent: neutral
   examples: |
     - humm, interessante
@@ -818,15 +861,33 @@ nlu:
 - synonym: computação
   examples: |
     - computaçao
+    - computacao
+    - computacão
     - comptação
     - comptaçao
     - computacão
     - compuacão
     - compuação
     - compuacao
-- synonym: RU
+- synonym: engenharia eletrica
+  examples: |
+    - engenharia elétrica
+    - engenharia eletrca
+    - engeharia eletrica
+    - engenharia eletrica da unifap
+    - eng. elétrica
+    - eng. eletrica
+    - eng elétrica
+    - eng eletrica
+- synonym: letras
+  examples: |
+    - letras da unifap
+    - letras da universidade
+- synonym: ru
   examples: |
     - restaurante
+    - restaurante da universidade
+    - restaurante da unifap
     - restaurane
     - restaurate
     - restaurnte
@@ -834,3 +895,61 @@ nlu:
     - resturante
     - retaurante
     - R.U
+- synonym: posto de saude
+  examples: |
+    - unidade básica de saúde
+    - unidade basica de saude
+    - unidade de saúde
+    - posto de saúde
+    - unidade de saude
+    - posto da unifap
+- synonym: dcet
+  examples: |
+    - decet
+    - departamento de ciencias exatas e tecnologicas
+    - departamento de ciencias exatas e tecnologicas da universidade
+    - departamento de ciencias exatas
+    - departamento de ciencias exatas da universidade
+    - departamento de ciencias exatas da unifap
+    - departamento exatas
+    - departamento exatas da universidade
+- synonym: nai
+  examples: |
+    - nucleo de acessibilidade
+    - nucleo de acessibilidade
+    - núcleo de acessilidade
+    - nai da unifap
+    - nai da universidade
+- synonym: biblioteca
+  examples: |
+    - bibioteca
+    - biblioteca da unifap
+    - biblioteca da universidade
+    - bibliote
+- synonym: unifap
+  examples: |
+    - universidade
+- synonym: ginasio
+  examples: |
+    - quadra da unifap
+    - quadra
+    - ginásio
+    - ginasio da unifap
+    - ginásio da unifap
+    - ginásio da universidade
+- synonym: nti
+  examples: |
+    - núcleo de tecnologia e informática
+    - nucleo de tecnologia e informatica
+    - núcleo de tecnologia
+    - nucleo de tecnologia
+- synonym: xerox
+  examples: |
+    - xerox na unifap
+    - xerox na universidade
+    - reprografia
+    - cópias
+    - copias
+    - copia
+    - fotocopia
+    - imprimir
