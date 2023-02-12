@@ -1130,3 +1130,8 @@ stories:
   - action: utter_ask_training_require
   - intent: ask_training_program
   - action: utter_ask_training_program
+
+- story: ask-how-to-eduroam
+  steps:
+  - intent: ask_how_to_eduroam
+  - action: utter_ask_how_to_eduroam

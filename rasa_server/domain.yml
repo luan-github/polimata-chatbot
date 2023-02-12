@@ -37,6 +37,7 @@ intents:
 - greet
 - inform
 - neutral
+- ask_how_to_eduroam
 - out_of_scope
 - polimata_compliment
 - polimata_out_of_scope_for_now
@@ -332,6 +333,11 @@ responses:
   utter_ask_what_more_tcc:
   - text: Eu posso responder o que é o TCC, como é feito, qual a nota mínima, como a nota é calculada, entre outras dúvidas comuns e baseadas na documentação. Qual sua curiosidade sobre o TCC?
   - text: Eu posso responder o que é o TCC, quando você pode se inscrever, qual a finalidade, quanto tempo dura uma apresentação, entre outras dúvidas comuns e baseadas na documentação. Qual sua curiosidade sobre o TCC?
+  utter_ask_how_to_eduroam:
+  - text: "O passo a passo está no documento abaixo:"
+    custom:
+      document: https://www2.unifap.br/nti/files/2016/05/Eduroam-Android.pdf
+    channel: telegram
   utter_out_of_scope:
   - text: Eu não tenho certeza se entendi. Talvez você precise escrever sua solicitação com outras palavras, ou eu não posso atendê-la pois ela está fora do propósito do meu projeto.
 actions:

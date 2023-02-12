@@ -758,6 +758,22 @@ nlu:
     - onde eu posso tirar [xerox](lugar)?
     - a onde é o [nti](lugar)?
     - onde fica o (núcleo de tecnologia e informática](lugar)?
+- intent: ask_how_to_eduroam
+  examples: |
+    - como eu posso usar a internet do bloco?
+    - como conecta na wifi do curso?
+    - como posso usar a internet do prédio?
+    - quero usar a wifi do curso?
+    - como eu uso a wifi?
+    - eu gostaria de usar a internet do curso de computação
+    - eu gostaria de usar a internet da Universidade
+    - eu gostaria de usar a internet da unifap
+    - como configurar a internet da universidade no celular?
+    - como eu posso configurar a wifi da universidade no celular?
+    - como faz para usar a wifi da universidade?
+    - como usar a rede eduroam?
+    - como conecta na eduroam?
+    - como configura a eduroam no celular?
 - intent: out_of_scope
   examples: |
     - vc sabe contar piadas?
