@@ -10,11 +10,10 @@ services:
      - 5005:5005
     volumes:
      - ./rasa_server:/app
-    command:
-      - run
-      - --enable-api
-      - --cors
-      - "*"
+    command: >
+      run
+      --enable-api
+      --cors "*"
   action-server:
     container_name: "polimataAction"
     build:
@@ -24,3 +23,10 @@ services:
       - ./actions_server:/app/actions
     ports:
       - 5055:5055
+  postgres:
+    image: postgres:latest
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+volumes:
+  postgres_data:

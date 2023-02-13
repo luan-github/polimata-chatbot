@@ -17,6 +17,15 @@ action_endpoint:
 # By default the conversations are stored in memory.
 # https://rasa.com/docs/rasa/tracker-stores
 
+tracker_store:
+    type: sql
+    dialect: "postgresql"  # the dialect used to interact with the db
+    url: "postgres"  # (optional) host of the sql db, e.g. "localhost"
+    db: "rasa"  # path to your db
+    username: ${POSTGRES_USER}  # username used for authentication
+    password: ${POSTGRES_PASSWORD}  # password used for authentication
+    login_db: postgres
+
 #tracker_store:
 #    type: redis
 #    url: <host of the redis instance, e.g. localhost>
