@@ -4,6 +4,7 @@
 rasa_server/.rasa
 rasa_server/.bash_history
 rasa_server/story_graph.dot
+rasa_server/graph.html
 rasa_server/models/
 
 

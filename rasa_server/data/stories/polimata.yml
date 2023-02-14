@@ -1,0 +1,55 @@
+version: "3.1"
+
+stories:
+
+- story: ask-polimata-name
+  steps:
+  - intent: ask_polimata_name
+  - action: utter_ask_polimata_name
+
+- story: ask-polimata-meaning
+  steps:
+  - intent: ask_polimata_meaning
+  - action: utter_ask_polimata_meaning
+
+- story: ask-polimata-project
+  steps:
+  - intent: ask_polimata_project
+  - action: utter_ask_polimata_project
+
+- story: ask-polimata-technology
+  steps:
+  - intent: ask_polimata_technology
+  - action: utter_ask_polimata_technology
+
+- story: ask-polimata-address
+  steps:
+  - intent: ask_polimata_address
+  - action: utter_ask_polimata_address
+
+- story: ask-polimata-functions
+  steps:
+  - intent: ask_polimata_functions
+  - action: utter_ask_polimata_functions
+
+- story: ask-polimata-give-suggestion
+  steps:
+  - intent: ask_polimata_give_suggestion
+  - action: utter_ask_polimata_give_suggestion
+
+- story: ask-polimata-installation
+  steps:
+  - intent: ask_polimata_installation
+  - action: utter_ask_polimata_installation
+
+- story: ask-polimata-learning-aid
+  steps:
+  - intent: ask_polimata_learning_aid
+  - action: utter_ask_polimata_learning_aid
+
+- story: short-presentation
+  steps:
+  - intent: ask_polimata_name
+  - action: utter_ask_polimata_name
+  - intent: ask_polimata_meaning
+  - action: utter_ask_polimata_meaning

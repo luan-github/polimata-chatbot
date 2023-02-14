@@ -1,0 +1,100 @@
+version: "3.1"
+
+stories:
+
+- story: how-get-in-without-slot
+  steps:
+  - intent: ask_how_get_in
+  - action: utter_ask_how_get_in
+
+- story: how-get-in-projeto
+  steps:
+  - intent: ask_how_get_in
+    entities:
+    - polimata: projeto
+  - action: utter_ask_polimata_how_get_in
+
+- story: how-get-in-caccal
+  steps:
+  - intent: ask_how_get_in
+    entities:
+    - entidade: caccal
+  - slot_was_set:
+    - entidade: caccal
+  - action: utter_ask_caccal_how_get_in
+
+- story: how-get-in-caotica
+  steps:
+  - intent: ask_how_get_in
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_ask_caotica_how_get_in
+
+- story: ask-caccal-entity
+  steps:
+  - intent: ask_entity
+    entities:
+    - entidade: caccal
+  - slot_was_set:
+    - entidade: caccal
+  - action: utter_ask_caccal
+  - intent: ask_how_get_in
+  - action: utter_ask_caccal_how_get_in
+  - intent: ask_contact
+  - action: utter_ask_caccal_contact
+
+- story: ask-caccal-entity-2
+  steps:
+  - intent: ask_entity
+    entities:
+    - entidade: caccal
+  - slot_was_set:
+    - entidade: caccal
+  - action: utter_ask_caccal
+  - intent: ask_contact
+  - action: utter_ask_caccal_contact
+  - intent: ask_how_get_in
+  - action: utter_ask_caccal_how_get_in
+
+- story: ask-caotica-entity-1
+  steps:
+  - intent: ask_entity
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_ask_caotica
+  - intent: ask_how_get_in
+  - action: utter_ask_caotica_how_get_in
+  - intent: ask_contact
+  - action: utter_ask_caotica_contact
+
+- story: ask-caotica-entity-2
+  steps:
+  - intent: ask_entity
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_ask_caotica
+  - intent: ask_contact
+  - action: utter_ask_caotica_contact
+  - intent: ask_how_get_in
+  - action: utter_ask_caotica_how_get_in
+
+- story: ask-caotica-entity-3
+  steps:
+  - intent: ask_entity
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_ask_caotica
+  - intent: ask_how_get_in
+  - action: utter_ask_caotica_how_get_in
+  - intent: ask_caotica_tax
+  - action: utter_ask_caotica_tax
+  - intent: ask_contact
+  - action: utter_ask_caotica_contact

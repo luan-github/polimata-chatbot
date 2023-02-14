@@ -35,9 +35,32 @@ rules:
 - rule: ask-location
   steps:
   - intent: ask_location
-  - slot_was_set:
-    - lugar: biblioteca
   - action: action_utter_location
+
+- rule: neutral-intention
+  steps:
+  - intent: neutral
+  - action: action_listen
+
+- rule: ask-more-tcc
+  steps:
+  - intent: ask_what_more_tcc
+  - action: utter_ask_what_more_tcc
+
+- rule: ask-more-training
+  steps:
+  - intent: ask_what_more_training
+  - action: utter_ask_what_more_training
+
+- rule: ask-more-caotica
+  steps:
+  - intent: ask_what_more_caotica
+  - action: utter_ask_what_more_caotica
+
+- rule: ask-more-caccal
+  steps:
+  - intent: ask_what_more_caccal
+  - action: utter_ask_what_more_caccal
 
 - rule: out-of-scope
   steps:
@@ -48,3 +71,9 @@ rules:
   steps:
   - intent: nlu_fallback
   - action: utter_out_of_scope
+
+- rule: reset-slots
+  steps:
+  - intent: ask_reset
+  - action: utter_ask_reset
+  - action: action_restart

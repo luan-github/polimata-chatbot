@@ -1,0 +1,8 @@
+version: "3.1"
+
+stories:
+
+- story: ask-how-to-eduroam
+  steps:
+  - intent: ask_how_to_eduroam
+  - action: utter_ask_how_to_eduroam

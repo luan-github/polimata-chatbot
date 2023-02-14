@@ -1,0 +1,44 @@
+version: "3.1"
+
+stories:
+
+- story: ask-polimata-what-more
+  steps:
+  - intent: ask_for_more
+  - action: utter_ask_what_more
+
+- story: ask-caccal-what-more
+  steps:
+  - intent: ask_for_more
+    entities:
+    - entidade: caccal
+  - slot_was_set:
+    - entidade: caccal
+  - action: utter_ask_what_more_caccal
+
+- story: ask-caotica-what-more
+  steps:
+  - intent: ask_for_more
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_ask_what_more_caotica
+
+- story: ask-tcc-what-more
+  steps:
+  - intent: ask_for_more
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_what_more_tcc
+
+- story: ask-training-what-more
+  steps:
+  - intent: ask_for_more
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_what_more_training

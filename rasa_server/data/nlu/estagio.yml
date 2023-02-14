@@ -1,0 +1,37 @@
+version: "3.1"
+nlu:
+- intent: ask_training_activity
+  examples: |
+    - O que é o [estagio](disciplina)?
+    - O que voce tem sobre [estagio](disciplina)?
+    - precisamos falar sobre [estágio](disciplina)
+    - O que você pode explicar sobre [estagio](disciplina)?
+    - O que vc sabe sobre [estágio](disciplina)?
+    - o que é [estágio](disciplina)?
+    - o que é a disciplina de [estágio](disciplina)?
+    - como é a disciplina de [estágio](disciplina)?
+    - me explica como funciona o [estágio](disciplina)
+    - o que é importante saber sobre o [estagio](disciplina)?
+    - o q vc sabe sobre [estágio](disciplina)?
+- intent: ask_training_program
+  examples: |
+    - onde encontro vagas?
+    - onde posso cumprir essa disciplina?
+    - onde posso cumprir esse requisito?
+    - onde posso cumprir essa matéria?
+    - Onde eu posso  [estagiar](disciplina)?
+    - Em que lugares eu posso  [estagiar](disciplina)?
+    - Você pode indicar lugares para [estágio](disciplina)?
+    - Alguma sugestão de lugares para  [estagiar](disciplina)?
+    - Onde os acadêmicos costumam  [estagiar](disciplina)?
+    - Onde dá para  [estagiar](disciplina)?
+    - Onde encontro um [estágio](disciplina)?
+    - onde encontro um lugar para  [estagiar](disciplina)?
+    - que lugares você indica para cumprir os [estágios](disciplina)?
+    - onde dá para  [estagiar](disciplina) nessa cidade?
+    - Preciso de indicações de [estágio](disciplina)
+    - Não tenho idéia de onde  [estagiar](disciplina)
+    - Não sei onde  [estagiar](disciplina)
+    - Como eu faço para arranjar um [estágio](disciplina)
+    - Não encontro vagas para [estagio](disciplina)
+    - onde encontro vagas para [estagio](disciplina)?

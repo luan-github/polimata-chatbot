@@ -1,0 +1,186 @@
+version: "3.1"
+
+stories:
+
+- story: ask-traning-require
+  steps:
+    - intent: ask_require
+      entities:
+      - disciplina:
+    - slot_was_set:
+      - disciplina: estagio
+    - action: utter_ask_training_require
+
+- story: ask-tcc-require
+  steps:
+    - intent: ask_require
+      entities:
+      - disciplina:
+    - slot_was_set:
+      - disciplina: tcc
+    - action: utter_ask_tcc_require
+
+- story: ask-training-require
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+  - intent: ask_require
+  - action: utter_ask_training_require
+
+- story: ask-training-require
+  steps:
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+  - intent: ask_require
+  - action: utter_ask_training_require
+
+- story: ask-tcc-require
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_tcc
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc
+  - intent: ask_require
+  - action: utter_ask_tcc_require
+
+- story: ask-tcc-require-2
+  steps:
+  - intent: ask_tcc
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc
+  - intent: ask_require
+  - action: utter_ask_tcc_require
+
+- story: ask-require-whithout-slot
+  steps:
+    - intent: ask_require
+    - action: utter_ask_curriculum_require
+
+- story: ask-tcc-require-whithout-slot
+  steps:
+    - intent: ask_require
+    - action: utter_ask_curriculum_require
+    - intent: inform
+      entities:
+      - disciplina: tcc
+    - slot_was_set:
+      - disciplina: tcc
+    - action: utter_ask_tcc_require
+
+- story: ask-training-require-whithout-slot
+  steps:
+    - intent: ask_require
+    - action: utter_ask_curriculum_require
+    - intent: inform
+      entities:
+      - disciplina: estagio
+    - slot_was_set:
+      - disciplina: estagio
+    - action: utter_ask_training_require
+
+- story: ask-when-whithout-slot
+  steps:
+    - intent: ask_when_to_start
+    - action: utter_ask_when_to_start
+
+- story: ask-tcc-when-whithout-slot
+  steps:
+    - intent: ask_when_to_start
+    - action: utter_ask_when_to_start
+    - intent: inform
+      entities:
+      - disciplina: tcc
+    - slot_was_set:
+      - disciplina: tcc
+    - action: utter_ask_tcc_when_to_start
+
+- story: ask-training-when-whithout-slot
+  steps:
+    - intent: ask_when_to_start
+    - action: utter_ask_when_to_start
+    - intent: inform
+      entities:
+      - disciplina: estagio
+    - slot_was_set:
+      - disciplina: estagio
+    - action: utter_ask_training_when_to_start
+
+- story: ask-when-tcc
+  steps:
+    - intent: ask_when_to_start
+      entities:
+      - disciplina: tcc
+    - slot_was_set:
+      - disciplina: tcc
+    - action: utter_ask_tcc_when_to_start
+
+- story: ask-when-training
+  steps:
+    - intent: ask_when_to_start
+      entities:
+      - disciplina: estagio
+    - slot_was_set:
+      - disciplina: estagio
+    - action: utter_ask_training_when_to_start
+
+- story: ask-docs-whithout-slot
+  steps:
+    - intent: ask_docs
+    - action: utter_ask_docs
+
+- story: ask-tcc-docs-whithout-slot
+  steps:
+    - intent: ask_docs
+    - action: utter_ask_docs
+    - intent: inform
+      entities:
+      - disciplina: tcc
+    - slot_was_set:
+      - disciplina: tcc
+    - action: utter_ask_tcc_docs
+
+- story: ask-training-docs-whithout-slot
+  steps:
+    - intent: ask_docs
+    - action: utter_ask_docs
+    - intent: inform
+      entities:
+      - disciplina: estagio
+    - slot_was_set:
+      - disciplina: estagio
+    - action: utter_ask_training_docs
+
+- story: ask-tcc-docs
+  steps:
+  - intent: ask_docs
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_docs
+
+- story: ask-traning-docs
+  steps:
+  - intent: ask_docs
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_docs

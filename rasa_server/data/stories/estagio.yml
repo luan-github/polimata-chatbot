@@ -1,0 +1,101 @@
+version: "3.1"
+
+stories:
+
+- story: ask-training
+  steps:
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+
+- story: ask-training-happy-path-1
+  steps:
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+  - intent: ask_when_to_start
+  - action: utter_ask_training_when_to_start
+  - intent: ask_require
+  - action: utter_ask_training_require
+  - intent: ask_docs
+  - action: utter_ask_training_docs
+
+- story: ask-training-happy-path-2
+  steps:
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+  - intent: ask_require
+  - action: utter_ask_training_require
+  - intent: ask_docs
+  - action: utter_ask_training_docs
+
+- story: ask-training-happy-path-3
+  steps:
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+  - intent: ask_docs
+  - action: utter_ask_training_docs
+  - intent: ask_require
+  - action: utter_ask_training_require
+
+- story: ask-training-happy-path-4
+  steps:
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+  - intent: ask_docs
+  - action: utter_ask_training_docs
+  - intent: ask_require
+  - action: utter_ask_training_require
+  - intent: ask_training_program
+  - action: utter_ask_training_program
+
+- story: ask-training-program-1
+  steps:
+    - intent: ask_training_program
+      entities:
+      - disciplina: estagio
+    - slot_was_set:
+      - disciplina: estagio
+    - action: utter_ask_training_program
+
+- story: ask-training-program-2
+  steps:
+    - intent: ask_training_program
+      entities:
+      - disciplina: estagio
+    - slot_was_set:
+      - disciplina: estagio
+    - action: utter_ask_training_program
+    - intent: ask_docs
+    - action: utter_ask_training_docs
+    - intent: ask_when_to_start
+    - action: utter_ask_training_when_to_start
+
+- story: ask-training-program
+  steps:
+  - intent: ask_training_activity
+    entities:
+    - disciplina: estagio
+  - slot_was_set:
+    - disciplina: estagio
+  - action: utter_ask_training_activity
+  - intent: ask_training_program
+  - action: utter_ask_training_program

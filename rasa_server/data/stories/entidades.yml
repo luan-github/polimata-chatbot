@@ -1,0 +1,120 @@
+version: "3.1"
+
+stories:
+
+- story: ask-caccal-entity
+  steps:
+  - intent: ask_entity
+    entities:
+    - entidade: caccal
+  - slot_was_set:
+    - entidade: caccal
+  - action: utter_ask_caccal
+
+- story: ask-contact-caotica-inform
+  steps:
+  - intent: ask_contact
+  - action: utter_ask_contact
+  - intent: inform
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_ask_caotica_contact
+
+- story: ask-contact-caccal-inform
+  steps:
+  - intent: ask_contact
+  - action: utter_ask_contact
+  - intent: inform
+    entities:
+    - entidade: caccal
+  - slot_was_set:
+    - entidade: caccal
+  - action: utter_ask_caccal_contact
+
+- story: ask-contact-caccal-1
+  steps:
+  - intent: ask_contact
+    entities:
+    - entidade: caccal
+  - slot_was_set:
+    - entidade: caccal
+  - action: utter_ask_caccal_contact
+
+- story: ask-caotica-entity
+  steps:
+  - intent: ask_entity
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_ask_caotica
+
+- story: ask-caotica-contact-1
+  steps:
+  - intent: ask_contact
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_ask_caotica_contact
+
+- story: ask-contact-without-slot
+  steps:
+  - intent: ask_contact
+  - action: utter_ask_contact
+
+- story: ask-caotica-tax-1
+  steps:
+  - intent: ask_caotica_tax
+  - action: utter_ask_caotica_tax
+
+- story: ask-caotica-tax-2
+  steps:
+  - intent: ask_caotica_tax
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+      - entidade: caotica
+  - action: utter_ask_caotica_tax
+
+- story: partial-happy-path-caotica-1
+  steps:
+  - intent: ask_entity
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_ask_caotica
+  - intent: ask_contact
+    entities:
+    - entidade: caotica
+    - curso: computação
+  - slot_was_set:
+    - entidade: caotica
+  - slot_was_set:
+    - curso: computação
+  - action: utter_ask_caotica_contact
+
+- story: partial-happy-path-caotica-2
+  steps:
+  - intent: ask_entity
+    entities:
+    - entidade: caotica
+  - slot_was_set:
+    - entidade: caotica
+  - action: utter_ask_caotica
+  - intent: ask_contact
+  - action: utter_ask_caotica_contact
+
+- story: partial-happy-path-caccal
+  steps:
+  - intent: ask_entity
+    entities:
+    - entidade: caccal
+  - slot_was_set:
+    - entidade: caccal
+  - action: utter_ask_caccal
+  - intent: ask_contact
+  - action: utter_ask_caccal_contact

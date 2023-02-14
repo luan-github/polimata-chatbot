@@ -1,0 +1,203 @@
+version: "3.1"
+nlu:
+- intent: ask_tcc
+  examples: |
+    - o que vc tem sobre [tcc](disciplina)?
+    - O que você sabe sobre [Trabalho de Conclusão de curso](disciplina)?
+    - O que é o [Trabalho de Conclusão](disciplina)?
+    - O que é um [tcc](disciplina)?
+    - o que é basicamente um [tcc](disciplina)?
+    - como é o [tcc](disciplina) de [computação](curso)?
+    - então, o que é [trabalho de conclusão de curso](disciplina)?
+    - então, o que é um [trabalho de conclsão de curso](disciplina)?
+    - o que é um [tcc](disciplina)?
+    - o que vc pode me falar sobre o [tcc](disciplina)?
+    - precisamos falar sobre o [tcc](disciplina)
+- intent: ask_tcc_usual_path
+  examples: |
+    - Eu queria saber como eu começo a fazer meu [tcc](disciplina)
+    - Eu queria saber como eu começo a fazer
+    - como é feito o [tcc](disciplina)?
+    - Como a gente começa a fazer o [tcc](disciplina)?
+    - Como se dá início ao [tcc](disciplina)?
+    - Como é o processo de fazer um [tcc](disciplina)?
+    - quais as etapas de um [tcc](disciplina)?
+    - quais as fases de um [tcc](disciplina)?
+    - Como é a burocracia do [tcc](disciplina)?
+    - Como que desenrola um [tcc](disciplina)?
+    - Como eu desenrolo meu [tcc](disciplina)?
+    - por onde eu começo meu [tcc](disciplina)?
+    - como eu dou inicio ao meu [tcc](disciplina)?
+    - qual o protocolo de um [tcc](disciplina)?
+    - mostre-me o caminho do [tcc](disciplina)?
+    - me explica como eu faço meu [tcc](disciplina)
+    - me explica como eu faço o meu
+    - O que é preciso para fazer o [tcc](disciplina)?
+    - O que eu preciso saber sobre [tcc](disciplina)?
+    - o que eu devo saber sobre [tcc](disciplina)
+    - como eu começo meu [tcc](disciplina)?
+    - como eu começo?
+    - eu queria saber sobre o [tcc](disciplina)
+    - tenho que me inscrever para creditar o [tcc](disciplina)?
+    - eu não preciso me inscrever no [tcc](disciplina)?
+    - eu não tenho que me matricular no [tcc](disciplina)?
+    - eu tenho que me matricular no [tcc](disciplina)?
+    - primeiro eu tenho que fazer meu pré-projeto?
+    - primeiro eu faço o pré-projeto?
+- intent: ask_tcc_goal
+  examples: |
+    - Qual a finalidade do [tcc](disciplina)?
+    - Para que serve o [tcc](disciplina)?
+    - Qual o propósito do [tcc](disciplina)?
+    - De que serve o [tcc](disciplina)?
+    - pra que serve o [tcc](disciplina)?
+- intent: ask_tcc_like_group_work
+  examples: |
+    - O [tcc](disciplina) é individual?
+    - O [Trabalho de Conclusão](disciplina) pode ser em grupo?
+    - Pode fazer o [tcc](disciplina) em dupla?
+    - Pode fazer em dupla?
+    - Pode fazer o [Trabalho de Conclusão de curso](disciplina) em dupla?
+    - tem que fazer sozinho?
+    - é obrigatório fazer só?
+    - é obrigado fazer sozinho?
+    - Pode fazer o [tcc](disciplina) em trio?
+    - pode fazer o [tcc](disciplina) em grupo de três?
+- intent: ask_tcc_score
+  examples: |
+    - Qual a nota mínima em um [Trabalho de Conclusão de curso](disciplina)?
+    - Qual a nota mínima?
+    - qual a nota minima no [tcc](disciplina)?
+    - Qual a pontuação mínima em um [tcc](disciplina)?
+    - Qual a pontuação mínima?
+    - Vale quantos pontos?
+    - Qual a pontuação máxima?
+    - Qual a pontuação máxima de um [tcc](disciplina)?
+    - e qual a nota minima?
+- intent: ask_tcc_type
+  examples: |
+    - Que tipo de pesquisa eu posso fazer?
+    - o [tcc](disciplina) tem que ser uma monografia?
+    - o projeto tem que ser uma monografia?
+    - o projeto pode ser um artigo científico?
+    - O [tcc](disciplina) pode ser um artigo?
+    - O [tcc](disciplina) tem que ser um artigo publicado?
+    - Posso apresentar um artigo como [tcc](disciplina)?
+    - Artigo ciêntifico vale como [tcc](disciplina)?
+    - Quais os tipos de [tcc](disciplina)?
+    - Sobre o que eu posso fazer meu [tcc](disciplina)?
+    - Sobre o que eu posso fazer minha pesquisa?
+    - Sobre o que eu posso fazer meu pré-projeto?
+    - Sobre o que eu posso fazer meu artigo?
+    - Sobre o que eu posso fazer minha monografia?
+    - Que tema eu posso escolher para o meu [tcc](disciplina)?
+    - Que tema eu posso escolher para pesquisar?
+    - qual pode ser o tema da pesquisa?
+    - Que tema eu posso escolher para o meu pré-projeto?
+    - O que eu posso pesquisar no meu [tcc](disciplina)?
+- intent: ask_tcc_professor
+  examples: |
+    - E como eu escolho meu orientador?
+    - Quem pode ser meu orientador?
+    - Quem pode ser meu supervisor?
+    - Quem pode ser meu supervisor de [tcc](disciplina)?
+    - E quem pode me orintar?
+    - Como eu defino meu orientador?
+    - Não sei quem escolher para me supervisionar
+    - Não sei quem escolher para me supervisonar no [tcc](disciplina)
+    - Não sei quem escolher para me orientar
+    - Não sei quem escolher para me orientar no meu [tcc](disciplina)
+    - Preciso de um orientador
+    - Preciso de um orientador de [tcc](disciplina)
+    - Quem pode ser orientador de [tcc](disciplina)?
+    - Quem pode ser orientador?
+    - Quem pode ser o supervisor do [tcc](disciplina)?
+    - Quem pode ser o supervisor?
+    - Quem pode orientar [tcc](disciplina)?
+    - E quem deve ser esse orientador?
+    - E quem deve ser esse professor supervisor?
+    - E quem deve ser esse professor?
+    - Onde encontro um supervisor?
+    - Onde encontro um supervisor de [tcc](disciplina)?
+    - Onde encontro um orientador?
+    - Onde encontro um orientador de [tcc](disciplina)?
+    - O orientador tem que ser colegiado?
+    - O orientador tem que ser do nosso curso?
+    - O orientador tem ser do curso de [computação](curso)?
+    - O professor que vai me orientar tem ser do curso?
+    - O professor que vai me supervisionar tem ser do curso?
+    - O professor orientador tem que ser do curso?
+    - O professor supervisor tem que ser do curso?
+    - Esse professor que orienta a gente tem que ser do nosso curso?
+    - Esse professor que orienta a gente tem que ser do colegiado?
+    - Que professor eu escolho para orientar meu [tcc](disciplina)?
+    - Que professor eu escolho para supervisionar meu [tcc](disciplina)?
+    - Que professor eu posso escolher para orientar meu [tcc](disciplina)?
+    - Que professor eu posso escolher para supervisionar meu [tcc](disciplina)?
+    - Que professor eu posso escolher para me orientar?
+    - Que professor eu posso escolher para me orientar no [tcc](disciplina)?
+- intent: ask_tcc_professor_change
+  examples: |
+    - Posso trocar de orientador?
+    - É possível trocar de orientador?
+    - Dá para trocar de orientador?
+    - Pode mudar o orientador?
+    - Como muda o orientador de [tcc](disciplina)?
+    - Pode substituir o orientador?
+- intent: ask_tcc_assessment
+  examples: |
+    - Como é feita a avaliação do [tcc](disciplina)
+    - E como é feita a avaliação
+    - como são calculados os pontos?
+    - como é feito o cálculo da pontuação?
+    - como é feito o cálculo da nota?
+    - como a banca decide a nota?
+    - como a banca gera a nota?
+    - qual a formula usada?
+    - qual a fórmula usada para atribuir a nota do [tcc](disciplina)?
+    - qual a fórmula usada para atribuir a nota?
+    - Quem compõe a banca de [tcc](disciplina)?
+    - Quem compõe a banca?
+    - o que faz a banca avaliadora?
+    - qual o papel da banca avaliadora?
+    - como atua a banca avaliadora?
+    - e como é calculada a nota?
+    - Quem avalia o [tcc](disciplina)?
+    - Quem avalia?
+    - Como é avaliado o [tcc](disciplina)?
+    - Como é calculada a nota do [tcc](disciplina)?
+    - Qual a fórmula para a nota do [tcc](disciplina)?
+    - Qual a fórmula para a nota?
+    - Como se calcula a nota do [tcc](disciplina)?
+    - Como se calcula a nota?
+    - Qual a conta que faz para gerar a nota de [tcc](disciplina)?
+- intent: ask_tcc_co_advisor
+  examples: |
+    - Quem pode ser coorientador de [tcc](disciplina)?
+    - Quem pode ser coorientador?
+    - É preciso de coorientador no [tcc](disciplina)?
+    - É preciso ter coorientador?
+    - O coorientador tem que ser do nosso curso?
+    - O coorientador tem que do colegiado?
+- intent: ask_tcc_examples
+  examples: |
+    - Onde eu encontro modelos de [tcc](disciplina)?
+    - Você tem [tccs](disciplina) pra mim dar uma olhada?
+    - onde encontro trabalhos de conclusão do curso?
+    - queria ver um [tcc](disciplina) pronto?
+    - Você tem exemplos de [tcc](disciplina)?
+    - quais trabalhos já foram apresentados?
+    - tem como ter acesso a trabalhos de quem já se formou?
+    - tem trabalhos de quem já se formou?
+    - tem exemplos de monografias para estudar?
+    - queria ver as monografias de quem já se formou
+    - Quais [tccs](disciplina) já foram apresentados?
+- intent: ask_tcc_time_span
+  examples: |
+    - Quanto tempo dura uma apresentação de [tcc](disciplina)?
+    - Quanto tempo dura uma apresentação?
+    - quanto tempo leva uma apresentação de [tcc](disciplina)?
+    - Qual a duração de uma apresentação de [tcc](disciplina)?
+    - Quanto tempo um aluno tem para apresentar o [tcc](disciplina)?
+    - quanto tempo dura uma apresentação de [tcc](disciplina)?
+    - quanto tempo dura uma apresentação?

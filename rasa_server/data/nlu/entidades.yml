@@ -1,0 +1,108 @@
+version: "3.1"
+nlu:
+- intent: ask_entity
+  examples: |
+    - O que é o [centro academico](entidade)?
+    - O que é um [centro academico](entidade)?
+    - O que faz um [centro academico](entidade)?
+    - Para que serve o [centro academico](entidade)?
+    - Qual a finalidade do [centro academico](entidade)?
+    - Qual o propósito do [centro academico](entidade)?
+    - Qual a atribuição do [centro academico](entidade)?
+    - Quais são as atividades do [centro academico](entidade)?
+    - o que vc sabe sobre o [centro academico](entidade)?
+    - O curso de [computação](curso) tem [centro acadêmico](entidade)?
+    - O que faz o [CACCAL](entidade)?
+    - O que faz o [centro academico](entidade) de [computação](curso)?
+    - e qual é o de [computação](curso)?
+    - O que é o [CACCAL](entidade)?
+    - Qual o [CA](entidade) de ciência da [computação](curso)?
+    - Qual o [centro academico](entidade) de ciência da [computação](curso)?
+    - O que significa [CACCAL](entidade)?
+    - Qual a sigla do [centro academico](entidade) de [computação](curso)?
+    - e qual [centro academico](entidade) de ciências da [computação](curso)?
+    - e qual [C.A](entidade) de ciências da [computação](curso)?
+    - e qual o [centro academico](entidade) do curso de [computação](curso)?
+    - o [CACCAL](entidade) é do curso de [computação](curso)
+    - O que é a [atlética](entidade)?
+    - O que é a [Atlética](entidade) universitária?
+    - O que é uma [Atlética](entidade)?
+    - o que vc sabe sobre a [atletica](entidade)?
+    - o que é a [atlética](entidade)?
+    - e o que vc sabe sobre a [atletica](entidade)?
+    - o que é a [atletica](entidade)?
+    - O que é a [caotica](entidade)?
+    - O que é a [atletica](entidade) [caotica](entidade)?
+    - O que é a [AAACC](entidade)?
+    - O que é a [A.A.A.C.C](entidade)?
+    - Qual a [atletica](entidade) do curso de [computação](curso)?
+    - A [caotica](entidade) é de qual curso?
+    - Qual a sigla da [atlética](entidade) de [computação](curso)}?
+    - O Curso de [computação](curso) tem uma [atletica](entidade)?
+    - A [computação](curso) tem uma [associação desportiva](entidade)?
+    - e qual a [atletica](entidade) de [computação](curso)?
+    - o que é a [caótica]{"entity": "entidade", "value": "caotica"}?
+    - o que é a [caotica](entidade)?
+    - O que faz a [atlética](entidade)?
+    - Qual a finalidade da [atlética](entidade)?
+    - Quais as atribuições da [atlética](entidade)?
+    - Para que serve a [atlética](entidade)?
+    - Qual o propósito da [atlética](entidade)?
+    - O que a [caotica](entidade) faz?
+    - Para que serve a [caótica](entidade)?
+    - Qual a finalidade da [caótica](entidade)?
+    - Qual a atribuição da [caótica](entidade)?
+    - Qual o propósito da [caótica](entidade)?
+- intent: ask_caotica_tax
+  examples: |
+    - Qual o valor da taxa?
+    - Qual o valor da taxa da [atlética](entidade)?
+    - Quanto é a taxa?
+    - Quanto é a taxa da [atlética](entidade)?
+    - E qual é o valor dessa taxa?
+    - qual a taxa de associação com a [caótica]entidade?
+    - E qual é o valor dessa taxa da [atlética](entidade)?
+    - quanto tem pagar para ser membro da [caotica](entidade)?
+    - qual o valor da taxa?
+- intent: ask_contact
+  examples: |
+    - Qual a rede social?
+    - Tem rede social?
+    - Tem instagram?
+    - Tem telefone?
+    - Tem whatsapp?
+    - Tem facebook?
+    - Tem face?
+    - e como posso entrar em contato com alguem de lá?
+    - Tem algum canal de contato?
+    - Qual o contato?
+    - Como eu entro em contato?
+    - Como eu entro em contato com a [atlética](entidade)?
+    - Como eu posso entrar em contato com a [atlética](entidade)?
+    - Qual o contato da [atlética](entidade)?
+    - Tem algum canal de contato da [atlética](entidade)?
+    - Qual o canal de contato da [atlética](entidade)?
+    - Qual a rede social da [atlética](entidade)?
+    - e qual o contato da [atlética](entidade)?
+    - e como posso entrar em contato com alguem da [caótica](entidade)?
+    - Como eu entro em contato com [centro academico](entidade)?
+    - Como eu posso entrar em contato com [centro academico](entidade)?
+    - Qual o contato do [centro academico](entidade)?
+    - Preciso falar com alguém do [centro academico](entidade)
+    - Como entro em contato com o pessoal do [centro academico](entidade)?
+    - Tem algum canal de contato com o [centro academico](entidade)?
+    - Qual o canal de contato do [centro academico](entidade)?
+    - Qual a rede social do [centro academico](entidade)?
+    - Como posso entrar em contato com membros do [centro academico](entidade)?
+    - qual o contato do [centro academico](entidade) de [computação](curso)?
+    - e qual a rede social do [caccal](entidade)?
+    - qual o contato da [atletica](entidade) de [computação](curso)?
+    - qual o contato da [caótica](entidade)?
+    - qual o contato do [CACCAL](entidade)?
+    - quais as redes sociais da [atlética](entidade) e do [centro academico](entidade)?
+    - qual o contato da [caótica](entidade) e do [caccal](entidade)?
+    - tem algum telefone para contato ou email?
+    - qual o contato da [atlética](entidade)?
+    - como eu entro em contato?
+    - como eu falo com o pessoal da [atletica](entidade)?
+    - qual o contato deles?

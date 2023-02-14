@@ -1,0 +1,361 @@
+version: "3.1"
+
+stories:
+
+- story: ask-tcc-1
+  steps:
+  - intent: ask_tcc
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc
+
+- story: ask-tcc-usual-path
+  steps:
+  - intent: ask_tcc_usual_path
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_usual_path
+
+- story: ask-tcc-assessment
+  steps:
+  - intent: ask_tcc_assessment
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_assessment
+
+- story: ask-tcc-co-advisor
+  steps:
+  - intent: ask_tcc_co_advisor
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_co_advisor
+
+- story: ask-tcc-examples
+  steps:
+  - intent: ask_tcc_examples
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_examples
+
+- story: ask-tcc-goal
+  steps:
+  - intent: ask_tcc_goal
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_goal
+
+- story: ask-tcc-like-group-work
+  steps:
+  - intent: ask_tcc_like_group_work
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_like_group_work
+
+- story: ask-tcc-professor
+  steps:
+  - intent: ask_tcc_professor
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_professor
+
+- story: ask-tcc-professor-change
+  steps:
+  - intent: ask_tcc_professor_change
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_professor_change
+
+- story: ask-tcc-score
+  steps:
+  - intent: ask_tcc_score
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_score
+
+- story: ask-tcc-time-span
+  steps:
+  - intent: ask_tcc_time_span
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_time_span
+
+- story: ask-tcc-type
+  steps:
+  - intent: ask_tcc_type
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_type
+
+- story: ask-tcc-when-to-start
+  steps:
+  - intent: ask_when_to_start
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_when_to_start
+
+- story: tcc-happy-path-1
+  steps:
+  - intent: ask_tcc_usual_path
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_usual_path
+  - intent: ask_when_to_start
+  - action: utter_ask_tcc_when_to_start
+  - intent: ask_docs
+  - action: utter_ask_tcc_docs
+
+- story: tcc-happy-path-2
+  steps:
+  - intent: ask_tcc
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc
+  - intent: ask_when_to_start
+  - action: utter_ask_tcc_when_to_start
+  - intent: ask_docs
+  - action: utter_ask_tcc_docs
+
+- story: tcc-happy-path-2.1
+  steps:
+  - intent: ask_tcc_usual_path
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_usual_path
+  - intent: ask_tcc_professor
+  - action: utter_ask_tcc_professor
+  - intent: ask_docs
+  - action: utter_ask_tcc_docs
+
+- story: tcc-happy-path-2.2
+  steps:
+  - intent: ask_tcc_usual_path
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_usual_path
+  - intent: ask_tcc_professor
+  - action: utter_ask_tcc_professor
+  - intent: ask_docs
+  - action: utter_ask_tcc_docs
+
+- story: tcc-happy-path-2.3
+  steps:
+  - intent: ask_tcc_usual_path
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_usual_path
+  - intent: ask_docs
+  - action: utter_ask_tcc_docs
+  - intent: ask_tcc_professor
+  - action: utter_ask_tcc_professor
+  - intent: ask_tcc_professor_change
+  - action: utter_ask_tcc_professor_change
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
+
+- story: tcc-happy-path-2.5
+  steps:
+  - intent: ask_tcc_usual_path
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_usual_path
+  - intent: ask_tcc_type
+  - action: utter_ask_tcc_type
+  - intent: ask_tcc_examples
+  - action: utter_ask_tcc_examples
+  - intent: ask_tcc_professor
+  - action: utter_ask_tcc_professor
+  - intent: ask_tcc_professor_change
+  - action: utter_ask_tcc_professor_change
+  - intent: ask_tcc_co_advisor
+  - action: utter_ask_tcc_co_advisor
+
+- story: tcc-happy-path-2.4
+  steps:
+  - intent: ask_tcc_professor
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_professor
+  - intent: ask_tcc_professor_change
+  - action: utter_ask_tcc_professor_change
+  - intent: ask_tcc_co_advisor
+  - action: utter_ask_tcc_co_advisor
+
+- story: happy-path-3
+  steps:
+  - intent: ask_tcc_time_span
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_time_span
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
+
+- story: happy-path-4
+  steps:
+  - intent: ask_tcc_score
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_score
+  - intent: ask_tcc_assessment
+  - action: utter_ask_tcc_assessment
+
+- story: happy-path-5
+  steps:
+  - intent: ask_tcc_type
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_type
+  - intent: ask_tcc_examples
+  - action: utter_ask_tcc_examples
+
+- story: tcc-happy-path-6
+  steps:
+  - intent: ask_tcc
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc
+  - intent: ask_when_to_start
+  - action: utter_ask_tcc_when_to_start
+  - intent: ask_docs
+  - action: utter_ask_tcc_docs
+  - intent: ask_tcc_like_group_work
+  - action: utter_ask_tcc_like_group_work
+
+- story: tcc-happy-path-7
+  steps:
+  - intent: ask_docs
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_docs
+  - intent: ask_when_to_start
+  - action: utter_ask_tcc_when_to_start
+  - intent: ask_tcc_usual_path
+  - action: utter_ask_tcc_usual_path
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
+
+- story: tcc-happy-path-8
+  steps:
+  - intent: ask_tcc_type
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_type
+  - intent: ask_when_to_start
+  - action: utter_ask_tcc_when_to_start
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
+  - intent: ask_tcc_assessment
+  - action: utter_ask_tcc_assessment
+
+- story: tcc-happy-path-9
+  steps:
+  - intent: ask_tcc_co_advisor
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_co_advisor
+  - intent: ask_tcc_professor_change
+  - action: utter_ask_tcc_professor_change
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
+  - intent: ask_tcc_assessment
+  - action: utter_ask_tcc_assessment
+
+- story: tcc-happy-path-10
+  steps:
+  - intent: ask_tcc_professor_change
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_professor_change
+  - intent: ask_tcc_co_advisor
+  - action: utter_ask_tcc_co_advisor
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
+  - intent: ask_tcc_assessment
+  - action: utter_ask_tcc_assessment
+  - intent: ask_tcc_time_span
+  - action: utter_ask_tcc_time_span
+
+- story: tcc-happy-path-11
+  steps:
+  - intent: ask_tcc_time_span
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_time_span
+  - intent: ask_tcc_co_advisor
+  - action: utter_ask_tcc_co_advisor
+  - intent: ask_tcc_score
+  - action: utter_ask_tcc_score
+  - intent: ask_tcc_assessment
+  - action: utter_ask_tcc_assessment
+  - intent: ask_when_to_start
+  - action: utter_ask_tcc_when_to_start
+
+- story: ask-tcc-assessment-2
+  steps:
+  - intent: ask_tcc_assessment
+    entities:
+    - disciplina: tcc
+  - slot_was_set:
+    - disciplina: tcc
+  - action: utter_ask_tcc_assessment
+  - intent: ask_when_to_start
+  - action: utter_ask_tcc_when_to_start
+  - intent: ask_tcc_examples
+  - action: utter_ask_tcc_examples
