@@ -23,49 +23,59 @@ class ActionUtterLocation(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         places = {
-                    "unifap":{"latitude": -0.006323019979364349,
-                                    "longitude": -51.08270659116776},
-                    "computação":{"latitude": -0.002937,
+                    "computação":{"geolocation": {"latitude": -0.002937,
+                                  "longitude": -51.084196},
+                                  "name": "Curso de Ciência da Computação"},
+                    "coordenação":{"geolocation": {"latitude": -0.0029435945030728662,
+                                    "longitude": -51.08438355944174},
+                                    "name": "Coordenação de Ciência da Computação"},
+                    "engenharia eletrica":{"geolocation": {"latitude": -0.002937,
                                     "longitude": -51.084196},
-                    "engenharia eletrica":{"latitude": -0.002937,
-                                    "longitude": -51.084196},
-                    "letras":{"latitude": -0.004166005594351067,
-                                    "longitude": -51.08418297799158},
-                    "anfiteatro":{"latitude": -0.007215790482183133,
-                                    "longitude": -51.0835086813143},
-                    "ru":{"latitude": -0.008080799437680657,
-                                    "longitude": -51.083689730713985},
-                    "biblioteca":{"latitude": -0.007298635579484426,
-                                    "longitude": -51.084805364437294},
-                    "ginasio":{"latitude": -0.005511126816573149,
-                                    "longitude": -51.08325324851948},
-                    "reitoria":{"latitude": -0.006650882433062583,
-                                    "longitude": -51.08380154857428},
-                    "derca":{"latitude": -0.006039698644908812,
-                                    "longitude": -51.084188435835166},
-                    "dcet":{"latitude": -0.006046553503424945,
-                                    "longitude": -51.08446370835129},
-                    "nai":{"latitude": -0.007547903721781402,
-                                    "longitude": -51.08473866865888},
-                    "posto de saude":{"latitude": -0.009502598385964829,
-                                        "longitude": -51.088881901030305},
-                    "nti":{"latitude": -0.0060490249275337,
-                                        "longitude": -51.08479139781439},
-                    "xerox":{"latitude": -0.008218507124738528,
-                                        "longitude": -51.0850496714252}
+                                    "name": "Curso de Engenharia Elétrica"},
+                    "letras":{"geolocation": {"latitude": -0.004166005594351067,
+                              "longitude": -51.08418297799158},
+                              "name": "Curso de Letras"},
+                    "anfiteatro":{"geolocation": {"latitude": -0.007215790482183133,
+                                  "longitude": -51.0835086813143},
+                                  "name": "Anfiteatro da UNIFAP"},
+                    "ru":{"geolocation": {"latitude": -0.008080799437680657,
+                          "longitude": -51.083689730713985},
+                          "name": "Restaurante Universitário"},
+                    "biblioteca":{"geolocation": {"latitude": -0.007298635579484426,
+                                  "longitude": -51.084805364437294},
+                                  "name": "Biblioteca da UNIFAP"},
+                    "ginasio":{"geolocation": {"latitude": -0.005511126816573149,
+                               "longitude": -51.08325324851948},
+                               "name": "Ginásio da UNIFAP"},
+                    "reitoria":{"geolocation": {"latitude": -0.006650882433062583,
+                                "longitude": -51.08380154857428},
+                                "name": "Reitoria da UNIFAP"},
+                    "derca":{"geolocation": {"latitude": -0.006039698644908812,
+                             "longitude": -51.084188435835166},
+                             "name": "Departamento de Registro e Controle Acadêmico"},
+                    "dcet":{"geolocation": {"latitude": -0.006046553503424945,
+                            "longitude": -51.08446370835129},
+                            "name": "Departamento de Ciências Exatas e Tecnológicas"},
+                    "nai":{"geolocation": {"latitude": -0.007547903721781402,
+                           "longitude": -51.08473866865888},
+                           "name": "Núcleo de Acessibilidade e Inclusão"},
+                    "posto de saude":{"geolocation": {"latitude": -0.009502598385964829,
+                                      "longitude": -51.088881901030305},
+                                      "name": "Unidade Básica de Saúde"},
+                    "nti":{"geolocation": {"latitude": -0.0060490249275337,
+                           "longitude": -51.08479139781439},
+                           "name": "Núcleo de Tecnologia e Informática"},
+                    "xerox":{"geolocation": {"latitude": -0.008218507124738528,
+                             "longitude": -51.0850496714252},
+                             "name": "Xerox"}
                 }
 
         slot = tracker.get_slot("lugar")
-        if 'banheiro' in slot:
-            dispatcher.utter_message(text = "Geralmente fica no final do \
-            corredor de cada um dos blocos dos cursos. Não posso fornecer uma \
-            informação mais precisa pois não tenho informação sobre todos os \
-                                                                        locais")
+        if slot is None or slot not in places:
+            dispatcher.utter_message(text = "Desculpe, ainda não sei informar o local solicitado ou não entendi sua solicitação")
         elif slot in places:
-            place = places[slot]
-            dispatcher.utter_message(text = "Essas são as coordenadas que eu \
-                        disponho para: {}".format(slot.upper()), json_message = place)
-        else:
-            dispatcher.utter_message(text = "Desculpe, ainda não sei informar \
-                            o local solicitado ou não entendi sua solicitação")
+            place = places[slot]["geolocation"]
+            name = places[slot]["name"]
+            dispatcher.utter_message(text = "Essas são as coordenadas que eu disponho para: {}".format(name), json_message = place)
+
         return[SlotSet("lugar", None)]
