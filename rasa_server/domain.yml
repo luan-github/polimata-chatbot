@@ -38,6 +38,9 @@ intents:
 - ask_what_more_tcc
 - ask_what_more_training
 - ask_when_to_start
+- ask_schedules
+- ask_requirements
+- ask_office_hour
 - goodbye
 - greet
 - inform
@@ -86,6 +89,7 @@ slots:
     values:
     - dcet
     - derca
+    - coordenação
     mappings:
     - type: from_entity
       entity: departamento
@@ -368,6 +372,47 @@ responses:
   - text: 'O passo a passo está no documento abaixo:'
     custom:
       document: https://www2.unifap.br/nti/files/2016/05/Eduroam-Android.pdf
+    channel: telegram
+  utter_ask_schedules:
+  - custom:
+      text: "Você pode consultar seus horários no link abaixo"
+      parse_mode: MarkdownV2
+      reply_markup:
+        inline_keyboard:
+        - - text: Horários
+            url: https://www2.unifap.br/ccomputacao/horarios-de-aula/
+    channel: telegram
+  utter_ask_requirements:
+  - custom:
+      text: "Talvez a sua situação seja satisfeita mediante a entrada ou envio de requerimentos para a coordenação\\.\nNa página de requerimentos do blog do curso você encontrará os documentos para\\:\nRequerimento de crédito ou equivalência em disciplinas,\nMatrícula ou cancelamento fora de prazo,\nAbono ou justificativa de faltas,\nColação de grau,\nOutras solicitações\\."
+      parse_mode: MarkdownV2
+      reply_markup:
+        inline_keyboard:
+        - - text: Requerimentos
+            url: https://www2.unifap.br/ccomputacao/requerimentos/
+    channel: telegram
+  utter_ask_office_hour:
+  - custom:
+      text: "Atualmente o horário de atendimento é das 09h00 às 12h00 e 13h00 às 18h00\\.\n\nVocê pode confirmar essa informação na página do blog\\."
+      parse_mode: MarkdownV2
+      reply_markup:
+        inline_keyboard:
+        - - text: Horário de Atendimento
+            url: https://www2.unifap.br/ccomputacao/organizacao-do-curso/
+    channel: telegram
+  utter_ask_coordination:
+  - custom:
+      text: "A coordenação do Curso de Computação é responsável por gerenciar e participar de atividades relacionadas ao curso, incluindo a elaboração do currículo, definição das disciplinas e atendimento aos acadêmicos em diversas atividades, o que frequentemente envolve a entrega ou registro de alguma forma de documentação\\.\n\nVocê pode encontrar maiores informações sobre o funcionamento da coordenação no link abaixo para o blog do curso\\."
+      reply_markup:
+        inline_keyboard:
+        - - text: Coordenação
+            url: https://www2.unifap.br/ccomputacao/organizacao-do-curso/
+      parse_mode: MarkdownV2
+    channel: telegram
+  utter_ask_coordination_contact:
+  - custom:
+      text: "Você pode entrar em contato com a coordenação nos seguintes canais de atendimeto:\n\nEmail: ccc@unifap\\.br\nTelefone: \\(96\\) 4009\\-2664"
+      parse_mode: MarkdownV2
     channel: telegram
   utter_out_of_scope:
   - text: Eu não tenho certeza se entendi. Talvez você precise escrever sua solicitação com outras palavras, ou eu não posso atendê-la pois ela está fora do propósito do meu projeto.

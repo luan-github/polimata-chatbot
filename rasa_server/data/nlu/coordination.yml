@@ -1,0 +1,33 @@
+version: "3.1"
+nlu:
+- intent: ask_schedules
+  examples: |
+    - Qual o horário das disciplinas deste semestre?
+    - Onde estão os horários das disciplinas?
+    - Quais são as minhas aulas de hoje?
+    - Como posso saber as aulas da semana?
+    - Quais são os horários das aulas para esta semana?
+    - Qual a agenda de aulas para este semestre?
+    - Como posso visualizar meu horário de aulas
+    - Onde posso verificar os horários das disciplinas para este período?
+- intent: ask_requirements
+  examples: |
+    - Preciso do requerimento para creditar uma disciplina
+    - Como posso solicitar dispensa de uma disciplina?
+    - Como posso creditar uma disciplina que eu já cursei?
+    - Qual o procedimento para solicitar créditos em uma disciplina já cursada?
+    - Gostaria do requerimento para justificar minhas faltas
+    - Você tem o requerimento para abono de faltas?
+    - Como posso me matricular fora do prazo?
+    - Perdi o prazo de matrícula, o que faço?
+    - Quais requerimentos eu posso enviar a coordenação?
+- intent: ask_office_hour
+  examples: |
+    - Qual o horário de funcionamento da coordenação?
+    - Que horas abre e fecha a coordenação?
+    - Qual o horário de atendimento da coordenação?
+    - Qual o horário de expediente da coordenação?
+    - Em que horário posso ir à coordenação?
+    - Quais são os dias e horários em que a coordenação está aberta?
+    - Qual é o horário de atendimento ao público da coordenação?
+    - A coordenação tem horário de funcionamento aos sábados?

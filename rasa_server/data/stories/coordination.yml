@@ -1,0 +1,60 @@
+version: "3.1"
+
+stories:
+
+- story: ask-entity-coordination
+  steps:
+  - intent: ask_entity
+    entities:
+    - departamento: coordenação
+  - slot_was_set:
+    - departamento: coordenação
+  - action: utter_ask_coordination
+
+- story: ask-contact-coordination-inform
+  steps:
+  - intent: ask_contact
+  - action: utter_ask_contact
+  - intent: inform
+    entities:
+    - departamento: coordenação
+  - slot_was_set:
+    - departamento: coordenação
+  - action: utter_ask_coordination_contact
+
+- story: ask-contact-coordination-1
+  steps:
+  - intent: ask_contact
+    entities:
+    - departamento: coordenação
+  - slot_was_set:
+    - departamento: coordenação
+  - action: utter_ask_coordination_contact
+
+- story: coordination-happy-path
+  steps:
+  - intent: ask_entity
+    entities:
+    - departamento: coordenação
+  - slot_was_set:
+    - departamento: coordenação
+  - action: utter_ask_coordination
+  - intent: ask_contact
+  - action: utter_ask_coordination_contact
+  - intent: ask_office_hour
+  - action: utter_ask_office_hour
+
+- story: ask-schedules
+  steps:
+  - intent: ask_schedules
+  - action: utter_ask_schedules
+
+- story: ask-requerimentos
+  steps:
+  - intent: ask_requirements
+  - action: utter_ask_requirements
+
+- story: ask-office-hour
+  steps:
+  - intent: ask_office_hour
+  - action: utter_ask_office_hour
