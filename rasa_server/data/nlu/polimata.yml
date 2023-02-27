@@ -6,21 +6,21 @@ nlu:
     - Como você se chama?
     - olá qual seu nome?
     - oi, qual o seu nome?
-    - oi, qual seu nome?
-    - qual seu nome?
+    - oi, qual seu nome mesmo?
+    - qual seu nome completo?
+    - Como você gostaria de ser chamado?
 - intent: ask_polimata_meaning
   examples: |
-    - O que significa polimata?
-    - porque polimata?
-    - O que quer dizer polímata?
-    - Seu nome é estranho
+    - O que significa o seu nome, polimata?
+    - De onde vem o nome polímata?
+    - O que quer dizer o termo polímata?
+    - Seu nome é estranho, qual o significado?
+    - Seu nome é diferente, o que ele significa?
     - De onde veio a ideia do seu nome?
     - Por que vc se chama polimata?
-    - por que você se chama assim?
-    - e o que isso quer dizer
-    - e o que significa isso?
-    - e o que isso quer dizer?
-    - polimata é alguem que fala vários idiomas?
+    - Pode me explicar a origem do nome Polímata?
+    - o que é um polímata?
+    - Qual é a história por trás do nome Polimata?
 - intent: ask_polimata_project
   examples: |
     - /ask_polimata_project

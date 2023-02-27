@@ -56,14 +56,14 @@ nlu:
     - O [estágio](disciplina)
     - A disciplina de [estagio](disciplina), por favor
     - [calculo](disciplina)
-    - do [centro academico](entidade)
+    - da [coordenação](departamento)
+    - do [centro acadêmico](entidade)
     - do [caccal](entidade)
     - do [CA](entidade)
-    - do [centro academico](entidade) de [computação](curso)
+    - do [centro acadêmico](entidade) de [computação](curso)
     - da [atletica](entidade)
     - da [caotica](entidade)
     - da [atlética]{"entity": "entidade", "value": "caotica"}
-    - do [centro acadêmico]{"entity": "entidade", "value": "caccal"}
 - intent: neutral
   examples: |
     - humm, interessante
@@ -91,13 +91,13 @@ nlu:
     - kkk
 - intent: ask_for_more
   examples: |
-    - me conta mais
-    - o que mais?
-    - o que mais voce sabe?
-    - o que mais vc sabe sobre a [atletica](entidade)
-    - o que mais voce sabe sobre o [centro academico](entidade)
-    - o que mais voce sabe sobre o [estagio](disciplina)
-    - o que mais voce sabe sobre o [tcc](disciplina)
+    - Me conta mais
+    - O que mais?
+    - O que mais você sabe?
+    - O que mais você sabe sobre a [atlética](entidade)?
+    - E mais informações sobre o [centro acadêmico](entidade)?
+    - Você tem mais detalhes sobre a disciplina de [estágio](disciplina)?
+    - Pode me dar mais informações sobre o [trabalho de conclusão de curso](disciplina)?
 - intent: ask_how_get_in
   examples: |
     - Como eu posso partipar?
@@ -109,9 +109,9 @@ nlu:
     - Quero fazer parte da [atlética](entidade)
     - Como posso participar da [atletica](entidade)?
     - Como posso fazer parte da [atlética](entidade)?
-    - Como eu posso participar do [centro academico](entidade) de [computação](curso)?
+    - Como eu posso participar do [centro acadêmico](entidade) de [computação](curso)?
     - Como eu participo do [caccal](entidade)?
-    - Eu quero fazer parte do [centro academico](entidade)
+    - Eu quero fazer parte do [centro acadêmico](entidade)
     - Como posso fazer parte do [centro academico](entidade) de [computação](curso)?
     - como eu posso entrar?
     - e como eu posso participar?
@@ -119,72 +119,61 @@ nlu:
     - como eu posso participar da [caótica](entidade)?
     - como eu posso participar da [atlética](entidade) de [computação](curso)?
     - e como eu posso participar?
+    - gostaria de contribuir
     - Como eu posso participar do seu [projeto](polimata)?
     - Gostaria de participar do [projeto](polimata)?
     - O que eu preciso saber para participar do [projeto](polimata)?
-    - e eu posso participar?
-    - e como eu participo da [atlética](entidade)?
+    - Eu posso participar?
 - intent: ask_location
   examples: |
-    - Onde fica a [unifap](lugar)?
-    - Onde é a [biblioteca](lugar)?
-    - Onde é a [biblioteca da unifap](lugar)?
-    - Onde é a [biblioteca da universidade](lugar)?
-    - Como eu chego no [anfiteatro](lugar)?
-    - Onde é o bloco do curso de [computação](lugar)?
+    - Onde é a [biblioteca](lugar) da unifap?
+    - Como chego ao [anfiteatro](lugar)?
+    - Onde fica o bloco do curso de [computação](lugar)?
     - Onde é o curso de [computação](lugar)?
+    - Onde é a [coordenação de computação](lugar)?
+    - Onde fica a [Coordenação de Computação](lugar)?
     - Onde fica o curso de [letras](lugar)?
-    - Onde fica o prédio de [computação](lugar)?
-    - onde fica o predio de [engenharia eletrica](lugar)?
-    - Como eu chego no prédio de [engenharia eletrica](lugar)?
-    - qual o caminho para o [restaurante](lugar) universitario?
-    - onde é o [restaurante](lugar)?
-    - onde é o [derca](lugar)?
-    - onde é o [derca da unifap](lugar)?
-    - pra onde é o [ginasio](lugar)?
-    - pra onde é o [ginasio da unifap](lugar)?
-    - pra onde é o [ginasio da universidade](lugar)?
-    - onde é o [dcet](lugar)?
-    - como eu chego no [decet](lugar)
-    - eu quero chegar no [ginasio](lugar)
-    - onde é a [quadra](lugar)?
-    - onde é a [quadra da unifap](lugar)?
-    - onde fica o [nai](lugar)?
-    - como que a gente chega no [nai](lugar)
-    - onde é o [nucleo de acessilidade](lugar) ?
-    - onde é o [departamento de exatas](lugar)?
-    - onde é o [departamento de ciencias exatas e tecnologicas](lugar)?
-    - onde fica o [posto de saude](lugar)?
-    - onde fica o [posto de saude da unifap](lugar)?
-    - tem [unidade básica de saúde](lugar) na unifap?
-    - onde é o [banheiro](lugar)?
-    - onde é a [unifap](lugar)?
-    - onde é a [universidade](lugar)?
-    - onde eu posso tirar [xerox](lugar)?
-    - onde tira [xerox](lugar) aqui?
-    - onde eu posso tirar [cópias](lugar)?
-    - onde fica a [xerox](lugar)?
-    - onde é a [reprografia](lugar)?
-    - onde posso [imprimir](lugar) um trabalho?
-    - vc sabe onde é a [xerox](lugar)?
-    - a onde é o [nti](lugar)?
-    - onde fica o [núcleo de tecnologia e informática](lugar)?
+    - Onde fica o prédio de [engenharia elétrica](lugar)?
+    - Qual o caminho para o [restaurante](lugar) universitário?
+    - Onde é a [reitoria](lugar)?
+    - Onde fica o [derca](lugar)?
+    - Pra onde é o [ginásio da unifap](lugar)?
+    - Onde fica o [DCET](lugar)?
+    - Como eu chego no [DCET](lugar)?
+    - Onde é o [ginásio](lugar)?
+    - Onde é a [quadra](lugar) de esportes?
+    - Onde fica o [NAI](lugar)?
+    - Como chegar no [NAI](lugar)?
+    - Onde fica o [núcleo de acessibilidade](lugar)?
+    - Onde é o [Departamento de Exatas](lugar)?
+    - Onde é o [Departamento de Ciências Exatas e Tecnológicas](lugar)?
+    - Onde fica o [posto de saúde](lugar)?
+    - Onde fica o [posto de saúde da UNIFAP](lugar)?
+    - Existe uma [unidade básica de saúde](lugar) na UNIFAP?
+    - Onde posso encontrar uma [copiadora](lugar)?
+    - Onde posso encontrar uma [impressora](lugar)?
+    - Onde posso tirar [cópias](lugar)?
+    - Onde fica a [reprografia](lugar)?
+    - Onde posso [imprimir](lugar) um trabalho?
+    - Você sabe onde fica a [xerox](lugar)?
+    - A onde é o [nti](lugar)?
+    - Onde fica o [núcleo de tecnologia e informática](lugar)?
 - intent: ask_how_to_eduroam
   examples: |
-    - como eu posso usar a internet do bloco?
-    - como conecta na wifi do curso?
-    - como posso usar a internet do prédio?
-    - quero usar a wifi do curso?
-    - como eu uso a wifi?
-    - eu gostaria de usar a internet do curso de computação
-    - eu gostaria de usar a internet da Universidade
-    - eu gostaria de usar a internet da unifap
-    - como configurar a internet da universidade no celular?
-    - como eu posso configurar a wifi da universidade no celular?
-    - como faz para usar a wifi da universidade?
-    - como usar a rede eduroam?
-    - como conecta na eduroam?
-    - como configura a eduroam no celular?
+    - Como faço para conectar na internet do bloco?
+    - Qual é o processo para usar a Wi-Fi do curso?
+    - Como posso acessar a internet do prédio?
+    - Como posso me conectar à Wi-Fi do curso?
+    - Como utilizo a wifi?
+    - Eu gostaria de usar a internet do curso de computação. Como faço?
+    - Como posso acessar a internet da Universidade?
+    - Como posso me conectar à rede da Unifap?
+    - Como faço para configurar a internet da Universidade no celular?
+    - Como posso configurar a Wi-Fi da Universidade no meu celular?
+    - Qual é o procedimento para acessar a wifi da Universidade?
+    - Como faço para usar a rede Eduroam?
+    - Como me conecto à rede Eduroam?
+    - Como configuro a Eduroam no celular?
 - intent: ask_what_more_tcc
   examples: |
     - /ask_what_more_tcc

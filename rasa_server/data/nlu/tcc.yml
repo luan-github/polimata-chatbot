@@ -16,34 +16,22 @@ nlu:
 - intent: ask_tcc_usual_path
   examples: |
     - Eu queria saber como eu começo a fazer meu [tcc](disciplina)
-    - Eu queria saber como eu começo a fazer
     - como é feito o [tcc](disciplina)?
     - Como a gente começa a fazer o [tcc](disciplina)?
     - Como se dá início ao [tcc](disciplina)?
-    - Como é o processo de fazer um [tcc](disciplina)?
+    - Como é o processo de fazer o [tcc](disciplina)?
     - quais as etapas de um [tcc](disciplina)?
     - quais as fases de um [tcc](disciplina)?
-    - Como é a burocracia do [tcc](disciplina)?
-    - Como que desenrola um [tcc](disciplina)?
-    - Como eu desenrolo meu [tcc](disciplina)?
     - por onde eu começo meu [tcc](disciplina)?
-    - como eu dou inicio ao meu [tcc](disciplina)?
     - qual o protocolo de um [tcc](disciplina)?
-    - mostre-me o caminho do [tcc](disciplina)?
     - me explica como eu faço meu [tcc](disciplina)
-    - me explica como eu faço o meu
     - O que é preciso para fazer o [tcc](disciplina)?
     - O que eu preciso saber sobre [tcc](disciplina)?
     - o que eu devo saber sobre [tcc](disciplina)
     - como eu começo meu [tcc](disciplina)?
-    - como eu começo?
-    - eu queria saber sobre o [tcc](disciplina)
     - tenho que me inscrever para creditar o [tcc](disciplina)?
-    - eu não preciso me inscrever no [tcc](disciplina)?
-    - eu não tenho que me matricular no [tcc](disciplina)?
     - eu tenho que me matricular no [tcc](disciplina)?
-    - primeiro eu tenho que fazer meu pré-projeto?
-    - primeiro eu faço o pré-projeto?
+    - primeiro eu tenho que fazer meu pré-projeto de [tcc](disciplina)?
 - intent: ask_tcc_goal
   examples: |
     - Qual a finalidade do [tcc](disciplina)?
@@ -86,55 +74,28 @@ nlu:
     - Artigo ciêntifico vale como [tcc](disciplina)?
     - Quais os tipos de [tcc](disciplina)?
     - Sobre o que eu posso fazer meu [tcc](disciplina)?
-    - Sobre o que eu posso fazer minha pesquisa?
-    - Sobre o que eu posso fazer meu pré-projeto?
-    - Sobre o que eu posso fazer meu artigo?
-    - Sobre o que eu posso fazer minha monografia?
     - Que tema eu posso escolher para o meu [tcc](disciplina)?
-    - Que tema eu posso escolher para pesquisar?
-    - qual pode ser o tema da pesquisa?
+    - qual pode ser o tema da pesquisa do [tcc](disciplina)?
     - Que tema eu posso escolher para o meu pré-projeto?
     - O que eu posso pesquisar no meu [tcc](disciplina)?
 - intent: ask_tcc_professor
   examples: |
-    - E como eu escolho meu orientador?
-    - Quem pode ser meu orientador?
-    - Quem pode ser meu supervisor?
-    - Quem pode ser meu supervisor de [tcc](disciplina)?
-    - E quem pode me orintar?
-    - Como eu defino meu orientador?
-    - Não sei quem escolher para me supervisionar
-    - Não sei quem escolher para me supervisonar no [tcc](disciplina)
-    - Não sei quem escolher para me orientar
+    - E como eu escolho meu orientador de [tcc](disciplina)?
+    - E quem pode me orientar?
+    - Como eu defino meu orientador de [tcc](disciplina)?
+    - Não sei quem poderia me supervisonar no [tcc](disciplina)
     - Não sei quem escolher para me orientar no meu [tcc](disciplina)
-    - Preciso de um orientador
     - Preciso de um orientador de [tcc](disciplina)
     - Quem pode ser orientador de [tcc](disciplina)?
-    - Quem pode ser orientador?
-    - Quem pode ser o supervisor do [tcc](disciplina)?
-    - Quem pode ser o supervisor?
     - Quem pode orientar [tcc](disciplina)?
-    - E quem deve ser esse orientador?
-    - E quem deve ser esse professor supervisor?
-    - E quem deve ser esse professor?
-    - Onde encontro um supervisor?
-    - Onde encontro um supervisor de [tcc](disciplina)?
-    - Onde encontro um orientador?
+    - Quem deve ser o orientador de [tcc](disciplina)?
+    - Quem deve ser o professor supervisor de [tcc](disciplina)?
     - Onde encontro um orientador de [tcc](disciplina)?
-    - O orientador tem que ser colegiado?
-    - O orientador tem que ser do nosso curso?
-    - O orientador tem ser do curso de [computação](curso)?
-    - O professor que vai me orientar tem ser do curso?
-    - O professor que vai me supervisionar tem ser do curso?
-    - O professor orientador tem que ser do curso?
-    - O professor supervisor tem que ser do curso?
-    - Esse professor que orienta a gente tem que ser do nosso curso?
-    - Esse professor que orienta a gente tem que ser do colegiado?
-    - Que professor eu escolho para orientar meu [tcc](disciplina)?
-    - Que professor eu escolho para supervisionar meu [tcc](disciplina)?
+    - O orientador de [tcc](disciplina) tem que ser colegiado?
+    - O professor de [tcc](disciplina) tem que ser do nosso curso?
+    - O orientador de [tcc](disciplina) tem ser do curso de [computação](curso)?
+    - Esse professor que orienta a gente no [tcc](disciplina) tem que ser do colegiado?
     - Que professor eu posso escolher para orientar meu [tcc](disciplina)?
-    - Que professor eu posso escolher para supervisionar meu [tcc](disciplina)?
-    - Que professor eu posso escolher para me orientar?
     - Que professor eu posso escolher para me orientar no [tcc](disciplina)?
 - intent: ask_tcc_professor_change
   examples: |
@@ -147,30 +108,21 @@ nlu:
 - intent: ask_tcc_assessment
   examples: |
     - Como é feita a avaliação do [tcc](disciplina)
-    - E como é feita a avaliação
-    - como são calculados os pontos?
-    - como é feito o cálculo da pontuação?
-    - como é feito o cálculo da nota?
-    - como a banca decide a nota?
-    - como a banca gera a nota?
-    - qual a formula usada?
+    - como são calculados os pontos do [tcc](disciplina)?
+    - como é feito o cálculo da pontuação do [tcc](disciplina)?
+    - como é feito o cálculo da nota do [tcc](disciplina)?
+    - como a banca decide a nota do [tcc](disciplina)?
     - qual a fórmula usada para atribuir a nota do [tcc](disciplina)?
-    - qual a fórmula usada para atribuir a nota?
     - Quem compõe a banca de [tcc](disciplina)?
-    - Quem compõe a banca?
-    - o que faz a banca avaliadora?
-    - qual o papel da banca avaliadora?
-    - como atua a banca avaliadora?
-    - e como é calculada a nota?
-    - Quem avalia o [tcc](disciplina)?
-    - Quem avalia?
+    - o que faz a banca avaliadora do [tcc](disciplina)?
+    - como atua a banca avaliadora do [tcc](disciplina)?
+    - Quem são os profesores que avaliam o [tcc](disciplina)?
     - Como é avaliado o [tcc](disciplina)?
-    - Como é calculada a nota do [tcc](disciplina)?
     - Qual a fórmula para a nota do [tcc](disciplina)?
-    - Qual a fórmula para a nota?
+    - Qual a equação para a nota do [tcc](disciplina)?
     - Como se calcula a nota do [tcc](disciplina)?
     - Como se calcula a nota?
-    - Qual a conta que faz para gerar a nota de [tcc](disciplina)?
+    - Que conta que se faz para gerar a nota de [tcc](disciplina)?
 - intent: ask_tcc_co_advisor
   examples: |
     - Quem pode ser coorientador de [tcc](disciplina)?

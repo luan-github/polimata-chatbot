@@ -3,6 +3,8 @@ nlu:
 
 - synonym: caotica
   examples: |
+    - Atlética
+    - Caótica
     - atlética
     - atletica
     - caótica
@@ -22,6 +24,7 @@ nlu:
     - asociaçao desportiva
 - synonym: caccal
   examples: |
+    - Centro Acadêmico
     - centro acadêmico
     - CA
     - C.A
@@ -37,6 +40,7 @@ nlu:
     - cento academico
 - synonym: computação
   examples: |
+    - Computação
     - computaçao
     - computacao
     - computacão
@@ -47,6 +51,7 @@ nlu:
     - compuacao
 - synonym: engenharia eletrica
   examples: |
+    - Engenharia Elétrica
     - engenharia elétrica
     - engenharia eletrca
     - engeharia eletrica
@@ -57,10 +62,12 @@ nlu:
     - eng eletrica
 - synonym: letras
   examples: |
+    - Letras
     - letras da unifap
     - letras da universidade
 - synonym: ru
   examples: |
+    - Restaurante
     - restaurante
     - restaurante da universidade
     - restaurante da unifap
@@ -71,17 +78,32 @@ nlu:
     - resturante
     - retaurante
     - R.U
+    - RU
 - synonym: posto de saude
   examples: |
+    - Unidade Básica de Saúde
     - unidade básica de saúde
     - unidade basica de saude
+    - posto de saúde da UNIFAP
     - unidade de saúde
     - posto de saúde
+    - Posto de Saúde
     - unidade de saude
     - posto da unifap
+    - unidade básica de saúde na UNIFAP
+- synonym: derca
+  examples: |
+    - Derca
+    - DERCA
+    - Departamento de Registro e Controle Acadêmico
+    - Departamento de Registro
+    - departamento de registro e controle
+    - departamento de registro
 - synonym: dcet
   examples: |
+    - DCET
     - decet
+    - Decet
     - departamento de ciencias exatas e tecnologicas
     - departamento de ciencias exatas e tecnologicas da universidade
     - departamento de ciencias exatas
@@ -89,31 +111,51 @@ nlu:
     - departamento de ciencias exatas da unifap
     - departamento exatas
     - departamento exatas da universidade
+    - Departamento de Exatas
+    - Departamento de Ciências Exatas e Tecnológicas
 - synonym: nai
   examples: |
+    - NAI
+    - Nai
     - nucleo de acessibilidade
     - núcleo de acessilidade
     - nai da unifap
     - nai da universidade
 - synonym: biblioteca
   examples: |
+    - Biblioteca
     - bibioteca
     - biblioteca da unifap
     - biblioteca da universidade
     - bibliote
-- synonym: unifap
+- synonym: reitoria
   examples: |
-    - universidade
+    - Reitoria
+    - reitria
+- synonym: coordenação
+  examples: |
+    - Coordenação
+    - Coordenação de Computação
+    - Coordenação De Computação
+    - coordenação de computação
+    - Coordenação do Curso de Computação
+    - Coordenação de Ciência da Computação
+- synonym: anfiteatro
+  examples: |
+    - Anfiteatro
+    - anfteatro
 - synonym: ginasio
   examples: |
     - quadra da unifap
     - quadra
+    - Ginásio
     - ginásio
     - ginasio da unifap
     - ginásio da unifap
     - ginásio da universidade
 - synonym: nti
   examples: |
+    - Núcleo de Tecnologia e Informática
     - núcleo de tecnologia e informática
     - nucleo de tecnologia e informatica
     - núcleo de tecnologia
@@ -128,12 +170,15 @@ nlu:
     - copia
     - fotocopia
     - imprimir
+    - copiadora
+    - impressora
 - synonym: projeto
   examples: |
     - desenvolvimento
     - codificação
 - synonym: estagio
   examples: |
+    - Estágio
     - estágio
     - estágios
     - estagios
@@ -149,6 +194,7 @@ nlu:
     - trabalho de conclusão
     - trabalho de conclusao
     - tccs
+    - TCC
     - trbalho de conclusão
     - trbalho de conclusao
     - trabaho de conclusão
