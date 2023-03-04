@@ -414,8 +414,10 @@ responses:
       text: "Você pode entrar em contato com a coordenação nos seguintes canais de atendimeto:\n\nEmail: ccc@unifap\\.br\nTelefone: \\(96\\) 4009\\-2664"
       parse_mode: MarkdownV2
     channel: telegram
+  utter_default:
+  - text: Eu não tenho certeza se entendi. Talvez você precise escrever sua mensagem com outras palavras.
   utter_out_of_scope:
-  - text: Eu não tenho certeza se entendi. Talvez você precise escrever sua solicitação com outras palavras, ou eu não posso atendê-la pois ela está fora do propósito do meu projeto.
+  - text: Não posso atender essa solicitação.
   utter_ask_reset:
   - text: Desculpe, acho que fiquei confuso.
 actions:

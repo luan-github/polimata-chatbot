@@ -70,7 +70,7 @@ rules:
 - rule: nlu-fallback
   steps:
   - intent: nlu_fallback
-  - action: utter_out_of_scope
+  - action: utter_default
 
 - rule: reset-slots
   steps:
