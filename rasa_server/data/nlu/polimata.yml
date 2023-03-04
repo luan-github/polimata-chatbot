@@ -4,11 +4,11 @@ nlu:
   examples: |
     - Qual seu nome?
     - Como você se chama?
-    - olá qual seu nome?
     - oi, qual o seu nome?
     - oi, qual seu nome mesmo?
     - qual seu nome completo?
     - Como você gostaria de ser chamado?
+    - Polímata
 - intent: ask_polimata_meaning
   examples: |
     - O que significa o seu nome, polimata?
@@ -25,31 +25,26 @@ nlu:
   examples: |
     - /ask_polimata_project
     - O que é esse projeto polímata?
-    - Fale mais sobre você
-    - Me explique o seu escopo
-    - Qual a sua finalidade?
+    - Fale mais sobre você polímata
+    - Polimata, me explique o seu escopo
+    - Polímata, qual a sua finalidade?
     - Qual o seu propósito?
-    - Qual é a sua?
+    - O que é o projeto polímata?
     - O que é você?
     - o que é esse seu projeto?
-    - me fale mais sobre o seu projeto
     - ei, me explica esse seu projeto
 - intent: ask_polimata_functions
   examples: |
-    - Pra que você serve
-    - Quais funções você possui?
-    - Quais suas funcionalidades?
-    - quais são suas funções?
+    - Pra que você serve o polímata?
+    - Polímata, quais funções você possui?
+    - Quais suas funcionalidades você têm?
+    - O que o Pólimata faz?
     - Quais seus requisitos funcionais?
     - O que você sabe fazer?
-    - O que vc sabe fazer?
-    - e oq vc faz?
     - e o que você faz?
-    - me explica suas funções
-    - que assuntos vc conhece?
-    - que perguntas você sabe responder?
-    - o que você sabe responder?
-    - sobre o que você sabe falar
+    - me explica que perguntas você sabe responder
+    - que assuntos você conhece?
+    - sobre o que o polímata sabe falar
 - intent: ask_polimata_address
   examples: |
     - Qual o link para esse projeto?
@@ -89,9 +84,7 @@ nlu:
     - Posso te dar uma ideia?
 - intent: ask_polimata_learning_aid
   examples: |
-    - Você sabe dar cola?
-    - Você dá cola
-    - Você sabe [calculo](disciplina)?
+    - O que você sabe sobre a disciplina de cálculo?
     - Você sabe [programação](disciplina)?
     - Você ensina alguma coisa?
     - Você sabe programar?
@@ -103,7 +96,18 @@ nlu:
     - você pode me ajudar em [banco de dados](disciplina)?
     - e você ajuda os estudantes nas disciplinas?
     - em quais matérias você ajuda os esudantes?
-    - vc ensina alguma matéria?
+    - Você ensina alguma matéria?
+    - Como eu faço a referência de um site?
+    - Como eu faço referência de artigo com mais de três autores?
+    - Como eu faço a referência de uma monografia?
+    - Qual deve ser a margem do [TCC](disciplina)?
+    - Qual deve ser o tamanho da fonte no [tcc](disciplina)?
+    - qual a diferença entre quadro e tabela?
+    - como eu faço se o quadro é maior que a página?
+    - como faço a referência de outra monografia?
+    - fale de EDO
+    - Me fale sobre a matéria de calculo 3
+    - Me fale de uma disciplina da computação
 - intent: polimata_compliment
   examples: |
     - Você é muito legal
@@ -130,39 +134,38 @@ nlu:
     - você é o melhor
 - intent: polimata_out_of_scope_for_now
   examples: |
-    - O que vc sabe sobre a [atlética](entidade) de [biologia](curso)
-    - Quem compõe a diretoria atual do [centro academico](entidade)
-    - Qual o [centro academico](entidade) de [historia](curso)
-    - qual o cardápio do [RU](lugar)?
-    - o que tem no [restarante](lugar) hoje?
-    - qual o valor da refeição no [restaurante](lugar)?
-    - A [biblioteca](lugar) tem site?
-    - como eu tiro a carteirinha da [biblioteca](lugar)?
-    - Qual o número de contato da [biblioteca]((lugar)?
-    - tem o livro de [calculo](disciplina) 1 na [biblioteca]((lugar)?
-    - qual o status do livro de [calculo](disciplina) na [biblioteca](lugar)?
-    - Como eu faço a referência de um site?
-    - Como eu faço referência de artigo com mais de três autores?
-    - Como eu faço a referência de uma monografia?
-    - Qual deve ser a margem do [TCC](disciplina)?
-    - Qual deve ser o tamanho da fonte no [tcc](disciplina)?
-    - qual a diferença entre quadro e tabela?
-    - como eu faço se o quadro é maior que a página?
-    - como faço a referência de outra monografia?
+    - O que vc sabe sobre a [atlética](entidade) de [biologia](curso)?
+    - Quem compõe a diretoria atual do [centro acadêmico](entidade)?
+    - Quem são os representantes do [CACCAL](entidade)?
+    - Quem são os membros do [CACCAL](entidade)?
+    - qual o cardápio do RU hoje?
+    - o que tem no restarante hoje?
+    - qual o valor da refeição no restaurante?
+    - Como eu almoço na unifap?
+    - Como eu me alimento no restaurante universitário?
+    - Como funciona o RU?
+    - Que horas abre o restaurante universitário?
+    - Qual o site da biblioteca?
+    - como eu tiro a carteirinha da biblioteca?
+    - Qual o número de contato da biblioteca?
+    - tem o livro de calculo 1 na biblioteca?
+    - qual o status do livro de calculo na biblioteca?
+    - Quais horários de funcionamento da biblioteca?
+    - Que horas abre a biblioteca?
+    - Por quanto tempo posso emprestar livros na biblioteca?
+    - Como fazer empréstimo  de livros na biblioteca?
+    - O que tem de novo na página do blog?
+    - Você pode me enviar notificações de atualizações no blog do curso?
+    - Quais as últimas notícias do blog?
+    - Me fale sobre atividade complementar
+    - Quantas horas é preciso para creditar a disciplina de atividade complementar?
+    - Como eu uso o sigaa?
+    - Como funciona o sigaa?
+    - Como fazer a matrícula no sigaa?
+    - Quais as disciplinas optativas do curso?
+    - Quando finaliza o semestre?
 - intent: out_of_scope
   examples: |
-    - vc sabe contar piadas?
-    - me conta uma história interessante
-    - Qual sua data de nascimento?
-    - quando você nasceu?
-    - Qual seu time?
-    - Você veio em paz?
-    - Os robôs vão dominar a humanidade?
-    - os bots vão dominar a humanidade?
-    - você tem sentimetos?
-    - você tem emoções?
-    - qual seu sonho?
-    - O universo tem fim?
-    - Quem é o presidente do Brasil?
-    - você fala inglês?
+    - Me explique a tabela verdade do ou inclusivo
+    - Faça um código radix sort
     - você fala outro idioma?

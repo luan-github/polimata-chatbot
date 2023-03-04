@@ -9,17 +9,17 @@ nlu:
     - Qual é o propósito da [caótica](entidade)?
     - Qual é a atribuição do [centro acadêmico](entidade)?
     - Quais são as atividades do [caótica](entidade)?
-    - O que você sabe sobre o [centro acadêmico](entidade)?
     - Existe algum [centro acadêmico](entidade) para o curso de [computação](curso)?
     - Qual é o [centro acadêmico](entidade) do curso de [computação](curso)?
     - O que faz o [caccal](entidade) de [computação](curso)?
     - Qual é a sigla do [centro acadêmico](entidade) de [computação](curso)?
     - Qual é o [centro acadêmico](entidade) de ciência da [computação](curso)?
     - O que significa a sigla [CACCAL](entidade)?
+    - Fale sobre a [atlética](entidade)
+    - Quem é [atlética](entidade)?
     - O que faz a [coordenação](departamento)?
     - Que serviços a [coordenação](departamento) oferece?
     - Para que serve a [coordenação](departamento)?
-
 - intent: ask_caotica_tax
   examples: |
     - Qual é o valor da taxa de associação?
@@ -53,3 +53,5 @@ nlu:
     - Qual o contato da [coordenação](departamento)?
     - Qual o email do curso?
     - Qual o email da [coordenação](departamento)?
+    - Quero falar com alguém da [coordenação](departamento)
+    - Me transfira para um técnico da [coordenação](departamento)

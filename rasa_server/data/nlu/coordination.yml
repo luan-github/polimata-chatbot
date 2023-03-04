@@ -21,6 +21,8 @@ nlu:
     - Como posso me matricular fora do prazo?
     - Perdi o prazo de matrícula, o que faço?
     - Quais requerimentos eu posso enviar a coordenação?
+    - Quais os requerimentos do curso?
+    - Qual a página de requerimentos no blog do curso?
 - intent: ask_office_hour
   examples: |
     - Qual o horário de funcionamento da coordenação?

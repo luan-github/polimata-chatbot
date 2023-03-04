@@ -15,13 +15,13 @@ nlu:
     - bom dia
     - boa noite
     - boa tarde
-    - bomdia
-    - boanoite
-    - boatarde
     - olá
+    - ola
     - oi, tudo bem?
     - oi de novo
     - tem alguém ai?
+    - esta ai?
+    - E ai Polímata
 - intent: goodbye
   examples: |
     - tchau
@@ -55,7 +55,6 @@ nlu:
     - O [tcc](disciplina)
     - O [estágio](disciplina)
     - A disciplina de [estagio](disciplina), por favor
-    - [calculo](disciplina)
     - da [coordenação](departamento)
     - do [centro acadêmico](entidade)
     - do [caccal](entidade)
@@ -89,15 +88,29 @@ nlu:
     - então é né
     - se é assim sim
     - kkk
+    - de nada
 - intent: ask_for_more
   examples: |
     - Me conta mais
-    - O que mais?
-    - O que mais você sabe?
+    - Só isso que você sabe?
+    - Você sabe mais alguma coisa?
+    - Polímata, que perguntas você sabe responder?
+    - polímata, o que você sabe explicar?
     - O que mais você sabe sobre a [atlética](entidade)?
-    - E mais informações sobre o [centro acadêmico](entidade)?
+    - O que você sabe sobre o [centro acadêmico](entidade)?
+    - Oq vc sabe da [atlética](entidade)?
+    - Você tem mais informações sobre o [centro acadêmico](entidade)?
     - Você tem mais detalhes sobre a disciplina de [estágio](disciplina)?
     - Pode me dar mais informações sobre o [trabalho de conclusão de curso](disciplina)?
+    - O que vc pode me falar sobre o [tcc](disciplina)?
+    - O que vc tem sobre [tcc](disciplina)?
+    - O que você sabe sobre [Trabalho de Conclusão de curso](disciplina)?
+    - precisamos falar sobre [estágio](disciplina)
+    - O que você pode explicar sobre [estagio](disciplina)?
+    - O que vc sabe sobre [estágio](disciplina)?
+    - o q vc sabe sobre [estágio](disciplina)?
+    - Gostaria de saber sobre o [estágio](disciplina)
+    - o que é importante saber sobre o [estagio](disciplina)?
 - intent: ask_how_get_in
   examples: |
     - Como eu posso partipar?
@@ -158,6 +171,7 @@ nlu:
     - Você sabe onde fica a [xerox](lugar)?
     - A onde é o [nti](lugar)?
     - Onde fica o [núcleo de tecnologia e informática](lugar)?
+    - Qual a localização do [DCET](lugar)?
 - intent: ask_how_to_eduroam
   examples: |
     - Como faço para conectar na internet do bloco?

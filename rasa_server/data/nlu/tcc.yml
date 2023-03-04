@@ -2,17 +2,10 @@ version: "3.1"
 nlu:
 - intent: ask_tcc
   examples: |
-    - o que vc tem sobre [tcc](disciplina)?
-    - O que você sabe sobre [Trabalho de Conclusão de curso](disciplina)?
     - O que é o [Trabalho de Conclusão](disciplina)?
-    - O que é um [tcc](disciplina)?
     - o que é basicamente um [tcc](disciplina)?
-    - como é o [tcc](disciplina) de [computação](curso)?
-    - então, o que é [trabalho de conclusão de curso](disciplina)?
-    - então, o que é um [trabalho de conclsão de curso](disciplina)?
-    - o que é um [tcc](disciplina)?
-    - o que vc pode me falar sobre o [tcc](disciplina)?
-    - precisamos falar sobre o [tcc](disciplina)
+    - Como o curso de computação define o [tcc](disciplina)?
+    - o que é o [tcc](disciplina) no curso de computação?
 - intent: ask_tcc_usual_path
   examples: |
     - Eu queria saber como eu começo a fazer meu [tcc](disciplina)
@@ -20,6 +13,7 @@ nlu:
     - Como a gente começa a fazer o [tcc](disciplina)?
     - Como se dá início ao [tcc](disciplina)?
     - Como é o processo de fazer o [tcc](disciplina)?
+    - Como funciona o [tcc](disciplina)?
     - quais as etapas de um [tcc](disciplina)?
     - quais as fases de um [tcc](disciplina)?
     - por onde eu começo meu [tcc](disciplina)?
@@ -39,6 +33,7 @@ nlu:
     - Qual o propósito do [tcc](disciplina)?
     - De que serve o [tcc](disciplina)?
     - pra que serve o [tcc](disciplina)?
+    - o que representa o [tcc](disciplina) para o curso de computação?
 - intent: ask_tcc_like_group_work
   examples: |
     - O [tcc](disciplina) é individual?
