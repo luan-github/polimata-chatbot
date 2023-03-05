@@ -8,7 +8,7 @@ stories:
       entities:
       - disciplina:
     - slot_was_set:
-      - disciplina: estagio
+      - disciplina: estágio
     - action: utter_ask_training_require
 
 - story: ask-tcc-require
@@ -26,9 +26,9 @@ stories:
   - action: utter_greet
   - intent: ask_training_activity
     entities:
-    - disciplina: estagio
+    - disciplina: estágio
   - slot_was_set:
-    - disciplina: estagio
+    - disciplina: estágio
   - action: utter_ask_training_activity
   - intent: ask_require
   - action: utter_ask_training_require
@@ -37,9 +37,9 @@ stories:
   steps:
   - intent: ask_training_activity
     entities:
-    - disciplina: estagio
+    - disciplina: estágio
   - slot_was_set:
-    - disciplina: estagio
+    - disciplina: estágio
   - action: utter_ask_training_activity
   - intent: ask_require
   - action: utter_ask_training_require
@@ -90,9 +90,9 @@ stories:
     - action: utter_ask_curriculum_require
     - intent: inform
       entities:
-      - disciplina: estagio
+      - disciplina: estágio
     - slot_was_set:
-      - disciplina: estagio
+      - disciplina: estágio
     - action: utter_ask_training_require
 
 - story: ask-when-whithout-slot
@@ -117,9 +117,9 @@ stories:
     - action: utter_ask_when_to_start
     - intent: inform
       entities:
-      - disciplina: estagio
+      - disciplina: estágio
     - slot_was_set:
-      - disciplina: estagio
+      - disciplina: estágio
     - action: utter_ask_training_when_to_start
 
 - story: ask-when-tcc
@@ -135,9 +135,9 @@ stories:
   steps:
     - intent: ask_when_to_start
       entities:
-      - disciplina: estagio
+      - disciplina: estágio
     - slot_was_set:
-      - disciplina: estagio
+      - disciplina: estágio
     - action: utter_ask_training_when_to_start
 
 - story: ask-docs-whithout-slot
@@ -162,9 +162,9 @@ stories:
     - action: utter_ask_docs
     - intent: inform
       entities:
-      - disciplina: estagio
+      - disciplina: estágio
     - slot_was_set:
-      - disciplina: estagio
+      - disciplina: estágio
     - action: utter_ask_training_docs
 
 - story: ask-tcc-docs
@@ -180,7 +180,7 @@ stories:
   steps:
   - intent: ask_docs
     entities:
-    - disciplina: estagio
+    - disciplina: estágio
   - slot_was_set:
-    - disciplina: estagio
+    - disciplina: estágio
   - action: utter_ask_training_docs

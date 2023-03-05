@@ -118,3 +118,15 @@ stories:
   - action: utter_ask_caccal
   - intent: ask_contact
   - action: utter_ask_caccal_contact
+
+- story: ask-caccal-entity
+  steps:
+  - intent: ask_entity
+    entities:
+    - entidade: caccal
+    - curso: computação
+  - slot_was_set:
+    - entidade: caccal
+  - slot_was_set:
+    - curso: computação
+  - action: utter_ask_caccal

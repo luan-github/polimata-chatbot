@@ -6,18 +6,18 @@ stories:
   steps:
   - intent: ask_training_activity
     entities:
-    - disciplina: estagio
+    - disciplina: estágio
   - slot_was_set:
-    - disciplina: estagio
+    - disciplina: estágio
   - action: utter_ask_training_activity
 
 - story: ask-training-happy-path-1
   steps:
   - intent: ask_training_activity
     entities:
-    - disciplina: estagio
+    - disciplina: estágio
   - slot_was_set:
-    - disciplina: estagio
+    - disciplina: estágio
   - action: utter_ask_training_activity
   - intent: ask_when_to_start
   - action: utter_ask_training_when_to_start
@@ -30,9 +30,9 @@ stories:
   steps:
   - intent: ask_training_activity
     entities:
-    - disciplina: estagio
+    - disciplina: estágio
   - slot_was_set:
-    - disciplina: estagio
+    - disciplina: estágio
   - action: utter_ask_training_activity
   - intent: ask_require
   - action: utter_ask_training_require
@@ -43,9 +43,9 @@ stories:
   steps:
   - intent: ask_training_activity
     entities:
-    - disciplina: estagio
+    - disciplina: estágio
   - slot_was_set:
-    - disciplina: estagio
+    - disciplina: estágio
   - action: utter_ask_training_activity
   - intent: ask_docs
   - action: utter_ask_training_docs
@@ -56,9 +56,9 @@ stories:
   steps:
   - intent: ask_training_activity
     entities:
-    - disciplina: estagio
+    - disciplina: estágio
   - slot_was_set:
-    - disciplina: estagio
+    - disciplina: estágio
   - action: utter_ask_training_activity
   - intent: ask_docs
   - action: utter_ask_training_docs
@@ -71,18 +71,18 @@ stories:
   steps:
     - intent: ask_training_program
       entities:
-      - disciplina: estagio
+      - disciplina: estágio
     - slot_was_set:
-      - disciplina: estagio
+      - disciplina: estágio
     - action: utter_ask_training_program
 
 - story: ask-training-program-2
   steps:
     - intent: ask_training_program
       entities:
-      - disciplina: estagio
+      - disciplina: estágio
     - slot_was_set:
-      - disciplina: estagio
+      - disciplina: estágio
     - action: utter_ask_training_program
     - intent: ask_docs
     - action: utter_ask_training_docs
@@ -93,9 +93,9 @@ stories:
   steps:
   - intent: ask_training_activity
     entities:
-    - disciplina: estagio
+    - disciplina: estágio
   - slot_was_set:
-    - disciplina: estagio
+    - disciplina: estágio
   - action: utter_ask_training_activity
   - intent: ask_training_program
   - action: utter_ask_training_program

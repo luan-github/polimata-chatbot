@@ -38,7 +38,7 @@ stories:
   steps:
   - intent: ask_for_more
     entities:
-    - disciplina: estagio
+    - disciplina: estágio
   - slot_was_set:
-    - disciplina: estagio
+    - disciplina: estágio
   - action: utter_ask_what_more_training

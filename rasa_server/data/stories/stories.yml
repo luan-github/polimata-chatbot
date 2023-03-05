@@ -6,3 +6,48 @@ stories:
   steps:
   - intent: ask_how_to_eduroam
   - action: utter_ask_how_to_eduroam
+
+- story: inform
+  steps:
+  - intent: inform
+    entities:
+      - entidade: caotica
+  - slot_was_set:
+      - entidade: caotica
+  - action: utter_inform
+
+- story: inform
+  steps:
+  - intent: inform
+    entities:
+      - entidade: caccal
+  - slot_was_set:
+      - entidade: caccal
+  - action: utter_inform
+
+- story: inform
+  steps:
+  - intent: inform
+    entities:
+      - departamento: coordenação
+  - slot_was_set:
+      - departamento: coordenação
+  - action: utter_inform
+
+- story: inform
+  steps:
+  - intent: inform
+    entities:
+      - disciplina: tcc
+  - slot_was_set:
+      - disciplina: tcc
+  - action: utter_inform
+
+- story: inform
+  steps:
+  - intent: inform
+    entities:
+      - disciplina: estágio
+  - slot_was_set:
+      - disciplina: estágio
+  - action: utter_inform
