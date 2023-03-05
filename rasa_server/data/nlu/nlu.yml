@@ -51,18 +51,22 @@ nlu:
 - intent: inform
   examples: |
     - [estágio](disciplina)
+    - O [estagio](disciplina)
+    - A disciplina de [estágio](disciplina), por favor
     - [tcc](disciplina)
     - O [tcc](disciplina)
-    - O [estágio](disciplina)
-    - A disciplina de [estagio](disciplina), por favor
+    - O [TCC](disciplina)
+    - O [trabalho de conclusão](disciplina)
+    - O [trabalho de conclusao](disciplina)
     - da [coordenação](departamento)
     - do [centro acadêmico](entidade)
     - do [caccal](entidade)
     - do [CA](entidade)
     - do [centro acadêmico](entidade) de [computação](curso)
-    - da [atletica](entidade)
-    - da [caotica](entidade)
     - da [atlética]{"entity": "entidade", "value": "caotica"}
+    - da [atletica](entidade)
+    - da [caótica](entidade)
+    - da [caotica](entidade)
 - intent: neutral
   examples: |
     - humm, interessante
@@ -106,10 +110,10 @@ nlu:
     - O que vc tem sobre [tcc](disciplina)?
     - O que você sabe sobre [Trabalho de Conclusão de curso](disciplina)?
     - precisamos falar sobre [estágio](disciplina)
-    - O que você pode explicar sobre [estagio](disciplina)?
+    - O que você pode explicar sobre [estágio](disciplina)?
     - O que vc sabe sobre [estágio](disciplina)?
     - o q vc sabe sobre [estágio](disciplina)?
-    - Gostaria de saber sobre o [estágio](disciplina)
+    - Gostaria de saber sobre o [estagio](disciplina)
     - o que é importante saber sobre o [estagio](disciplina)?
 - intent: ask_how_get_in
   examples: |

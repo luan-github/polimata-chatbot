@@ -2,16 +2,19 @@ version: "3.1"
 nlu:
 - intent: ask_tcc
   examples: |
-    - O que é o [Trabalho de Conclusão](disciplina)?
+    - O que é o [trabalho de conclusão](disciplina)?
+    - O que é o [trabalho de conclusao](disciplina) exigido no curso de computação?
+    - O que é o [tcc](disciplina) para o curso de computação?
     - o que é basicamente um [tcc](disciplina)?
     - Como o curso de computação define o [tcc](disciplina)?
     - o que é o [tcc](disciplina) no curso de computação?
+    - qual a definição de [TCC](disciplina)?
 - intent: ask_tcc_usual_path
   examples: |
     - Eu queria saber como eu começo a fazer meu [tcc](disciplina)
-    - como é feito o [tcc](disciplina)?
-    - Como a gente começa a fazer o [tcc](disciplina)?
-    - Como se dá início ao [tcc](disciplina)?
+    - como é feito o [TCC](disciplina)?
+    - Como a gente começa a fazer o [trabalho de conclusão](disciplina)?
+    - Como se dá início ao [trabalho de conclusao](disciplina)?
     - Como é o processo de fazer o [tcc](disciplina)?
     - Como funciona o [tcc](disciplina)?
     - quais as etapas de um [tcc](disciplina)?
@@ -29,42 +32,39 @@ nlu:
 - intent: ask_tcc_goal
   examples: |
     - Qual a finalidade do [tcc](disciplina)?
-    - Para que serve o [tcc](disciplina)?
-    - Qual o propósito do [tcc](disciplina)?
-    - De que serve o [tcc](disciplina)?
+    - Para que serve o [TCC](disciplina)?
+    - Qual o propósito do [trabalho de conclusão](disciplina)?
+    - De que serve o [trabalho de conclusao](disciplina)?
     - pra que serve o [tcc](disciplina)?
     - o que representa o [tcc](disciplina) para o curso de computação?
 - intent: ask_tcc_like_group_work
   examples: |
     - O [tcc](disciplina) é individual?
-    - O [Trabalho de Conclusão](disciplina) pode ser em grupo?
-    - Pode fazer o [tcc](disciplina) em dupla?
-    - Pode fazer em dupla?
-    - Pode fazer o [Trabalho de Conclusão de curso](disciplina) em dupla?
-    - tem que fazer sozinho?
+    - O [trabalho de conclusão](disciplina) pode ser em grupo?
+    - Pode fazer o [trabalho de conclusao](disciplina) em dupla?
+    - Pode fazer o [TCC](disciplina) em dupla?
+    - Eu tenho que fazer o [tcc](disciplina) sozinho?
     - é obrigatório fazer só?
-    - é obrigado fazer sozinho?
+    - O [tcc](disciplina) deve ser um trabalho individual?
     - Pode fazer o [tcc](disciplina) em trio?
     - pode fazer o [tcc](disciplina) em grupo de três?
 - intent: ask_tcc_score
   examples: |
-    - Qual a nota mínima em um [Trabalho de Conclusão de curso](disciplina)?
-    - Qual a nota mínima?
-    - qual a nota minima no [tcc](disciplina)?
-    - Qual a pontuação mínima em um [tcc](disciplina)?
-    - Qual a pontuação mínima?
-    - Vale quantos pontos?
-    - Qual a pontuação máxima?
+    - Qual a nota mínima em um [trabalho de conclusão](disciplina)?
+    - qual a nota minima no [trabalho de conclusao](disciplina)?
+    - Qual a pontuação mínima em um [TCC](disciplina)?
+    - Quantos pontos valem um trabalho de [tcc](disciplina)?
     - Qual a pontuação máxima de um [tcc](disciplina)?
-    - e qual a nota minima?
+    - Qual a pontuação máxima?
+    - Qual a pontuação mínima?
 - intent: ask_tcc_type
   examples: |
     - Que tipo de pesquisa eu posso fazer?
     - o [tcc](disciplina) tem que ser uma monografia?
-    - o projeto tem que ser uma monografia?
+    - o projeto de [TCC](disciplina) tem que ser uma monografia?
     - o projeto pode ser um artigo científico?
-    - O [tcc](disciplina) pode ser um artigo?
-    - O [tcc](disciplina) tem que ser um artigo publicado?
+    - O [trabalho de conclusão](disciplina) pode ser um artigo?
+    - O [trabalho de conclusao](disciplina) tem que ser um artigo publicado?
     - Posso apresentar um artigo como [tcc](disciplina)?
     - Artigo ciêntifico vale como [tcc](disciplina)?
     - Quais os tipos de [tcc](disciplina)?
@@ -77,11 +77,11 @@ nlu:
   examples: |
     - E como eu escolho meu orientador de [tcc](disciplina)?
     - E quem pode me orientar?
-    - Como eu defino meu orientador de [tcc](disciplina)?
+    - Como eu defino meu orientador de [TCC](disciplina)?
     - Não sei quem poderia me supervisonar no [tcc](disciplina)
     - Não sei quem escolher para me orientar no meu [tcc](disciplina)
-    - Preciso de um orientador de [tcc](disciplina)
-    - Quem pode ser orientador de [tcc](disciplina)?
+    - Preciso de um orientador de [trabalho de conclusão](disciplina)
+    - Quem pode ser orientador de [trabalho de conclusao](disciplina)?
     - Quem pode orientar [tcc](disciplina)?
     - Quem deve ser o orientador de [tcc](disciplina)?
     - Quem deve ser o professor supervisor de [tcc](disciplina)?
@@ -94,18 +94,18 @@ nlu:
     - Que professor eu posso escolher para me orientar no [tcc](disciplina)?
 - intent: ask_tcc_professor_change
   examples: |
-    - Posso trocar de orientador?
+    - Posso trocar de orientador de [TCC]?
     - É possível trocar de orientador?
     - Dá para trocar de orientador?
-    - Pode mudar o orientador?
-    - Como muda o orientador de [tcc](disciplina)?
+    - Pode mudar o orientador de [trabalho de conclusão]?
+    - Como muda o orientador de [trabalho de conclusao](disciplina)?
     - Pode substituir o orientador?
 - intent: ask_tcc_assessment
   examples: |
     - Como é feita a avaliação do [tcc](disciplina)
-    - como são calculados os pontos do [tcc](disciplina)?
-    - como é feito o cálculo da pontuação do [tcc](disciplina)?
-    - como é feito o cálculo da nota do [tcc](disciplina)?
+    - como são calculados os pontos do [TCC](disciplina)?
+    - como é feito o cálculo da pontuação do [trabalho de conclusão](disciplina)?
+    - como é feito o cálculo da nota do [trabalho de conclusao](disciplina)?
     - como a banca decide a nota do [tcc](disciplina)?
     - qual a fórmula usada para atribuir a nota do [tcc](disciplina)?
     - Quem compõe a banca de [tcc](disciplina)?
@@ -122,29 +122,29 @@ nlu:
   examples: |
     - Quem pode ser coorientador de [tcc](disciplina)?
     - Quem pode ser coorientador?
-    - É preciso de coorientador no [tcc](disciplina)?
+    - É preciso de coorientador no [TCC](disciplina)?
     - É preciso ter coorientador?
-    - O coorientador tem que ser do nosso curso?
-    - O coorientador tem que do colegiado?
+    - O coorientador de [trabalho de conclusão](disciplina) tem que ser do nosso curso?
+    - O coorientador do [trabalho de conclusao](disciplina) tem que do colegiado?
 - intent: ask_tcc_examples
   examples: |
     - Onde eu encontro modelos de [tcc](disciplina)?
     - Você tem [tccs](disciplina) pra mim dar uma olhada?
-    - onde encontro trabalhos de conclusão do curso?
-    - queria ver um [tcc](disciplina) pronto?
-    - Você tem exemplos de [tcc](disciplina)?
-    - quais trabalhos já foram apresentados?
-    - tem como ter acesso a trabalhos de quem já se formou?
+    - onde encontro [trabalhos de conclusão do curso](disciplina)?
+    - queria ver um [trabalho de conclusão](disciplina) pronto?
+    - Você tem exemplos de [trabalho de conclusao](disciplina)?
+    - quais trabalhos de [TCC](disciplina) já foram apresentados?
+    - tem como ter acesso a [trabalhos de conclusão](disciplina) de quem já se formou?
     - tem trabalhos de quem já se formou?
     - tem exemplos de monografias para estudar?
     - queria ver as monografias de quem já se formou
     - Quais [tccs](disciplina) já foram apresentados?
 - intent: ask_tcc_time_span
   examples: |
-    - Quanto tempo dura uma apresentação de [tcc](disciplina)?
-    - Quanto tempo dura uma apresentação?
-    - quanto tempo leva uma apresentação de [tcc](disciplina)?
-    - Qual a duração de uma apresentação de [tcc](disciplina)?
-    - Quanto tempo um aluno tem para apresentar o [tcc](disciplina)?
-    - quanto tempo dura uma apresentação de [tcc](disciplina)?
+    - Quanto tempo dura uma apresentação de [trabalho de conclusão](disciplina)?
+    - Quanto tempo leva para apresentar o [trabalho de conclusao]?
+    - Quanto tempo eu vou ter para expor o [tcc](disciplina) no dia da banca?
+    - Qual a duração de uma apresentação de [TCC](disciplina)?
+    - Quanto tempo um aluno tem para defender o [tcc](disciplina)?
+    - quanto tempo dura uma defesa de [tcc](disciplina)?
     - quanto tempo dura uma apresentação?

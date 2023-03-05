@@ -176,10 +176,10 @@ nlu:
   examples: |
     - desenvolvimento
     - codificação
-- synonym: estagio
+- synonym: estágio
   examples: |
     - Estágio
-    - estágio
+    - estagio
     - estágios
     - estagios
     - estagiar
@@ -191,6 +191,7 @@ nlu:
   examples: |
     - trabalho de conclusão de curso
     - trabalho de conclusao de curso
+    - trabalhos de conclusão
     - trabalho de conclusão
     - trabalho de conclusao
     - tccs

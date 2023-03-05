@@ -5,9 +5,9 @@ nlu:
     - O [tcc](disciplina) é obrigatório?
     - quem é obrigado a fazer?
     - mas eu sou obridago a fazer?
-    - O [Trabalho de Conclusão](disciplina) reprova?
-    - O que acontece se eu não fizer o [tcc](disciplina)?
-    - Tem que fazer o [tcc](disciplina)?
+    - O [trabalho de conclusão](disciplina) reprova?
+    - O que acontece se eu não fizer o [TCC](disciplina)?
+    - Tem que fazer o [trabalho de conclusao](disciplina)?
     - Quem já trabalha precisa [estagiar](disciplina)?
     - Eu tenho uma empresa, preciso [estagiar](disciplina)?
     - O [estágio](disciplina) é obrigatório para quem já trabalha?
@@ -15,15 +15,15 @@ nlu:
     - Quem não precisa [estagiar](disciplina)?
     - Todos precisam [estagiar](disciplina)?
     - Todos os estudantes precisam fazer o [estágio](disciplina)?
-    - eu já trabalho na área, também preciso cumprir o [estágio](disciplina)?
+    - eu já trabalho na área, também preciso cumprir o [estagio](disciplina)?
 - intent: ask_when_to_start
   examples: |
-    - Quando posso iniciar meu [tcc](disciplina)?
-    - Quando eu devo começar meu [Trabalho de Conclusão de Curso](disciplina)?
+    - Quando posso iniciar meu [TCC](disciplina)?
+    - Quando eu devo começar meu [trabalho de conclusão](disciplina)?
     - A partir de quando posso apresentar o [tcc](disciplina)?
-    - Qual é a data limite para começar meu [tcc](disciplina)?
-    - Quando posso iniciar o [estágio](disciplina)?
-    - A partir de quando posso começar o [estágio](disciplina)?
+    - Qual é a data limite para começar meu [trabalho de conclusao](disciplina)?
+    - Quando posso iniciar o [estagio](disciplina)?
+    - A partir de quando posso começar o [estagio](disciplina)?
     - Qual é o prazo para iniciar o [estágio](disciplina)?
     - Qual é o período de inscrição para o [tcc](disciplina)?
     - Quando eu posso me inscrever para o [tcc](disciplina)?
@@ -35,15 +35,15 @@ nlu:
     - Quando eu devo entregar a versão final do meu [tcc](disciplina)?
 - intent: ask_docs
   examples: |
-    - Vc tem a documentação de [tcc](disciplina)?
+    - Vc tem a documentação de [TCC](disciplina)?
     - qual é o regulamento de [tcc](disciplina)?
     - Me envia os documentos necessários para dar entrada no [tcc](disciplina)
     - Me envia o formulário de inscrição de [tcc](disciplina)
     - manda os documentos do [tcc](disciplina)
     - quais os docs do [tcc](disciplina)?
     - me envia o pdf do regulamento de [tcc](disciplina)
-    - Me envia o modelo de projeto do [Trabalho de Conclusão de curso](disciplina)
-    - preciso dos links para os documentos do [Trabalho de Conclusão](disciplina)
+    - Me envia o modelo de projeto do [trabalho de conclusão](disciplina)
+    - preciso dos links para os documentos do [trabalho de conclusao](disciplina)
     - preciso do link para a carta de aceite
     - Quais documentos eu preciso para dar entrada no [tcc](disciplina)?
     - Que documentos são necessários para dar entrada no [tcc](disciplina)?
@@ -56,5 +56,5 @@ nlu:
     - Qual a documentação de [estágio](disciplina)?
     - Me envia os pdfs de [estágio](disciplina)?
     - vc tem o link para o termo de compromisso de [estágio](disciplina)?
-    - vc tem o modelo do plano de [estágio](disciplina)?
-    - quais são os documentos de [estágio](disciplina)
+    - vc tem o modelo do plano de [estagio](disciplina)?
+    - quais são os documentos de [estagio](disciplina)

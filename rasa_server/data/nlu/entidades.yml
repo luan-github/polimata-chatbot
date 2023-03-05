@@ -3,7 +3,8 @@ nlu:
 - intent: ask_entity
   examples: |
     - O que é o [centro acadêmico](entidade)?
-    - O que faz uma [atlética](entidade)?
+    - O que faz uma [atletica](entidade)?
+    - O que faz a [caótica](entidade)?
     - Para que serve o [centro acadêmico](entidade)?
     - Qual é a finalidade do [CA](entidade)?
     - Qual é o propósito da [caótica](entidade)?
@@ -16,7 +17,7 @@ nlu:
     - Qual é o [centro acadêmico](entidade) de ciência da [computação](curso)?
     - O que significa a sigla [CACCAL](entidade)?
     - Fale sobre a [atlética](entidade)
-    - Quem é [atlética](entidade)?
+    - Quem é [caotica](entidade)?
     - O que faz a [coordenação](departamento)?
     - Que serviços a [coordenação](departamento) oferece?
     - Para que serve a [coordenação](departamento)?
@@ -28,24 +29,24 @@ nlu:
     - Quanto é a taxa de associação anual?
     - Qual é o valor da taxa mensal?
     - Qual é o valor da taxa para se inscrever na [caótica](entidade)?
-    - Quanto custa se tornar um membro da [atlética](entidade)?
-    - E quanto é a taxa de adesão da [caótica](entidade)?
+    - Quanto custa se tornar um membro da [atletica](entidade)?
+    - E quanto é a taxa de adesão da [caotica](entidade)?
     - Qual é o valor da taxa de renovação anual?
 - intent: ask_contact
   examples: |
-    - Qual a rede social da [atlética](entidade)?
+    - Qual a rede social da [atletica](entidade)?
     - Tem perfil do Instagram para a [atlética](entidade)?
-    - Tem algum telefone para entrar em contato com a [atlética](entidade)?
+    - Tem algum telefone para entrar em contato com a [caotica](entidade)?
     - Qual o e-mail de contato da [atlética](entidade)?
     - Tem página do Facebook para o [centro acadêmico](entidade)?
     - Como eu posso falar com alguém da [caótica](entidade)?
-    - Qual o contato do [centro acadêmico](entidade)?
+    - Qual o contato do [CA](entidade)?
     - Existe algum canal de contato com o [caccal](entidade)?
     - Qual o perfil do Instagram da [caótica](entidade)?
     - Tem alguma página no Facebook do [caccal](entidade)?
     - Qual o telefone de contato da [atlética](entidade) de [computação](curso)?
     - Como faço para entrar em contato com a [atlética](entidade)?
-    - Quero falar com alguém do [centro acadêmico](entidade).
+    - Quero falar com alguém do [centro academico](entidade).
     - Gostaria de saber como chegar em vocês.
     - Como eu falo com o pessoal da [atlética](entidade)?
     - Qual o contato deles?

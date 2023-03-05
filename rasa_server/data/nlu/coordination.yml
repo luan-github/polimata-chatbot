@@ -3,8 +3,11 @@ nlu:
 - intent: ask_schedules
   examples: |
     - Qual o horário das disciplinas deste semestre?
+    - Quais são os horários de aulas das disciplins do semestre?
     - Onde estão os horários das disciplinas?
     - Quais são as minhas aulas de hoje?
+    - Quais são as aulas de hoje?
+    - Quais os horários do curso de computação?
     - Como posso saber as aulas da semana?
     - Quais são os horários das aulas para esta semana?
     - Qual a agenda de aulas para este semestre?

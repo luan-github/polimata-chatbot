@@ -2,6 +2,8 @@ version: "3.1"
 nlu:
 - intent: ask_training_activity
   examples: |
+    - Como e [estagio](disciplina) é definido no curso de computação?
+    - O que é o [estagio](disciplina) no curso de computação?
     - O que é o [estágio](disciplina) obrigatório?
     - o que é a disciplina de [estágio](disciplina)?
     - como é a disciplina de [estágio](disciplina)?
@@ -12,10 +14,10 @@ nlu:
   examples: |
     - onde posso cumprir essa disciplina?
     - onde posso cumprir esse requisito?
-    - onde posso achar oportunidades de [estágio](disciplina)?
+    - onde posso achar oportunidades de [estagio](disciplina)?
     - Onde eu posso  [estagiar](disciplina)?
     - Em que lugares eu posso  [estagiar](disciplina)?
-    - Você pode indicar lugares para [estágio](disciplina)?
+    - Você pode indicar lugares para [estagio](disciplina)?
     - Alguma sugestão de lugares para  [estagiar](disciplina)?
     - Onde os acadêmicos costumam  [estagiar](disciplina)?
     - Onde dá para  [estagiar](disciplina)?
@@ -26,4 +28,4 @@ nlu:
     - Não tenho idéia de onde  [estagiar](disciplina)
     - Não sei onde  [estagiar](disciplina)
     - Como eu faço para arranjar um [estágio](disciplina)
-    - onde encontro vagas para [estagio](disciplina)?
+    - onde encontro vagas para [estágio](disciplina)?
