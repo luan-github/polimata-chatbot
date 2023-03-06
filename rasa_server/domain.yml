@@ -44,6 +44,7 @@ intents:
 - ask_requirements
 - ask_office_hour
 - ask_for_professors_names
+- ask_lab_scheduling
 - goodbye
 - greet
 - inform
@@ -411,6 +412,8 @@ responses:
         - - text: Professores
             url: https://www2.unifap.br/ccomputacao/organizacao-do-curso/docentes-2/
     channel: telegram
+  utter_ask_lab_scheduling:
+  - text: De acordo com os regulamentos para o uso dos laboratórios dos cursos de Ciência da Computação e Arquitetura e Urbanismo, os interessados na utilização desses espaços deverão encaminhar uma solicitação para reserva prévia com antecedência mínima de 24 horas, preenchendo um formulário disponibilizado pela secretaria do departamento. Não é permitido que os discentes façam o agendamento.
   utter_ask_coordination:
   - custom:
       text: "A coordenação do Curso de Computação é responsável por gerenciar e participar de atividades relacionadas ao curso, incluindo a elaboração do currículo, definição das disciplinas e atendimento aos acadêmicos em diversas atividades, o que frequentemente envolve a entrega ou registro de alguma forma de documentação\\.\n\nVocê pode encontrar maiores informações sobre o funcionamento da coordenação no link abaixo para o blog do curso\\."

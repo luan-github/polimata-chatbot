@@ -63,3 +63,8 @@ stories:
   steps:
   - intent: ask_for_professors_names
   - action: utter_ask_for_professors_names
+
+- story: ask-lab-scheduling
+  steps:
+  - intent: ask_lab_scheduling
+  - action: utter_ask_lab_scheduling

@@ -44,3 +44,12 @@ nlu:
     - Listar os professores do curso de ciência da computação
     - Como posso conhecer os professores do curso?
     - Gostaria de saber quem são os professores do curso?
+- intent: ask_lab_scheduling
+  examples: |
+    - Como eu solicito permissão para usar um laboratório de redes e Telecomunicação?
+    - Como eu posso usar um laboratório de Computação?
+    - Como eu agendo o uso do laboratório de computação e arquitetura?
+    - Quais são os passos necessários para utilizar um laboratório de computação?
+    - Como faço para agendar o uso do laboratório de computação e arquitetura?
+    - O que eu preciso fazer para ter acesso ao laboratório de redes e telecomunicação?
+    - Quais são as etapas para utilizar o laboratório de computação?
