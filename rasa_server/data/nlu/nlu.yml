@@ -125,6 +125,17 @@ nlu:
     - o q vc sabe sobre [estágio](disciplina)?
     - Gostaria de saber sobre o [estagio](disciplina)
     - o que é importante saber sobre o [estagio](disciplina)?
+- intent: ask_list_locations
+  examples: |
+    - /ask_list_locations
+    - Quais locais você conhece na UNIFAP?
+    - Que lugares o polímata pode encontrar na universidade?
+    - Quais localizações você pode indicar?
+    - Que lugares o polímata sabe onde ficam?
+    - Você pode me ajudar a chegar em quais locais da universidades?
+    - Que locais você mapeou?
+    - Quais lugares da universidade o polímata já tem mapeados?
+    - Que lugares você me ajuda a achar dentro da universidade?
 - intent: ask_how_get_in
   examples: |
     - Como eu posso partipar?

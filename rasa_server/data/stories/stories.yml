@@ -7,6 +7,11 @@ stories:
   - intent: ask_how_to_eduroam
   - action: utter_ask_how_to_eduroam
 
+- story: ask-list-locations
+  steps:
+  - intent: ask_list_locations
+  - action: utter_ask_list_locations
+
 - story: inform
   steps:
   - intent: inform
