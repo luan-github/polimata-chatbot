@@ -58,3 +58,8 @@ stories:
   steps:
   - intent: ask_office_hour
   - action: utter_ask_office_hour
+
+- story: ask-for-professors-names
+  steps:
+  - intent: ask_for_professors_names
+  - action: utter_ask_for_professors_names

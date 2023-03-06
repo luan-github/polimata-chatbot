@@ -36,3 +36,11 @@ nlu:
     - Quais são os dias e horários em que a coordenação está aberta?
     - Qual é o horário de atendimento ao público da coordenação?
     - A coordenação tem horário de funcionamento aos sábados?
+- intent: ask_for_professors_names
+  examples: |
+    - Quero saber o nome dos professores do Curso?
+    - Quais são os professores do curso de ciência da computação?
+    - Quem são os docentes ou professores do curso?
+    - Listar os professores do curso de ciência da computação
+    - Como posso conhecer os professores do curso?
+    - Gostaria de saber quem são os professores do curso?

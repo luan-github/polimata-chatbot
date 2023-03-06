@@ -41,6 +41,7 @@ intents:
 - ask_schedules
 - ask_requirements
 - ask_office_hour
+- ask_for_professors_names
 - goodbye
 - greet
 - inform
@@ -394,6 +395,15 @@ responses:
         inline_keyboard:
         - - text: Horário de Atendimento
             url: https://www2.unifap.br/ccomputacao/organizacao-do-curso/
+    channel: telegram
+  utter_ask_for_professors_names:
+  - custom:
+      text: "Você pode encontrar a relação atualizada de professores do curso na página do blog\\. O link abaixo leva a página com as informações que você busca\\."
+      parse_mode: MarkdownV2
+      reply_markup:
+        inline_keyboard:
+        - - text: Professores
+            url: https://www2.unifap.br/ccomputacao/organizacao-do-curso/docentes-2/
     channel: telegram
   utter_ask_coordination:
   - custom:
