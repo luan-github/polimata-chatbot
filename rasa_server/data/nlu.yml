@@ -187,6 +187,7 @@ nlu:
     - stágio
     - estgio
     - estago
+    - estagiando
 - synonym: tcc
   examples: |
     - trabalho de conclusão de curso

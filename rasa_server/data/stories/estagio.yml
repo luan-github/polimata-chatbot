@@ -99,3 +99,27 @@ stories:
   - action: utter_ask_training_activity
   - intent: ask_training_program
   - action: utter_ask_training_program
+
+- story: ask-training-workload
+  steps:
+  - intent: ask_training_workload
+    entities:
+    - disciplina: estágio
+  - slot_was_set:
+    - disciplina: estágio
+  - action: utter_ask_training_workload
+  - intent: ask_training_program
+  - action: utter_ask_training_program
+
+- story: ask-training-supervisor-in-charge
+  steps:
+  - intent: ask_training_supervisor_in_charge
+    entities:
+    - disciplina: estágio
+  - slot_was_set:
+    - disciplina: estágio
+  - action: utter_ask_training_supervisor_in_charge
+  - intent: ask_training_workload
+  - action: utter_ask_training_workload
+  - intent: ask_training_program
+  - action: utter_ask_training_program

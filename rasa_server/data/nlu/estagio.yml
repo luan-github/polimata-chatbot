@@ -29,3 +29,23 @@ nlu:
     - Não sei onde  [estagiar](disciplina)
     - Como eu faço para arranjar um [estágio](disciplina)
     - onde encontro vagas para [estágio](disciplina)?
+- intent: ask_training_workload
+  examples: |
+    - Quantas horas eu preciso [estagiar](disciplina) para creditar o estágio?
+    - Quantas horas são necessárias para concluir o [estágio](disciplina) obrigatório?
+    - Qual a carga horária do [estágio](disciplina) obrigatório?
+    - Quantas horas de [estágio](disciplina) é preciso ter para concluir o curso de ciência da computação?
+    - Qual é a quantidade mínima de horas de estágio necessárias para obter o crédito do estágio?
+    - Para concluir o [estágio](disciplina) obrigatório, quantas horas são necessárias?
+    - Qual é a carga horária obrigatória para o [estágio](disciplina)?
+    - Quantas horas de [estagio](disciplina) são necessárias para concluir o curso de ciência da computação?
+    - Para concluir o [estagio](disciplina) obrigatório, qual é a quantidade mínima de horas que eu preciso completar?
+- intent: ask_training_supervisor_in_charge
+  examples: |
+    - Enquanto estou [estagiando](disciplina) o meu supervisor precisa ser da área de computação?
+    - Quem é responsável por avaliar e acompanhar as atividades de [estágio](disciplina)?
+    - Quem é responsável por supervisionar as atividades de [estágio](disciplina)?
+    - Quem pode ser supervisor de [estágio](disciplina)?
+    - Quem é encarregado de supervisionar as atividades durante o [estágio](disciplina)?
+    - Quem está qualificado para ser um supervisor de [estágio](disciplina)?
+    - É necessário que o supervisor de [estágio](disciplina) tenha formação na área de computação?

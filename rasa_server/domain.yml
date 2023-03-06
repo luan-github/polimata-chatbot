@@ -33,6 +33,8 @@ intents:
 - ask_tcc_usual_path
 - ask_training_activity
 - ask_training_program
+- ask_training_workload
+- ask_training_supervisor_in_charge
 - ask_what_more_caccal
 - ask_what_more_caotica
 - ask_what_more_tcc
@@ -300,6 +302,10 @@ responses:
       Atualmente atividades como: projeto de extensão, projeto de pesquisa, monitoria, escritório modelo do Curso de Ciência da Computação, podem ser consideradas como atividades de estágio, uma vez que essas atendem regulamentação da universidade.
 
       Mas alguns exemplos de instituições ou empresas onde estudantes do curso já conseguiram estágios são: Tribunal Regional do Trabalho, Ministério Público do Estado do Amapá, Tribunal de Justiça do Estado do Amapá, POP-AP RNP, Sesc Amapá, Banm Criação de Softwares, A3Data, MSB Tecnologia, Linformatica e CRM TI LTDA
+  utter_ask_training_workload:
+  - text: O estágio obrigatório tem uma carga horária mínima de 405 horas, cuja jornada não ultrapasse 30 horas semanais e 6 horas diárias, sendo que não haja conflito com o horário do curso.
+  utter_ask_training_supervisor_in_charge:
+  - text: Segundo norma da universidade o acompanhamento e avaliação do estágio deve ser realizado por docente, indicado pelo Colegiado do Curso ao qual está vinculado, e por um profissional ligado ao Campo de Estágio, designado pela Instituição Concedente.
   utter_ask_training_require:
   - custom:
       text: "Estudantes que puderem comprovar atividade profissional na área de seu curso como empregados, autônomos ou empresários, há pelo menos um ano, podem creditar o Estágio Supervisionado Obrigatório, formalizando o APROVEITAMENTO DE ESTÁGIO\\.\n\nO processo de formalização é descrito nesta [página do blog do curso](https://www2.unifap.br/ccomputacao/pesquisa-e-desenvolvimento/estagio-obrigatorio/)\n"
