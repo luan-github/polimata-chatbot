@@ -16,6 +16,8 @@ nlu:
     - Todos precisam [estagiar](disciplina)?
     - Todos os estudantes precisam fazer o [estágio](disciplina)?
     - eu já trabalho na área, também preciso cumprir o [estagio](disciplina)?
+    - posso usar a carteira de trabalho para aproveitamento de [estagio](disciplina)?
+    - posso usar a carteira de trabalho para creditar o [estágio](disciplina)?
 - intent: ask_when_to_start
   examples: |
     - Quando posso iniciar meu [TCC](disciplina)?
