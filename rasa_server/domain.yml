@@ -9,7 +9,6 @@ intents:
 - ask_how_to_eduroam
 - ask_location
 - ask_polimata_address
-- ask_polimata_functions
 - ask_polimata_give_suggestion
 - ask_polimata_installation
 - ask_polimata_learning_aid
@@ -74,7 +73,7 @@ slots:
   disciplina:
     type: categorical
     values:
-    - estagio
+    - estágio
     - tcc
     mappings:
     - type: from_entity
@@ -149,7 +148,7 @@ responses:
       E esse nome me foi dado porque eu deveria auxiliar estudantes a revisarem assuntos em várias disciplinas, como se eu fosse um verdadeiro polímata.
   utter_ask_polimata_project:
   - custom:
-      text: "Eu sou um chatbot contextual de código aberto\\. Isso significa que posso alternar entre os diálogos para os quais fui projetado, que considero informações anteriores para responder sua mensagem mais recente, e que posso evoluir para considerar o seu contexto um pouco além da conversa\\.\\.\\. Por exemplo, se eu identificasse que você tem dúvidas em disciplinas avançadas, poderia calcular que você já creditou 50\\% do curso e no dia seguinte lembrá\\-lo que você já poderia realizar a inscrição do seu Pré\\-Projeto de TCC\\.\n\nE sendo de código aberto você pode contribuir com o meu desenvolvimento, agregando mais ao seu portfólio, quem sabe até implementar essa funcionalidade que eu citei\\. Clique no link do projeto para saber mais\\.\n"
+      text: "Eu sou um chatbot contextual de código aberto\\. O Projeto Polímata é o trabalho de graduação que deu início ao meu desenvolvimento\\.\n\nPara saber mais sobre este projeto algumas das perguntas que você pode fazer são: “O que significa meu nome?”, “Com que tecnologias fui desenvolvido?”, “Que perguntas sei responder?”, “Qual minha página no Github?”, “Como participar do projeto?” \\.\\.\\.\n\nE caso eu não tenha a resposta que você busca, ela poderá ser adicionada futuramente\\."
       parse_mode: MarkdownV2
       reply_markup:
         inline_keyboard:
@@ -157,20 +156,13 @@ responses:
             url: https://github.com/luan-github/polimata-chatbot
     channel: telegram
   - text: |
-      Eu sou um chatbot contextual de código aberto. Isso significa que posso alternar entre os diálogos para os quais fui projetado, que considero informações anteriores para responder sua mensagem mais recente, e que posso evoluir para considerar o seu contexto um pouco além da conversa... Por exemplo, se eu identificasse que você tem dúvidas em disciplinas avançadas, poderia calcular que você já creditou 50% do curso e no dia seguinte lembrá-lo que você já poderia realizar a inscrição do seu Pré-Projeto de TCC.
+      Eu sou um chatbot contextual de código aberto. O Projeto Polímata é o trabalho de graduação que deu início ao meu desenvolvimento.
 
-      E sendo de código aberto você pode contribuir com o meu desenvolvimento, agregando mais ao seu portfólio, quem sabe até implementar essa última funcionalidade que eu citei. Clique no link do projeto para saber mais: https://github.com/luan-github/polimata-chatbot
-  utter_ask_polimata_functions:
-  - custom:
-      text: "Por enquanto eu tenho respostas para dúvidas sobre o meu projeto, as regulamentações de TCC e Estágio, algumas informações básicas sobre o Centro Acadêmico e a Associação Atlética de Computação\\. Além de ajudar a encontrar alguns locais dentro da universidade posso informar como conectar a eduroam\\.\n"
-      parse_mode: MarkdownV2
-      reply_markup:
-        inline_keyboard:
-        - - text: Projeto Polímata
-            url: https://github.com/luan-github/polimata-chatbot
-    channel: telegram
-  - text: |
-      Por enquanto eu tenho respostas para dúvidas sobre o meu projeto, as regulamentações de TCC e Estágio e algumas informações básicas sobre o Centro Acadêmico e a Associação Atlética de Computação. Para saber mais acesse https://github.com/luan-github/polimata-chatbot).
+      Para saber mais sobre este projeto algumas das perguntas que você pode fazer são: “O que significa meu nome?”, “Com que tecnologias fui desenvolvido?”, “Que perguntas sei responder?”, “Qual minha página no Github?”, “Como participar do projeto?” ...
+
+      E caso eu não tenha a resposta que você busca, ela poderá ser adicionada futuramente.
+
+      Ou clique ou use link do projeto para saber mais: https://github.com/luan-github/polimata-chatbot
   utter_ask_polimata_address:
   - custom:
       text: Meu projeto está disponível no Github
@@ -183,7 +175,7 @@ responses:
   - text: Meu projeto está disponível no Github em https://github.com/luan-github/polimata-chatbot
   utter_ask_polimata_technology:
   - custom:
-      text: Até o momento as principais tecnologias utilizadas no meu desenvolvimento foram a linguagem python, o sistema de containers Docker e a aplicação Telegram\. Novas tecnologias devem estar listadas na página do projeto\.
+      text: Até o momento as principais tecnologias utilizadas no meu desenvolvimento foram a linguagem python, o sistema de containers Docker, o sistema PostgreSQL e as aplicações Metabase e Telegram\. Novas tecnologias estarão listadas na página do projeto\.
       parse_mode: MarkdownV2
       reply_markup:
         inline_keyboard:
@@ -213,14 +205,14 @@ responses:
   - text: Você terá uma explicação mais adequada para a sua pergunta na página inicial do projeto, na seção 'Como Contribuir ou obter ajuda' em https://github.com/luan-github/polimata-chatbot
   utter_ask_polimata_give_suggestion:
   - custom:
-      text: No momento, sugestões e dúvidas só podem ser recebidas pela página do projeto na plataforma Github\.
+      text: "Envie sugestões e dúvidas pela página do projeto no Github\\. Respostas para perguntas que eu ainda não possa responder poderão ser adicionadas em atualizações futuras\\. Obrigado pelo interesse e contribuições para o projeto\\!"
       parse_mode: MarkdownV2
       reply_markup:
         inline_keyboard:
         - - text: Projeto Polímata
-            url: https://github.com/luan-github/polimata-chatbot
+            url: https://github.com/luan-github/polimata-chatbot#como-contribuir-ou-obter-ajuda
     channel: telegram
-  - text: No momento, sugestões e dúvidas só podem ser recebidas pela página do projeto na plataforma Github em https://github.com/luan-github/polimata-chatbot
+  - text: Envie sugestões e dúvidas pela página do projeto no Github. Respostas para perguntas que eu ainda não possa responder poderão ser adicionadas em atualizações futuras. Obrigado pelo interesse e contribuições para o projeto!
   utter_ask_polimata_learning_aid:
   - text: Futuramente eu espero dar assistência em dúvidas ou dificuldades de estudo, nem que seja apenas sobre a formatação de trabalhos. Mas até o momento essas funcionalidades não foram implementadas.
   utter_polimata_out_of_scope_for_now:
@@ -353,14 +345,14 @@ responses:
   - text: Eu posso responder o que é o TCC, quando você pode se inscrever, qual a finalidade, quanto tempo dura uma apresentação, entre outras dúvidas comuns e baseadas na documentação. Qual sua curiosidade sobre o TCC?
   utter_ask_what_more:
   - custom:
-      text: 'Escolha um assunto:'
+      text: 'Eu tenho respostas para os assuntos abaixo, escolha um deles para ter uma melhor descrição das perguntas que eu sei responder'
       parse_mode: MarkdownV2
       reply_markup:
         inline_keyboard:
         - - text: TCC
             callback_data: /ask_what_more_tcc{{"disciplina":"tcc"}}
           - text: Estágio
-            callback_data: /ask_what_more_training{{"disciplina":"estagio"}}
+            callback_data: /ask_what_more_training{{"disciplina":"estágio"}}
         - - text: CACCAL
             callback_data: /ask_what_more_caccal{{"entidade":"caccal"}}
           - text: CAÓTICA
@@ -384,7 +376,7 @@ responses:
     channel: telegram
   utter_ask_requirements:
   - custom:
-      text: "Talvez a sua situação seja satisfeita mediante a entrada ou envio de requerimentos para a coordenação\\.\nNa página de requerimentos do blog do curso você encontrará os documentos para\\:\nRequerimento de crédito ou equivalência em disciplinas,\nMatrícula ou cancelamento fora de prazo,\nAbono ou justificativa de faltas,\nColação de grau,\nOutras solicitações\\."
+      text: "Talvez a sua situação seja satisfeita mediante a entrada ou envio de requerimentos para a coordenação\\.\nO link abaixo leva à página de requerimentos do blog do curso, onde você encontrará os documentos para\\:\nRequerimento de crédito ou equivalência em disciplinas,\nMatrícula ou cancelamento fora de prazo,\nAbono ou justificativa de faltas,\nColação de grau,\nOutras solicitações\\."
       parse_mode: MarkdownV2
       reply_markup:
         inline_keyboard:
@@ -393,7 +385,7 @@ responses:
     channel: telegram
   utter_ask_office_hour:
   - custom:
-      text: "Atualmente o horário de atendimento é das 09h00 às 12h00 e 13h00 às 18h00\\.\n\nVocê pode confirmar essa informação na página do blog\\."
+      text: "Atualmente o horário de atendimento da coordenação é das 09h00 às 12h00 e 13h00 às 18h00\\.\n\nVocê pode confirmar essa informação na página do blog\\."
       parse_mode: MarkdownV2
       reply_markup:
         inline_keyboard:
@@ -416,6 +408,8 @@ responses:
     channel: telegram
   utter_default:
   - text: Eu não tenho certeza se entendi. Talvez você precise escrever sua mensagem com outras palavras.
+  utter_inform:
+  - text: Desculpe, não entendi sua mensagem. Talvez você não esteja fornecendo contexto suficiente.
   utter_out_of_scope:
   - text: Não posso atender essa solicitação.
   utter_ask_reset:
