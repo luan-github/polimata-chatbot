@@ -99,6 +99,16 @@ nlu:
     - Só isso que você sabe?
     - Você sabe mais alguma coisa?
     - Polímata, que perguntas você sabe responder?
+    - Pra que você serve o polímata?
+    - Polímata, quais funções você possui?
+    - Quais funcionalidades você têm?
+    - O que o Pólimata faz?
+    - Quais seus requisitos funcionais?
+    - O que você sabe fazer?
+    - O que você faz?
+    - me explica que perguntas você sabe responder
+    - que assuntos você conhece?
+    - sobre o que o polímata sabe falar
     - polímata, o que você sabe explicar?
     - O que mais você sabe sobre a [atlética](entidade)?
     - O que você sabe sobre o [centro acadêmico](entidade)?
@@ -108,7 +118,7 @@ nlu:
     - Pode me dar mais informações sobre o [trabalho de conclusão de curso](disciplina)?
     - O que vc pode me falar sobre o [tcc](disciplina)?
     - O que vc tem sobre [tcc](disciplina)?
-    - O que você sabe sobre [Trabalho de Conclusão de curso](disciplina)?
+    - O que você sabe sobre [trabalho de conclusão](disciplina)?
     - precisamos falar sobre [estágio](disciplina)
     - O que você pode explicar sobre [estágio](disciplina)?
     - O que vc sabe sobre [estágio](disciplina)?

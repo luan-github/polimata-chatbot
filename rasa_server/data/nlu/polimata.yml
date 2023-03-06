@@ -33,18 +33,6 @@ nlu:
     - O que é você?
     - o que é esse seu projeto?
     - ei, me explica esse seu projeto
-- intent: ask_polimata_functions
-  examples: |
-    - Pra que você serve o polímata?
-    - Polímata, quais funções você possui?
-    - Quais suas funcionalidades você têm?
-    - O que o Pólimata faz?
-    - Quais seus requisitos funcionais?
-    - O que você sabe fazer?
-    - e o que você faz?
-    - me explica que perguntas você sabe responder
-    - que assuntos você conhece?
-    - sobre o que o polímata sabe falar
 - intent: ask_polimata_address
   examples: |
     - Qual o link para esse projeto?

@@ -27,11 +27,6 @@ stories:
   - intent: ask_polimata_address
   - action: utter_ask_polimata_address
 
-- story: ask-polimata-functions
-  steps:
-  - intent: ask_polimata_functions
-  - action: utter_ask_polimata_functions
-
 - story: ask-polimata-give-suggestion
   steps:
   - intent: ask_polimata_give_suggestion
