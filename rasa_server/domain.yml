@@ -9,6 +9,7 @@ intents:
 - ask_how_to_eduroam
 - ask_location
 - ask_polimata_address
+- ask_polimata_apology
 - ask_polimata_give_suggestion
 - ask_polimata_installation
 - ask_polimata_learning_aid
@@ -221,6 +222,8 @@ responses:
   utter_polimata_compliment:
   - text: Obrigado
   - text: Muito Obrigado
+  utter_ask_polimata_apology:
+  - text: Desculpe, as vezes eu fico confuso e minhas respostas estão sujeitas a desatualização. Também considere reformular a sua mensagem.
   utter_ask_tcc:
   - text: |-
       TCC é um trabalho acadêmico obrigatório para alunos que vão se graduar.

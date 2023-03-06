@@ -42,6 +42,12 @@ stories:
   - intent: ask_polimata_learning_aid
   - action: utter_ask_polimata_learning_aid
 
+- story: ask-polimata-apology
+  steps:
+  - intent: ask_polimata_apology
+  - action: utter_ask_polimata_apology
+  - action: action_restart
+
 - story: short-presentation
   steps:
   - intent: ask_polimata_name

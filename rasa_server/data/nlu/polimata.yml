@@ -120,6 +120,18 @@ nlu:
     - você é fantástico
     - você é sensacional
     - você é o melhor
+- intent: ask_polimata_apology
+  examples: |
+    - esta localização está errada, Polímata
+    - esse não é o local correto
+    - Acredito que você está desatualizado
+    - Essa resposta está desatualizada
+    - Não foi isso que eu pedi
+    - Não foi isso que eu perguntei
+    - Você não está me entendendo
+    - Você já disse isso
+    - Polímata, você errou de novo
+    - Polímata você está me dando a uma resposta incorreta
 - intent: polimata_out_of_scope_for_now
   examples: |
     - O que vc sabe sobre a [atlética](entidade) de [biologia](curso)?
