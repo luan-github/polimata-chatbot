@@ -6,6 +6,7 @@ rules:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_ask_what_more
 
 - rule:  Despedir-se a qualquer momento
   steps:
@@ -21,6 +22,7 @@ rules:
   steps:
   - intent: start
   - action: utter_greet
+  - action: utter_ask_what_more
 
 - rule: polimata-compliment
   steps:
@@ -61,6 +63,16 @@ rules:
   steps:
   - intent: ask_what_more_caccal
   - action: utter_ask_what_more_caccal
+
+- rule: ask-more-coordination
+  steps:
+  - intent: ask_what_more_coordination
+  - action: utter_ask_what_more_coordination
+
+- rule: blog
+  steps:
+  - intent: blog_settings
+  - action: utter_blog_settings
 
 - rule: out-of-scope
   steps:

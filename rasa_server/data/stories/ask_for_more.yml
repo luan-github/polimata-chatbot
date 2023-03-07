@@ -42,3 +42,12 @@ stories:
   - slot_was_set:
     - disciplina: estágio
   - action: utter_ask_what_more_training
+
+- story: ask-coordination-what-more
+  steps:
+  - intent: ask_for_more
+    entities:
+    - disciplina: coordenação
+  - slot_was_set:
+    - disciplina: coordenação
+  - action: utter_ask_what_more_coordination

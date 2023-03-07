@@ -24,6 +24,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_ask_what_more
   - intent: ask_training_activity
     entities:
     - disciplina: estágio
@@ -48,6 +49,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_ask_what_more
   - intent: ask_tcc
     entities:
     - disciplina: tcc

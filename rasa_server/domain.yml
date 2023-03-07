@@ -38,6 +38,7 @@ intents:
 - ask_training_supervisor_in_charge
 - ask_what_more_caccal
 - ask_what_more_caotica
+- ask_what_more_coordination
 - ask_what_more_tcc
 - ask_what_more_training
 - ask_when_to_start
@@ -55,6 +56,7 @@ intents:
 - polimata_out_of_scope_for_now
 - start
 - thanks
+- blog_settings
 entities:
 - lugar
 - entidade
@@ -355,11 +357,13 @@ responses:
   utter_ask_what_more_tcc:
   - text: Eu posso responder o que é o TCC, como é feito, qual a nota mínima, como a nota é calculada, entre outras dúvidas comuns e baseadas na documentação. Qual sua curiosidade sobre o TCC?
   - text: Eu posso responder o que é o TCC, quando você pode se inscrever, qual a finalidade, quanto tempo dura uma apresentação, entre outras dúvidas comuns e baseadas na documentação. Qual sua curiosidade sobre o TCC?
+  utter_ask_what_more_coordination:
+  - text: Eu posso reponder o que faz a coordenação, horário de funcionamento, informar e-mail, telefone e requerimentos frequentemente solicitados. Outras dúvidas comuns ainda devem ser cadastradas no meu repertório.
   utter_ask_list_locations:
   - text: "Atualmente eu possuo o mapeamento dos seguintes locais na universidade: Bloco de Engenharia Elétrica e Ciência da Computação, Coordenação de Ciência da Computação, Bloco de Letras, Reitoria, Ginásio, Biblioteca, Anfiteatro, Restaurante Universitário, DERCA, DCET, NAI,  NTI, Xerox e Posto de Saúde."
   utter_ask_what_more:
   - custom:
-      text: 'Eu tenho respostas para os assuntos abaixo, escolha um deles para ter uma melhor descrição das perguntas que eu sei responder'
+      text: 'Eu tenho respostas para os assuntos abaixo, escolha um deles para ter uma noção de quais perguntas você pode fazer'
       parse_mode: MarkdownV2
       reply_markup:
         inline_keyboard:
@@ -367,17 +371,19 @@ responses:
             callback_data: /ask_what_more_tcc{{"disciplina":"tcc"}}
           - text: Estágio
             callback_data: /ask_what_more_training{{"disciplina":"estágio"}}
-        - - text: CACCAL
+        - - text: Centro Acadêmico
             callback_data: /ask_what_more_caccal{{"entidade":"caccal"}}
-          - text: CAÓTICA
+          - text: Atlética
             callback_data: /ask_what_more_caotica{{"entidade":"caotica"}}
-        - - text: Locais Mapeados
+        - - text: Coordenação
+            callback_data: /ask_what_more_coordination{{"departamento":"coordenação"}}
+          - text: Locais
             callback_data: /ask_list_location
-          - text: Projeto Polímata
+        - - text: Projeto Polímata
             callback_data: /ask_polimata_project
     channel: telegram
   utter_ask_how_to_eduroam:
-  - text: 'O passo a passo está no documento abaixo:'
+  - text: 'O passo a passo para acesso a Eduroam esta no documento abaixo:'
     custom:
       document: https://www2.unifap.br/nti/files/2016/05/Eduroam-Android.pdf
     channel: telegram
@@ -441,6 +447,8 @@ responses:
   - text: Não posso atender essa solicitação.
   utter_ask_reset:
   - text: Desculpe, acho que fiquei confuso.
+  utter_blog_settings:
+  - text: Configurações personalizadas ainda não estão disponíveis, mas devem incluir a possibilidade de receber atualizações do chatbot e notificações das últimas postagens do blog do curso.
 actions:
 - action_utter_location
 session_config:

@@ -95,6 +95,9 @@ nlu:
     - de nada
 - intent: ask_for_more
   examples: |
+    - /menu
+    - me envia aquele menu de novo
+    - me manda o menu de novo
     - Me conta mais
     - Só isso que você sabe?
     - Você sabe mais alguma coisa?
@@ -125,6 +128,9 @@ nlu:
     - o q vc sabe sobre [estágio](disciplina)?
     - Gostaria de saber sobre o [estagio](disciplina)
     - o que é importante saber sobre o [estagio](disciplina)?
+    - O que você sabe sobre a [coordenação](departamento)?
+    - O que você sabe informar sobre a [coordenacao](departamento)?
+    - Gostaria de saber mais sobre a [coordenação](departamento)?
 - intent: ask_list_locations
   examples: |
     - /ask_list_locations
@@ -229,6 +235,14 @@ nlu:
   examples: |
     - /ask_what_more_caotica
     - ask_what_more_caotica
+- intent: ask_what_more_coordination
+  examples: |
+    - /ask_what_more_coordination
+    - ask_what_more_coordination
+- intent: blog_settings
+  examples: |
+    - /blog
+    - blog_settings
 - intent: ask_reset
   examples: |
     - Você está confuso
